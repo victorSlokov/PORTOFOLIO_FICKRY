@@ -237,6 +237,9 @@ transform: translateX(50px)
   .icon{
      margin: 5px; 
   }
+  img[alt="wix"] {
+  width: 60px;
+}
 img[alt="ibis"] {
   width: 100px;
 }
@@ -276,7 +279,7 @@ img[alt="netlify"] {
 
 
 
-#softskill, #Adobe-ilustator {
+#softskill, #Adobe-ilustator, #wix {
     scroll-margin-top: 100px; 
 }
 /* WADAH TEKS */
@@ -367,10 +370,29 @@ img[alt="netlify"] {
     background-image: url('../img/Artboard\ 1.png');
 
 }
+
+
+.masked-porto-wix {
+    /* **JALUR GAMBAR UNTUK PORTO** */
+    /* Contoh: Gambar a.jpg */
+    background-image: url('../img/event.png');
+     background-position: 10px -10px;
+     top: 18px;
+}
+.masked-folio-wix {
+    /* **JALUR GAMBAR UNTUK FOLIO** */
+    /* Ganti b.jpg dengan nama file gambar kedua Anda */
+    background-image: url('../img/portowix.png');
+
+}
+
 .masked-porto ,
 .masked-folio,
 .masked-porto-adobe-ilustator,
-.masked-folio-adobe-ilustator, .text-mask-container h2{
+.masked-folio-adobe-ilustator,
+.masked-porto-wix,
+.masked-folio-wix,
+.text-mask-container h2{
    
     text-shadow: 10px 5px 9px rgba(0, 0, 0, 0.7);
 
@@ -602,6 +624,21 @@ img[alt="netlify"] {
     
 }
 
+.project-section-figma-wix{
+   background-image: linear-gradient(to bottom, #ffffff, #ce7b00, #000000); 
+    padding-top: 30px; 
+    padding-bottom: 30px; 
+  /*tindak tutur barudak*/
+}
+
+.project-section-figma-wix2{
+   background-image: linear-gradient(to bottom, #000000, #8a8a8a, #ffffff); 
+    padding-top: 30px; 
+    padding-bottom: 30px; 
+  /*tindak tutur barudak*/
+}
+
+
 .custom-label-button2 {
     /* ... properti lain (font-size, padding, etc.) ... */
     
@@ -651,6 +688,17 @@ img[alt="netlify"] {
     cursor: default;
 }
 
+.label-satu-wix-figma{
+  /* Warna Latar Belakang Kustom (Hijau) */
+    background-color:transparent !important; 
+    
+    /* Penting: Samakan warna border agar bentuknya solid */
+    border-color: #050505 !important;     
+    
+    /* Pastikan warna teks kontras */
+    color: rgb(26, 26, 26) !important; 
+    cursor: default;
+}
 
 
 
