@@ -469,8 +469,8 @@ img[alt="netlify"] {
 /* Container Utama Box call action */
 .motivation-box {
     /* Layout */
-    max-width: 100%; /* Batasi lebar */
-   height: 90px;
+    max-width: 190%; /* Batasi lebar */
+   height: 30px;
    
     text-align: center;
     background-color: #ffc400;
@@ -497,6 +497,7 @@ img[alt="netlify"] {
     line-height: 1.5;
     margin-bottom: 15px;
     font-weight: 500;
+    color: #000000;
 }
 
 /* Styling Penulis */
