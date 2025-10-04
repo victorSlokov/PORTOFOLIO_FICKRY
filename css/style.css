@@ -400,6 +400,16 @@ img[alt="netlify"] {
     -webkit-text-stroke: 1px rgb(255, 255, 255); 
 
 }
+.project-link-img img {
+    /* Agar gambar terlihat transisi saat di-hover */
+    transition: transform 0.3s ease-in-out; 
+}
+
+.project-link-img:hover img {
+    /* Gambar sedikit membesar saat disentuh mouse */
+    transform: scale(1.05); 
+    opacity: 0.8; /* Sedikit lebih gelap */
+}
 
  .keterangan-tengah {
     /* Membuat teks rata tengah */
