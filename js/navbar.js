@@ -22,5 +22,5 @@
             </div>
         `;
         
-        gridContainer.innerHTML += cardHTML;
+gridContainer.innerHTML += cardHTML;
     });
