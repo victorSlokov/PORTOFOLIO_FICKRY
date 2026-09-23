@@ -1,0 +1,372 @@
+/* Variasi Warna / Tema untuk Tiap Slide (Opsional) */
+.slide-1 {
+  background-color: #020202;
+  z-index: 1;
+}
+.slide-2 {
+  /* 0.6 artinya background memiliki tingkat transparansi 60% */
+  background-color: rgba(2, 2, 2, 0.6); 
+  
+  /* Atau jika menggunakan gradasi transparan: */
+  /* background: linear-gradient(180deg, rgba(2, 2, 2, 0.8), rgba(2, 2, 2, 0.2)); */
+  
+  z-index: 1;
+}
+
+/* Gambar di dalamnya dijamin 100% solid dan tidak terpengaruh */
+.slide-2 img {
+  opacity: 100%;
+}
+/* ============================================================
+   SLIDE 1 konten — Tindak Tutur Barudak
+  
+
+   ============================================================ */
+/* 1. Atur Section Utama agar Kontennya Dimulai dari Paling Atas */
+.stack-slide-1 {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;      /* Susun elemen dari atas ke bawah */
+  align-items: center;         /* Rata tengah secara horizontal */
+  justify-content: flex-start; /* PAKSA elemen mulai dari PALING ATAS */
+  padding-top: 20px;          /* Atur jarak dari tepi layar atas (bisa diset 0 jika ingin mentok 100%) */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 1b. Layer background gambar awan, di belakang semua konten */
+.slide-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* 2. Hilangkan Margin/Padding Bawaan Pembungkus Judul Slide Project */
+.slide-1-header-wrap {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Atur Container Konten Teks */
+.slide-content-1 {
+  position: relative;
+  z-index: 2;              /* pastikan teks di atas gambar background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 4. Judul Mentok ke Atas */
+.project-title-1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0 !important;   /* Menghapus margin bawaan <h2> */
+  padding-top: 0 !important;
+  margin-bottom: 10px;
+  
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: hsl(41, 100%, 50%);
+  line-height: 1.1;
+}
+.project-title-2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0 !important;   /* Menghapus margin bawaan <h2> */
+  padding-top: 0 !important;
+  margin-bottom: 10px;
+  
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+   color: hsl(0, 7%, 97%);
+  line-height: 1.9;
+}
+
+/* 5. Deskripsi Teks */
+.project-desc-1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0 !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  
+  font-size: 1.1rem;
+  color: hsl(41, 100%, 50%);
+  max-width: 600px;
+}
+
+.project-desc-2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 0 !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 2%);
+  max-width: 600px;
+}
+
+.img-awan {
+  position: absolute;
+  top: 20%; 
+  left: -50%;
+  z-index: 0;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  /* Terapkan pembesaran secara langsung agar gambarnya diam & tetap besar */
+  object-fit: contain;
+/* Atur nilai khusus di sini agar tidak tertimpa animasi */
+
+  --base-transform: scale(1.9);
+  /* Jeda waktu animasi (langsung/tanpa delay) */
+  --delay: 0.4s;
+
+  /* Masking pudar kiri & kanan */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+}
+
+.img-belakang-awan {
+  position: absolute;
+  top: 30%; 
+  left: -33%;
+  z-index: 0;  object-fit: contain;
+  object-fit: contain;
+/* Atur nilai khusus di sini agar tidak tertimpa animasi */
+
+  --base-transform: scale(1.5);
+  /* Jeda waktu animasi (langsung/tanpa delay) */
+  --delay: 0.5s;
+ 
+
+
+  /* Masking pudar kiri & kanan */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+}
+
+.img-logo,
+.img-logo-merek {
+  position: absolute;
+  top: 0%; 
+  left: -55%; /* Ubah dari -50% ke 50% untuk menentukan titik tengah */
+  z-index: 0;
+  object-fit: contain;
+  transform: scale(1.5);
+
+}
+
+
+/* ============================================================
+   OVERRIDE DELAY KHUSUS SAAT MENGGUNAKAN SPASI
+   ============================================================ */
+/* Saat ditekan Spasi, hapus delay (0s) agar animasi langsung jalan instan */
+
+body.is-space-pressed .img-awan{
+   --delay: 0.2s !important; 
+}
+body.is-space-pressed .img-belakang-awan {
+  --delay: 0.3s !important;
+}
+
+
+
+
+.img-logo-ai {
+  position: absolute;
+  top: 35%; 
+  left: 30%; /* Ubah dari -50% ke 50% untuk menentukan titik tengah */
+  z-index: 0;
+  object-fit: contain;
+  transform: scale(0.1);
+}
+/* Posisi Melayang di Pojok Kanan Bawah */
+.btn-pdf-vertical {
+position: absolute;
+  bottom: 50px;    /* Jarak dari batas bawah layar */
+  left: -90%;     /* Jarak dari batas kanan layar */
+  z-index: 999;    /* Memastikan tombol selalu berada paling depan di atas elemen lain */
+
+  /* Styling Tombol (Vertikal) */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background-color: rgba(0, 0, 0, 0.75); /* Background gelap agar kontras */
+  backdrop-filter: blur(8px);             /* Efek kaca buram modern */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Ukuran Gambar Ikon */
+.btn-pdf-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Gaya Teks di Bawah */
+.btn-pdf-text {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Efek Hover */
+.btn-pdf-vertical:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+.btn-pdf-vertical:hover .btn-pdf-text {
+  color: #000000; /* Teks berubah hitam saat tombol di-hover */
+}
+
+.btn-pdf-vertical:hover .btn-pdf-icon {
+  transform: scale(1.1);
+}
+
+
+
+/* ============================================================
+   SLIDE 1 konten — Tindak Tutur Barudak end
+  
+   
+   ============================================================ */
+
+/* 1. ATRIBUT BERSAMA (Diatur sekali saja) */
+.img-logo-kemasan,
+.img-logo-kartu,
+.img-logo-typo {
+  position: absolute;
+  z-index: 0;
+  object-fit: contain;
+  transform: scale(1.0);
+}
+
+/* 2. ATRIBUT SPESIFIK (Diatur masing-masing sesuai kebutuhan) */
+.img-logo-kemasan {
+  top: -12%;
+  left: -5%;
+  transform: scale(0.9);
+}
+
+.img-logo-kartu {
+  top: -12%;   /* Sesuaikan posisi atas typo */
+  left: -90%;  /* Sesuaikan posisi kiri typo */
+  transform: scale(0.9);
+}
+
+.img-logo-typo {
+top: 30%;    /* Sesuaikan posisi atas kartu */
+left: -50%;   /* Sesuaikan posisi kiri kartu */
+transform: scale(0.8);
+}
+
+
+
+
+
+
+
+/* Base Style Pembungkus Scatter */
+.scatter-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+  
+  /* Transisi ini akan berlaku baik saat MASUK (.in-view) maupun KELUAR */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) var(--delay, 0s),
+              opacity 0.4s ease var(--delay, 0s);
+}
+
+.scatter-item img {
+  pointer-events: auto;
+}
+
+/* Posisi Berpencar (State Awal / State Keluar) */
+.scatter-kemasan {
+  transform: translate(-120px, -100px) rotate(-15deg);
+  --delay: 0.1s;
+}
+
+.scatter-kartu {
+  transform: translate(-150px, 120px) rotate(20deg);
+  --delay: 0.2s;
+}
+
+.scatter-typo {
+  transform: translate(140px, -80px) rotate(-10deg);
+  --delay: 0.3s;
+}
+
+/* State Berkumpul (Saat Slide Aktif di Layar) */
+.in-view .scatter-item,
+.stack-slide-1.in-view .scatter-item {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0deg);
+}
+
+/* Override delay jika menggunakan navigasi tombol Spasi */
+body.is-space-pressed .scatter-item {
+  --delay: 0s !important;
+}
+
+
+
+
+
+/* Target elemen gambar di dalam scatter & elemen dengan kelas .img-logo */
+.scatter-item img,
+.img-logo {
+  --delay: 0s !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

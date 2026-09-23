@@ -1,0 +1,829 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gaya Dasar Dashboard */
+.dashboard-nav {
+  
+  /* Efek animasi perpindahan halus */
+  transition: transform 0.10s ease-in-out;
+}
+
+/* Class khusus untuk menyembunyikan dashboard ke atas luar layar */
+.dashboard-nav.hide {
+  transform: translateY(-100%);
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e0e0e0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+/* Style Tampilan Blokir Mobile */
+#mobile-blocker {
+  display: none; /* Sembunyikan secara default di Desktop */
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  z-index: 99999; /* Memastikan menutupi seluruh halaman */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.blocker-content {
+  max-width: 320px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.blocker-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.blocker-content h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.blocker-content p {
+  font-size: 14px;
+  color: #a0a0a0;
+  line-height: 1.5;
+}
+
+/* Tampilkan Blokir HANYA jika dibuka di HP / Tablet (Layar < 768px) */
+@media (max-width: 768px) {
+  #mobile-blocker {
+    display: flex; /* Tampilkan overlay di HP */
+  }
+  
+  /* Sembunyikan scrollbar di HP agar halaman di belakang tidak bisa di-scroll */
+  body {
+    overflow: hidden !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   SLIDE 1 — COVER
+   Tidak diubah sama sekali: tetap kartu kecil 900x400,
+   hanya dibungkus section agar bisa ditumpuk dengan slide berikutnya.
+   ============================================================ */
+.cover-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 88px);
+  width: 100%;
+}
+
+/* Card Utama */
+.card-container {
+  position: relative;
+  width: 900px;
+  height: 400px;
+  background-color: #ffffff;
+  border: 2px solid #000;
+  border-radius: 1%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge Pojok Kiri Atas */
+.badge-far {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Section Kiri */
+.left-section {
+  padding: 60px 40px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 55%;
+  z-index: 2;
+}
+
+/* Block Header / Judul */
+.header-title {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.main-title {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  color: #1a1a1a;
+}
+
+.barcode-top-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barcode-top {
+  font-family: 'Libre Barcode 39', cursive;
+  font-size: 42px;
+  line-height: 0.1;
+}
+
+.sub-top {
+  font-size: 20px;
+  letter-spacing: 10px;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* Tagline */
+.tagline {
+  margin-top: 25px;
+  font-size: 18px;
+  color: #222;
+  line-height: 1.3;
+}
+
+.tagline strong {
+  font-weight: 900;
+}
+
+/* Section Barcode Bawah & Typing Text */
+.bottom-barcode-container {
+  margin-top: auto;
+}
+
+.barcode-bottom {
+  font-family: 'Libre Barcode 39', cursive;
+  font-size: 48px;
+  line-height: 0.8;
+  letter-spacing: 2px;
+}
+
+.typing-container {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  color: #1a1a1a;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+/* Kursor Mengetik */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background-color: #000;
+  margin-left: 3px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Container Utama Kanan */
+.right-section {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+}
+
+.right-section img {
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+}
+
+/* Container Utama Kanan */
+.right-section-2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+}
+
+.right-section-2 img {
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+}
+
+
+/* Handle Instagram Tag */
+.ig-handle {
+  position: absolute;
+  top: 90px;
+  right: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #000;
+  z-index: 3;
+}
+
+/* Wadah Pembungkus Gambar */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+}
+
+/* Base Animasi Gambar */
+.img-front,
+.img-back,
+.img-onion,
+.img-onion_2 {
+  opacity: 0;
+  animation: fadeSlideLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Gambar Depan */
+.img-front {
+  position: relative;
+  top: 10%; 
+  z-index: 2;
+  height: 100%;
+  display: block;
+  animation-delay: 0.2s;
+}
+
+/* Gambar Belakang */
+.img-back {
+  position: absolute;
+  top: 0%; 
+  left: -50%;
+  z-index: -1;
+  width: 190%;
+  height: 120%;
+  object-fit: contain;
+  transform: scale(1.2);
+  transform-origin: center;
+  animation-delay: 0.8s;
+  max-width: 150%;
+}
+
+.img-onion {
+  position: absolute;
+  top: 30%; 
+  left: 0%;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.2);
+  transform-origin: center;
+  animation-delay: 1.4s;
+  filter: opacity(0.5);
+}
+
+.img-onion_2 {
+  position: absolute;
+  top: -3%; 
+  left: 20%;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.2);
+  transform-origin: center;
+  animation-delay: 1.9s;
+  filter: opacity(0.5);
+}
+
+
+/* Keyframe Animasi Fade ke Kiri */
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* ============================================================
+   SLIDE 2 — ABOUT ME (FULL LAYAR)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+.about-slide {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  border-top: 2px solid #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 60px 6vw;
+  gap: 4vw;
+  min-height: calc(100vh - 88px);
+}
+
+/* Badge FAR di slide About (identik gaya dengan cover) */
+.about-slide .badge-far {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 60px;
+  height: 60px;
+  font-size: 15px;
+  
+}
+
+/* -------- Dekorasi blob abu-abu (kanan atas) -------- */
+.blob-deco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 60%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.blob-deco span {
+  position: absolute;
+  display: block;
+  background-color: #e2e2e2;
+  border-radius: 999px;
+}
+
+.blob-deco .b1 { top: -30px;  right: 120px; width: 340px; height: 90px;  transform: rotate(90deg); }
+.blob-deco .b2 { top: 60px;   right: -40px; width: 300px; height: 90px; }
+.blob-deco .b3 { top: 150px;  right: 260px; width: 480px; height: 90px; background-color:#ececec; }
+
+/* -------- Kolom Kiri: Ilustrasi + tombol -------- */
+.about-left {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 34%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  min-height: 70vh;
+}
+
+.about-illustration-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-illustration-wrap img {
+  max-width: 100%;
+  height: auto;
+  max-height: 62vh;
+  object-fit: contain;
+
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.about-illustration-wrap img.in-view {
+  animation: fadeSlideInLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes fadeSlideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.view-cv-btn {
+  align-self: flex-start;
+  margin-top: 24px;
+  padding: 14px 28px;
+  background-color: #e6e6e6;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #111;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.view-cv-btn:hover {
+  background-color: #d3d3d3;
+  transform: translateY(-2px);
+}
+
+/* -------- Kolom Kanan: Judul + kartu bio -------- */
+.about-right {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 70vh;
+  justify-content: center;
+}
+
+
+
+.about-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2vw, 24px);
+  color: #3b2fe0;
+  margin-top: 4px;
+  margin-bottom: 28px;
+}
+
+    .about-card {
+      position: relative;
+      flex: 1;
+      max-height: 60vh;
+      /* Gunakan RGBA dengan opacity 0.5 pada warnanya */
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(242, 242, 242, 0.5) 100%);
+      /* Opsional: Efek kaca buram (Glassmorphism) */
+      backdrop-filter: blur(8px); 
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 18px;
+      padding: 36px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+.about-card-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #000000;
+  max-width: 70%;
+}
+
+/* barcode + nama di pojok kanan bawah kartu bio */
+.about-card-id {
+  position: absolute;
+  right: 32px;
+  bottom: 24px;
+  z-index: 2;
+  text-align: right;
+}
+
+.about-card-id .barcode-mini {
+  font-family: 'Libre Barcode 39', cursive;
+  font-size: 30px;
+  line-height: 0.7;
+}
+
+.about-card-id .name-mini {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #1a1a1a;
+  margin-top: 2px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .about-slide {
+    flex-direction: column;
+    padding: 100px 6vw 60px;
+    gap: 32px;
+  }
+  .about-left, .about-right {
+    flex: none;
+    width: 100%;
+    min-height: unset;
+  }
+  .about-card-text { max-width: 100%; }
+  .blob-deco { width: 100%; opacity: 0.6; }
+}
+
+
+/* ---------------- Base Animasi ---------------- */
+[data-animate] {
+  opacity: 0;
+  transform: var(--anim-slide, translateX(0)) var(--base-transform, );
+  /* Tambahkan transition-delay di sini */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) var(--delay, 0s), 
+              opacity 0.8s ease var(--delay, 0s);
+  will-change: transform, opacity;
+}
+
+/* Slide KANAN ke KIRI */
+[data-animate="slide-right"] {
+  --anim-slide: translateX(50px);
+}
+
+/* Slide KIRI ke KANAN */
+[data-animate="slide-left"] {
+  --anim-slide: translateX(-50px);
+}
+
+/* ---------------- Saat Masuk Layar (in-view) ---------------- */
+[data-animate].in-view {
+  /* Kembali ke opacity milik elemen (default 1 jika tidak diatur) */
+  opacity: var(--target-opacity, 1);
+  /* Netralkan geseran slide, tapi pertahankan transform bawaan (seperti scale) */
+  --anim-slide: translateX(0);
+}
+
+.img-onion-netral-1 {
+  position: absolute;
+  top: -6%; 
+  left: 30%;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+/* Atur nilai khusus di sini agar tidak tertimpa animasi */
+  --target-opacity: 0.2;
+  --base-transform: scale(1.2);
+  /* Jeda waktu animasi (langsung/tanpa delay) */
+  --delay: 0.2s;
+
+}
+
+.img-onion-netral {
+  position: absolute;
+  top: 30%; 
+  left: 0%;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+/* Atur nilai khusus di sini agar tidak tertimpa animasi */
+  --target-opacity: 0.2;
+  --base-transform: scale(1.2);
+  /* Jeda waktu animasi (langsung/tanpa delay) */
+  --delay: 0.5s;
+}
+
+
+.img-onion-netral-2 {
+  position: absolute;
+  top: -10%; 
+  left: -90%;
+  z-index: 0;
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+/* Atur nilai khusus di sini agar tidak tertimpa animasi */
+  --target-opacity: 0.2;
+  --base-transform: scale(1.2);
+  /* Jeda waktu animasi (langsung/tanpa delay) */
+  --delay: 0.2s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*experience................................*/
+/* =========================================================
+   SECTION EXPERIENCE & SOFTWARE SKILLS
+   ========================================================= */
+
+.experience-section {
+  background-color: #ffffff;
+  padding: 64px 32px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.exp-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.exp-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+/* Layout Grid Kolom */
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Item Pengalaman */
+.exp-item {
+  border-left: 2px solid #000000;
+  padding-left: 16px;
+}
+
+.exp-item.org-item {
+  border-left-color: #d1d5db; /* Garis abu-abu untuk organisasi */
+}
+
+.exp-item h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.exp-item .company {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin: 4px 0 0 0;
+}
+
+.exp-item .date {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+/* Pembatas Horizontal */
+.exp-divider {
+  border: 0;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-bottom: 40px;
+}
+/* Section Grid Software (>10 Logo) */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.skill-card {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  z-index: 1; /* Posisi awal agar tertata rapi */
+}
+
+.skill-card img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+/* Efek Hover Logo & Tooltip Teks */
+.skill-card:hover {
+  background-color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 20; /* MENAIKKAN POSISI KARTU YANG DI-HOVER KE PALING ATAS */
+}
+
+.skill-card:hover img {
+  filter: brightness(0) invert(1); /* Membuat logo putih saat dihover */
+}
+
+/* Tooltip Nama Software */
+.skill-card::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-family: sans-serif;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  z-index: 30; /* Tooltip selalu berada di atas kartu */
+}
+
+.skill-card:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

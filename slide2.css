@@ -1,0 +1,370 @@
+/* Menghapus efek sticky khusus slide logomark agar ter-scroll normal ke bawah */
+.normal-flow-slide {
+  position: relative !important;
+  top: auto !important;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 10; /* Memastikan slide ini mendorong dan menutupi stack wrapper di atasnya saat di-scroll */
+  background-color: #ffffff;
+}
+
+/* ==========================================
+   LAYOUT SLIDE LOGOMARK (MATCHING DESIGN)
+   ========================================== */
+.slide-logomark-4 {
+  position: relative !important;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Badge FAR Pojok Kiri Atas */
+.badge-far-4 {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 45px;
+  height: 45px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 13px;
+  z-index: 30;
+}
+
+/* Header Hitam Atas */
+.logomark-header-4 {
+  width: 100%;
+  background-color: #000000;
+  padding: 18px 0;
+  text-align: center;
+  z-index: 20;
+}
+
+.logomark-title-4 {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+  letter-spacing: 6px;
+  margin: 0;
+}
+
+/* Container Grid Kertas Milimeter (Catur) */
+.grid-background-4 {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+  background-size: 32px 32px; /* Ukuran kotak grid */
+  position: relative;
+}
+
+/* Baris Grid 3 Kolom */
+.grid-row-4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex: 1;
+  align-items: center;
+  justify-items: center;
+}
+
+.grid-col-4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.logomark-img-4 {
+  padding: 1%;
+  position: absolute;
+  max-width: 56%;
+  max-height: 56%;
+  object-fit: contain;
+}
+
+/* Garis Pembatas Hitam */
+.black-divider-4 {
+  width: 100%;
+  height: 40px;
+  background-color: #000000;
+  position: relative;
+}
+
+.black-divider-4.bottom-divider-4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Icon Kotak Hitam Rounded (Kanan Baris 2) */
+.app-icon-card-4 {
+  width: 140px;
+  height: 140px;
+  background-color: #000000;
+  border-radius: 35px; /* Sudut tumpul persis gambar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Mini Icon di Tengah Pembatas Bawah */
+.app-icon-card-4.mini-icon-4 {
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
+  position: absolute;
+  top: -60px; /* Nangkring tepat di tengah garis pembatas bawah */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 15;
+}
+
+.icon-img-4 {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+
+
+
+/* Indikator Navigasi Spasi */
+.space-hint {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  pointer-events: none; /* Supaya tidak menghalangi klik di sekitarnya */
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* Tampilan Tombol Keyboard Fizik */
+.key-cap {
+  background: #ffffff;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 #b2b2b2;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*css galeri*/
+/* Layout Utama Galeri */
+.gallery-section {
+  position: relative;
+  z-index: 99;
+  background: linear-gradient(180deg, #000000 0%, hsl(41, 100%, 50%) 100%);
+  padding: 80px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+
+/* Grid Layout Asimetris (Sesuai Gambar Referensi) */
+.gallery-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 8px; /* Celah tipis antar gambar */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+/* ==========================================
+   EFEK HITAM PUTIH PADA GALERI
+   ========================================== */
+
+/* 1. Kondisi Default: Gambar dalam galeri berwarna hitam putih */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease; /* Tambahkan efek transisi warna yang halus */
+  background-color: #000000;
+  filter: grayscale(100%); /* Mengubah gambar menjadi Hitam-Putih */
+}
+
+/* 2. Kondisi Hover (Kursor di atas gambar): Gambar kembali berwarna normal */
+.gallery-item:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%); /* Kembali ke warna asli */
+}
+
+/* 3. Kondisi Ditekan (Click/Active): Gambar dipastikan berwarna normal saat diklik */
+.gallery-item img:active {
+  filter: grayscale(0%);
+}
+
+/* 4. Gambar di Dalam Pop-up Modal: Selalu Tampil Berwarna Normal */
+.modal-content {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+  filter: grayscale(0%) !important; /* Dipastikan gambar di pop-up berwarna penuh */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  
+}
+
+/* Pemetaan Ukuran Grid Sesuai Gambar Referensi */
+.item-tall {
+  grid-column: span 1;
+  grid-row: span 2; /* Gambar vertikal tinggi di sisi kiri */
+}
+
+.item-wide {
+  grid-column: span 2;
+  grid-row: span 1; /* Gambar horizontal lebar di sisi kanan */
+}
+
+.item-square {
+  grid-column: span 1;
+  grid-row: span 1; /* Gambar kotak standar */
+}
+
+/* Styling Overlay Modal Pop-up */
+.modal-overlay {
+  display: none; /* Sembunyikan default */
+  position: fixed;
+  z-index: 9999; /* Selalu di paling depan */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Background hitam transparan */
+  backdrop-filter: blur(5px); /* Efek blur latar belakang */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Tampilkan Modal saat Aktif */
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Gambar di dalam Modal */
+.modal-content {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1); /* Efek Zoom In saat muncul */
+}
+
+/* Tombol Close (Silang) */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #ff4d4d;
+}
+
+
+
+
+
+
+.gallery-container .gallery-item:nth-child(9) img {
+  object-fit: contain !important;
+  background-color: transparent !important; /* Kotak hitam pembungkus gambar hilang */
+  filter: grayscale(0%) !important;
+  overflow: visible !important; /* Diperlukan agar bayangan luar tidak terpotong */
+}
+
+
+/* Mematikan efek perbesaran (scale) saat hover khusus untuk gambar ke-9 */
+.gallery-container .gallery-item:nth-child(9):hover img {
+  transform: none !important; /* Menghapus efek zoom-in saat kursor di atasnya */
+  filter: grayscale(0%) !important; /* Memastikan warna tetap normal saat di-hover */
+}

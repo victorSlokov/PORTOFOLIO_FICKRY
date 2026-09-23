@@ -1,0 +1,61 @@
+/* Reset Margin & Body agar tidak ada scrollbar liar */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  overflow-x: hidden;
+}
+
+/* Container Utama Section PDF */
+.pdf-viewer-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0d0d0d;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 10;
+  overflow: hidden; /* Mencegah leker ke luar section */
+}
+
+/* Pembungkus Halaman Memanjang (Scroll Snap Container) */
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth; 
+}
+
+/* Kartu Per Halaman (Full Layar Presisi) */
+.pdf-page {
+  width: 98vw;
+  height: 100vh;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start; 
+  /* scroll-snap-stop: always;  <-- HAPUS / HILANGKAN BARIS INI */
+  line-height: 0;
+  background-color: #0d0d0d;
+}
+
+
+/* Optimasi Gambar Halaman agar Penuh & Proporsoinal */
+.pdf-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Gambar pas 1 layar tanpa terpotong & tanpa melar */
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
