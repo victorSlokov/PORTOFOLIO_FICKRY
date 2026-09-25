@@ -3,7 +3,7 @@
   background-color: #020202;
   z-index: 1;
 }
-.slide-2 {
+.slide-1-2 {
   /* 0.6 artinya background memiliki tingkat transparansi 60% */
   background-color: rgba(2, 2, 2, 0.6); 
   
@@ -12,9 +12,35 @@
   
   z-index: 1;
 }
+/* Buat section sebagai acuan posisi */
+.slide-2 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Agar tinggi slide penuh layar */
+  overflow: hidden;
+}
+
+/* Mengubah gambar HTML biasa menjadi background full-cover */
+.slide-2 .slide-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agar gambar tidak gepeng/distorsi */
+  object-position: center;
+  z-index: 0; /* Menempatkan gambar di lapisan paling belakang */
+  pointer-events: none; /* Mencegah gambar mengganggu klik mouse */
+}
+
+/* Memastikan konten teks/elemen berada di depan gambar background */
+.slide-2 .slide-content-2 {
+  position: relative;
+  z-index: 1;
+}
 
 /* Gambar di dalamnya dijamin 100% solid dan tidak terpengaruh */
-.slide-2 img {
+.slide-1-2 img {
   opacity: 100%;
 }
 /* ============================================================

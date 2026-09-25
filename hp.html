@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>むちねこ - CONCEPT DESIGN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'muchi-bg': '#F6F4EE',
+                        'muchi-card': '#E6E1D7',
+                        'muchi-muted': '#BEBBAD',
+                        'muchi-gray': '#777777',
+                        'muchi-dark': '#333333',
+                        'muchi-black': '#111111',
+                    },
+                    fontFamily: {
+                        sans: ['"M PLUS Rounded 1c"', '"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F6F4EE;
+            color: #333333;
+            font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F6F4EE;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #BEBBAD;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #777777;
+        }
+
+        /* Float animation for elements */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(-2deg); }
+        }
+
+        .animate-float {
+            animation: float 2.5s ease-in-out infinite;
+        }
+
+        @keyframes bob {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-4px); }
+        }
+
+        .animate-bob {
+            animation: bob 1.8s ease-in-out infinite;
+        }
+
+        /* Phone Screen Canvas Aspect Ratio & Shadow */
+        .phone-shadow {
+            box-shadow: 0 25px 50px -12px rgba(17, 17, 17, 0.25), 
+                        0 0 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Pixel art rendering for retro components if needed */
+        .pixelated {
+            image-rendering: pixelated;
+        }
+
+        /* Smooth UI Transitions */
+        .interactive-card {
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .interactive-card:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8 md:p-12 max-w-6xl mx-auto flex flex-col justify-between select-none">
+
+    <header class="flex flex-col md:flex-row justify-between items-start mb-8 gap-6 border-b border-muchi-muted/30 pb-6">
+        <div>
+            <h1 class="text-4xl sm:text-5xl font-black tracking-widest text-muchi-black mb-1">
+                むちねこ
+            </h1>
+            <p class="text-xs font-bold tracking-widest uppercase text-muchi-gray mb-3">
+                CONCEPT DESIGN
+            </p>
+            <p class="text-sm font-medium text-muchi-dark tracking-wider">
+                食べたい。でも、飛べなくなる。
+            </p>
+            <div class="w-8 h-0.5 bg-muchi-black mt-3"></div>
+        </div>
+
+        <div class="text-xs text-muchi-dark space-y-1.5 font-medium leading-relaxed bg-muchi-card/30 p-4 rounded-xl border border-muchi-muted/20">
+            <p class="font-bold tracking-wider text-muchi-black mb-1 uppercase">CONCEPT</p>
+            <p>・ 食べるほど、重くなる。</p>
+            <p>・ 走る、跳ぶ、落ちる。</p>
+            <p>・ むちむちでも、ゴールをめざす。</p>
+        </div>
+    </header>
+
+    <main class="my-4">
+        <div class="relative max-w-4xl mx-auto">
+            <!-- Smartphone Shell -->
+            <div class="relative bg-muchi-black p-3 sm:p-5 rounded-[40px] sm:rounded-[50px] phone-shadow border-4 border-muchi-dark/20">
+                <!-- Phone Frame Details -->
+                <!-- Dynamic Island / Notch -->
+                <div class="absolute top-1/2 left-3 sm:left-4 -translate-y-1/2 w-3 h-16 sm:w-4 sm:h-24 bg-muchi-black rounded-full z-30 flex flex-col items-center justify-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-muchi-dark/60"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-muchi-dark/40"></div>
+                </div>
+
+                <!-- Phone Inner Screen -->
+                <div id="gameScreen" class="relative bg-[#EAE7DC] h-64 sm:h-80 md:h-96 rounded-[28px] sm:rounded-[36px] overflow-hidden flex flex-col justify-between p-4 sm:p-6 text-muchi-black">
+                    
+                    <div class="relative z-20 flex justify-between items-start">
+                        <!-- Weight Gauge (Top Left) -->
+                        <div class="w-36 sm:w-48 bg-muchi-bg/80 backdrop-blur-sm p-2 rounded-xl border border-muchi-dark/10 shadow-sm">
+                            <div class="flex justify-between items-center text-[10px] sm:text-xs font-bold tracking-wider mb-1">
+                                <span>WEIGHT</span>
+                                <span id="weightText">42%</span>
+                            </div>
+                            <div class="w-full h-2.5 sm:h-3 bg-muchi-card rounded-full overflow-hidden p-0.5 border border-muchi-dark/20">
+                                <div id="weightFill" class="h-full bg-muchi-black rounded-full transition-all duration-300" style="width: 42%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Collectibles & Controls (Top Right) -->
+                        <div class="flex items-center gap-3 bg-muchi-bg/80 backdrop-blur-sm px-3 py-1.5 rounded-xl border border-muchi-dark/10 shadow-sm">
+                            <!-- Kibble Icon + Count -->
+                            <div class="flex items-center gap-1.5 text-xs sm:text-sm font-bold">
+                                <svg class="w-4 h-4 text-muchi-black" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C8 2 4 6 4 10c0 5.25 8 12 8 12s8-6.75 8-12c0-4-4-8-8-8zm0 14c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/>
+                                </svg>
+                                <span>× <span id="foodCount">18</span></span>
+                            </div>
+                            <div class="w-px h-4 bg-muchi-gray/30"></div>
+                            <!-- Pause Button -->
+                            <button id="pauseBtn" class="hover:opacity-70 transition-opacity">
+                                <svg class="w-4 h-4 text-muchi-black" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Background Skyline -->
+                    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                        <!-- Distant Buildings Silhouette -->
+                        <div class="absolute bottom-12 left-0 right-0 flex items-end justify-between opacity-25 px-4">
+                            <div class="w-12 h-32 bg-muchi-gray rounded-t"></div>
+                            <div class="w-16 h-48 bg-muchi-gray rounded-t flex flex-col justify-around p-1">
+                                <div class="w-2 h-2 bg-muchi-bg rounded-xs"></div>
+                                <div class="w-2 h-2 bg-muchi-bg rounded-xs"></div>
+                            </div>
+                            <div class="w-20 h-40 bg-muchi-gray rounded-t"></div>
+                            <div class="w-14 h-56 bg-muchi-gray rounded-t"></div>
+                            <div class="w-24 h-36 bg-muchi-gray rounded-t"></div>
+                            <div class="w-16 h-44 bg-muchi-gray rounded-t"></div>
+                        </div>
+
+                        <!-- Midground Buildings -->
+                        <div class="absolute bottom-8 left-0 right-0 flex items-end justify-around opacity-60">
+                            <div class="w-20 h-40 bg-muchi-muted rounded-t relative">
+                                <div class="absolute top-2 left-2 right-2 grid grid-cols-2 gap-1">
+                                    <div class="h-3 bg-muchi-bg/40 rounded-xs"></div>
+                                    <div class="h-3 bg-muchi-bg/40 rounded-xs"></div>
+                                    <div class="h-3 bg-muchi-bg/40 rounded-xs"></div>
+                                    <div class="h-3 bg-muchi-bg/40 rounded-xs"></div>
+                                </div>
+                            </div>
+                            <div class="w-28 h-48 bg-muchi-muted rounded-t relative">
+                                <!-- Japanese Vertical Signboard -->
+                                <div class="absolute top-6 -left-3 bg-muchi-bg text-muchi-black text-[9px] font-bold py-2 px-1 rounded border border-muchi-dark tracking-widest writing-vertical">
+                                    むちねこ
+                                </div>
+                            </div>
+                            <div class="w-16 h-36 bg-muchi-muted rounded-t"></div>
+                            <div class="w-24 h-52 bg-muchi-muted rounded-t"></div>
+                        </div>
+
+                        <!-- Foreground Rooftops (Platforms) -->
+                        <div class="absolute bottom-0 left-0 w-1/2 h-20 bg-muchi-dark rounded-tr-lg border-t-2 border-muchi-black">
+                            <!-- Rooftop Details -->
+                            <div class="absolute -top-6 left-10 w-8 h-6 border-t-2 border-l-2 border-r-2 border-muchi-black bg-muchi-dark"></div>
+                        </div>
+
+                        <div class="absolute bottom-0 right-0 w-2/5 h-16 bg-muchi-dark rounded-tl-lg border-t-2 border-muchi-black flex justify-center items-start pt-2">
+                            <!-- Cat Can Item on Roof -->
+                            <div id="roofCan" class="animate-bob cursor-pointer transform hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8" viewBox="0 0 40 40">
+                                    <rect x="8" y="12" width="24" height="20" rx="3" fill="#333333" stroke="#111111" stroke-width="2"/>
+                                    <ellipse cx="20" cy="12" rx="12" ry="3" fill="#BEBBAD" stroke="#111111" stroke-width="2"/>
+                                    <rect x="10" y="16" width="20" height="12" rx="1" fill="#F6F4EE"/>
+                                    <!-- Cat face icon on can -->
+                                    <path d="M16 20 L18 20 L17 22 Z M22 20 L24 20 L23 22 Z" fill="#111111"/>
+                                    <circle cx="20" cy="23" r="1.5" fill="#111111"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Floating Pellets Trail -->
+                        <div class="absolute top-1/2 left-1/2 flex gap-3 -translate-y-4">
+                            <div class="w-2.5 h-2.5 bg-muchi-dark rounded-full animate-pulse"></div>
+                            <div class="w-2.5 h-2.5 bg-muchi-dark rounded-full animate-pulse delay-75"></div>
+                            <div class="w-2.5 h-2.5 bg-muchi-dark rounded-full animate-pulse delay-150"></div>
+                        </div>
+                    </div>
+
+                    <div id="mainCatContainer" class="absolute top-24 left-1/3 z-10 animate-float transition-all duration-300">
+                        <svg id="heroCatSvg" class="w-28 h-20 sm:w-36 sm:h-24 drop-shadow-md" viewBox="0 0 120 80">
+                            <!-- Motion Trail Dots -->
+                            <g class="opacity-40">
+                                <circle cx="10" cy="50" r="1.5" fill="#111111"/>
+                                <circle cx="16" cy="44" r="2" fill="#111111"/>
+                                <circle cx="22" cy="52" r="1.5" fill="#111111"/>
+                            </g>
+                            
+                            <!-- Cat Body Outer / Shadow -->
+                            <ellipse id="catBody" cx="65" cy="45" rx="32" ry="24" fill="#F6F4EE" stroke="#111111" stroke-width="3.5"/>
+                            
+                            <!-- Black Spot Patterns on Body -->
+                            <path d="M 50 23 Q 65 20 75 28 Q 60 40 42 32 Z" fill="#111111"/>
+                            <path d="M 80 35 Q 92 40 85 55 Q 75 50 80 35 Z" fill="#111111"/>
+
+                            <!-- Head -->
+                            <circle cx="82" cy="35" r="14" fill="#F6F4EE" stroke="#111111" stroke-width="3.5"/>
+                            <!-- Ears -->
+                            <path d="M 74 24 L 78 14 L 84 22 Z" fill="#111111" stroke="#111111" stroke-width="2"/>
+                            <path d="M 85 22 L 92 15 L 94 25 Z" fill="#F6F4EE" stroke="#111111" stroke-width="2"/>
+
+                            <!-- Face Details -->
+                            <!-- Eyes (Happy Closed) -->
+                            <path d="M 84 34 Q 87 31 89 34" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Whiskers -->
+                            <line x1="92" y1="36" x2="102" y2="34" stroke="#111111" stroke-width="1.5"/>
+                            <line x1="92" y1="38" x2="100" y2="41" stroke="#111111" stroke-width="1.5"/>
+                            
+                            <!-- Legs Extended Flying Pose -->
+                            <!-- Back Paws -->
+                            <ellipse cx="38" cy="50" rx="7" ry="4" fill="#F6F4EE" stroke="#111111" stroke-width="3" transform="rotate(-15 38 50)"/>
+                            <!-- Front Paws -->
+                            <ellipse cx="88" cy="55" rx="7" ry="4" fill="#F6F4EE" stroke="#111111" stroke-width="3" transform="rotate(15 88 55)"/>
+
+                            <!-- Tail -->
+                            <path d="M 35 42 Q 22 40 20 28" fill="none" stroke="#111111" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+
+                    <!-- Bottom Screen Label -->
+                    <div class="relative z-10 text-center text-[10px] tracking-widest text-muchi-gray uppercase font-semibold">
+                        Tap elements below to interact with weight state
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-8 space-y-8">
+        
+        <!-- Grid Top: Action Poses, Body States, Collectible Items -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-muchi-muted/30">
+            
+            <!-- SYSTEM / ACTION POSES -->
+            <div class="bg-muchi-card/20 p-4 rounded-2xl border border-muchi-muted/20 flex flex-col justify-between">
+                <h2 class="text-xs font-bold tracking-widest uppercase text-muchi-gray mb-4">SYSTEM</h2>
+                <div class="grid grid-cols-3 gap-2 text-center">
+                    
+                    <!-- Run -->
+                    <div class="flex flex-col items-center group cursor-pointer" onclick="setCatPose('run')">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-muchi-bg border border-muchi-muted/40 group-hover:border-muchi-black transition-colors">
+                            <svg class="w-12 h-12" viewBox="0 0 60 40">
+                                <ellipse cx="30" cy="22" rx="14" ry="10" fill="#111111"/>
+                                <circle cx="40" cy="16" r="6" fill="#111111"/>
+                                <!-- Running paws extended -->
+                                <line x1="18" y1="26" x2="10" y2="32" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="38" y1="28" x2="46" y2="34" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+                                <!-- Speed lines -->
+                                <line x1="4" y1="18" x2="10" y2="18" stroke="#111111" stroke-width="1.5"/>
+                                <line x1="2" y1="22" x2="8" y2="22" stroke="#111111" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold mt-2 text-muchi-dark">走る</span>
+                    </div>
+
+                    <!-- Jump -->
+                    <div class="flex flex-col items-center group cursor-pointer" onclick="setCatPose('jump')">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-muchi-bg border border-muchi-muted/40 group-hover:border-muchi-black transition-colors">
+                            <svg class="w-12 h-12" viewBox="0 0 60 40">
+                                <ellipse cx="30" cy="18" rx="13" ry="9" fill="#111111" transform="rotate(-20 30 18)"/>
+                                <circle cx="38" cy="12" r="6" fill="#111111"/>
+                                <path d="M 22 24 L 16 32 M 32 24 L 38 32" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold mt-2 text-muchi-dark">跳ぶ</span>
+                    </div>
+
+                    <!-- Fall -->
+                    <div class="flex flex-col items-center group cursor-pointer" onclick="setCatPose('fall')">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-xl bg-muchi-bg border border-muchi-muted/40 group-hover:border-muchi-black transition-colors">
+                            <svg class="w-12 h-12" viewBox="0 0 60 40">
+                                <circle cx="30" cy="22" r="11" fill="#111111"/>
+                                <circle cx="30" cy="14" r="5" fill="#111111"/>
+                                <!-- Ears -->
+                                <path d="M 26 10 L 28 6 L 30 10 Z M 30 10 L 32 6 L 34 10 Z" fill="#111111"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold mt-2 text-muchi-dark">落ちる</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CAT STATE / WEIGHT PROGRESSION -->
+            <div class="bg-muchi-card/20 p-4 rounded-2xl border border-muchi-muted/20 flex flex-col justify-between">
+                <h2 class="text-xs font-bold tracking-widest uppercase text-muchi-gray mb-4">CAT STATE</h2>
+                <div class="flex justify-around items-center">
+                    
+                    <!-- Light State -->
+                    <div class="flex flex-col items-center cursor-pointer group" onclick="updateWeight(10)">
+                        <div class="w-14 h-14 flex items-center justify-center">
+                            <svg class="w-10 h-10 transition-transform group-hover:scale-110" viewBox="0 0 40 40">
+                                <ellipse cx="20" cy="24" rx="9" ry="7" fill="#F6F4EE" stroke="#111111" stroke-width="2"/>
+                                <circle cx="20" cy="15" r="5" fill="#F6F4EE" stroke="#111111" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold text-muchi-dark">軽い</span>
+                    </div>
+
+                    <span class="text-muchi-gray text-xs">→</span>
+
+                    <!-- Normal State -->
+                    <div class="flex flex-col items-center cursor-pointer group" onclick="updateWeight(50)">
+                        <div class="w-14 h-14 flex items-center justify-center">
+                            <svg class="w-12 h-12 transition-transform group-hover:scale-110" viewBox="0 0 40 40">
+                                <ellipse cx="20" cy="23" rx="12" ry="9" fill="#F6F4EE" stroke="#111111" stroke-width="2"/>
+                                <circle cx="20" cy="14" r="5.5" fill="#F6F4EE" stroke="#111111" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold text-muchi-dark">ふつう</span>
+                    </div>
+
+                    <span class="text-muchi-gray text-xs">→</span>
+
+                    <!-- Heavy State -->
+                    <div class="flex flex-col items-center cursor-pointer group" onclick="updateWeight(95)">
+                        <div class="w-14 h-14 flex items-center justify-center">
+                            <svg class="w-14 h-14 transition-transform group-hover:scale-110" viewBox="0 0 40 40">
+                                <circle cx="20" cy="22" r="13" fill="#F6F4EE" stroke="#111111" stroke-width="2"/>
+                                <circle cx="20" cy="13" r="6" fill="#F6F4EE" stroke="#111111" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold text-muchi-dark">重い</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ITEMS -->
+            <div class="bg-muchi-card/20 p-4 rounded-2xl border border-muchi-muted/20 flex flex-col justify-between">
+                <h2 class="text-xs font-bold tracking-widest uppercase text-muchi-gray mb-4">ITEMS</h2>
+                <div class="flex justify-around items-center">
+                    
+                    <!-- Kibble -->
+                    <div class="flex flex-col items-center cursor-pointer group" onclick="addFood(1)">
+                        <div class="w-14 h-14 flex items-center justify-center bg-muchi-bg rounded-xl border border-muchi-muted/30 group-hover:border-muchi-black transition-colors">
+                            <svg class="w-8 h-8" viewBox="0 0 30 30">
+                                <circle cx="11" cy="18" r="4" fill="#333333"/>
+                                <circle cx="19" cy="18" r="4" fill="#333333"/>
+                                <circle cx="15" cy="12" r="4" fill="#333333"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold mt-2 text-muchi-dark">カリカリ</span>
+                    </div>
+
+                    <!-- Canned Food -->
+                    <div class="flex flex-col items-center cursor-pointer group" onclick="addFood(5)">
+                        <div class="w-14 h-14 flex items-center justify-center bg-muchi-bg rounded-xl border border-muchi-muted/30 group-hover:border-muchi-black transition-colors">
+                            <svg class="w-8 h-8" viewBox="0 0 32 32">
+                                <rect x="6" y="10" width="20" height="16" rx="2" fill="#333333" stroke="#111111" stroke-width="1.5"/>
+                                <ellipse cx="16" cy="10" rx="10" ry="2.5" fill="#BEBBAD" stroke="#111111" stroke-width="1.5"/>
+                                <rect x="8" y="13" width="16" height="9" rx="1" fill="#F6F4EE"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold mt-2 text-muchi-dark">ねこ缶</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-muchi-muted/30">
+            
+            <!-- WEIGHT GAUGE PRESETS -->
+            <div class="space-y-3">
+                <h2 class="text-xs font-bold tracking-widest uppercase text-muchi-gray">WEIGHT GAUGE</h2>
+                <div class="flex items-center gap-4 bg-muchi-card/20 p-4 rounded-2xl border border-muchi-muted/20">
+                    
+                    <!-- 0% Gauge -->
+                    <div class="flex-1 text-center cursor-pointer" onclick="updateWeight(0)">
+                        <div class="w-full h-3 bg-muchi-card rounded-full overflow-hidden border border-muchi-dark/20 p-0.5">
+                            <div class="h-full bg-muchi-black rounded-full" style="width: 0%"></div>
+                        </div>
+                        <span class="text-[10px] font-bold text-muchi-gray mt-1 inline-block">0%</span>
+                    </div>
+
+                    <span class="text-muchi-gray text-xs">→</span>
+
+                    <!-- 50% Gauge -->
+                    <div class="flex-1 text-center cursor-pointer" onclick="updateWeight(50)">
+                        <div class="w-full h-3 bg-muchi-card rounded-full overflow-hidden border border-muchi-dark/20 p-0.5">
+                            <div class="h-full bg-muchi-black rounded-full" style="width: 50%"></div>
+                        </div>
+                        <span class="text-[10px] font-bold text-muchi-gray mt-1 inline-block">50%</span>
+                    </div>
+
+                    <span class="text-muchi-gray text-xs">→</span>
+
+                    <!-- 100% Gauge -->
+                    <div class="flex-1 text-center cursor-pointer" onclick="updateWeight(100)">
+                        <div class="w-full h-3 bg-muchi-card rounded-full overflow-hidden border border-muchi-dark/20 p-0.5">
+                            <div class="h-full bg-muchi-black rounded-full" style="width: 100%"></div>
+                        </div>
+                        <span class="text-[10px] font-bold text-muchi-gray mt-1 inline-block">100%</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- KEYWORDS & COLOR PALETTE -->
+            <div class="space-y-4">
+                <!-- Keywords -->
+                <div>
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-muchi-gray mb-2">KEYWORDS</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-muchi-card/40 border border-muchi-muted/50 rounded-full text-xs font-medium text-muchi-dark">肥満</span>
+                        <span class="px-3 py-1 bg-muchi-card/40 border border-muchi-muted/50 rounded-full text-xs font-medium text-muchi-dark">ジャンプ</span>
+                        <span class="px-3 py-1 bg-muchi-card/40 border border-muchi-muted/50 rounded-full text-xs font-medium text-muchi-dark">横スクロール</span>
+                        <span class="px-3 py-1 bg-muchi-card/40 border border-muchi-muted/50 rounded-full text-xs font-medium text-muchi-dark">シンプル</span>
+                        <span class="px-3 py-1 bg-muchi-card/40 border border-muchi-muted/50 rounded-full text-xs font-medium text-muchi-dark">Bauhaus</span>
+                    </div>
+                </div>
+
+                <!-- Color Palette -->
+                <div>
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-muchi-gray mb-2">COLOR PALETTE</h2>
+                    <div class="flex items-center gap-2 sm:gap-3">
+                        <div class="flex flex-col items-center">
+                            <div class="w-8 h-8 rounded-full bg-[#111111] border border-muchi-dark/20 shadow-sm"></div>
+                            <span class="text-[9px] font-mono mt-1 text-muchi-gray">111111</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-8 h-8 rounded-full bg-[#333333] border border-muchi-dark/20 shadow-sm"></div>
+                            <span class="text-[9px] font-mono mt-1 text-muchi-gray">333333</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-8 h-8 rounded-full bg-[#777777] border border-muchi-dark/20 shadow-sm"></div>
+                            <span class="text-[9px] font-mono mt-1 text-muchi-gray">777777</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-8 h-8 rounded-full bg-[#BEBBAD] border border-muchi-dark/20 shadow-sm"></div>
+                            <span class="text-[9px] font-mono mt-1 text-muchi-gray">BEBBAD</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-8 h-8 rounded-full bg-[#E6E1D7] border border-muchi-dark/20 shadow-sm"></div>
+                            <span class="text-[9px] font-mono mt-1 text-muchi-gray">E6E1D7</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-8 h-8 rounded-full bg-[#F6F4EE] border border-muchi-dark/20 shadow-sm"></div>
+                            <span class="text-[9px] font-mono mt-1 text-muchi-gray">F6F4EE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        // State variables
+        let weightPercentage = 42;
+        let foodCounter = 18;
+        let isPaused = false;
+
+        // Elements
+        const weightFill = document.getElementById('weightFill');
+        const weightText = document.getElementById('weightText');
+        const foodCountEl = document.getElementById('foodCount');
+        const catBody = document.getElementById('catBody');
+        const mainCatContainer = document.getElementById('mainCatContainer');
+        const roofCan = document.getElementById('roofCan');
+        const pauseBtn = document.getElementById('pauseBtn');
+
+        // Update Cat Weight & Scale dynamically
+        function updateWeight(newWeight) {
+            weightPercentage = Math.min(100, Math.max(0, newWeight));
+            weightFill.style.width = weightPercentage + '%';
+            weightText.textContent = weightPercentage + '%';
+
+            // Scale cat rx and ry based on weight
+            // Light (0%): rx=24, ry=18
+            // Heavy (100%): rx=40, ry=32
+            const rx = 24 + (weightPercentage / 100) * 16;
+            const ry = 18 + (weightPercentage / 100) * 14;
+
+            catBody.setAttribute('rx', rx);
+            catBody.setAttribute('ry', ry);
+
+            // Lower floating height if too heavy!
+            if (weightPercentage > 75) {
+                mainCatContainer.style.transform = 'translateY(25px)';
+            } else if (weightPercentage < 25) {
+                mainCatContainer.style.transform = 'translateY(-15px)';
+            } else {
+                mainCatContainer.style.transform = 'translateY(0px)';
+            }
+        }
+
+        // Add Food Counter
+        function addFood(amount) {
+            foodCounter += amount;
+            foodCountEl.textContent = foodCounter;
+            
+            // Feeding increases weight
+            updateWeight(weightPercentage + (amount * 3));
+        }
+
+        // Action Pose simulator
+        function setCatPose(pose) {
+            if (pose === 'run') {
+                mainCatContainer.style.transform = 'translateX(-20px) rotate(0deg)';
+            } else if (pose === 'jump') {
+                mainCatContainer.style.transform = 'translateY(-30px) rotate(-15deg)';
+            } else if (pose === 'fall') {
+                mainCatContainer.style.transform = 'translateY(40px) rotate(20deg)';
+            }
+            
+            setTimeout(() => {
+                updateWeight(weightPercentage); // reset to normal float offset
+            }, 1200);
+        }
+
+        // Roof Can Click Interaction
+        roofCan.addEventListener('click', () => {
+            addFood(5);
+            // Quick bounce animation feedback
+            roofCan.style.transform = 'scale(1.4)';
+            setTimeout(() => roofCan.style.transform = 'scale(1)', 200);
+        });
+
+        // Pause button toggle
+        pauseBtn.addEventListener('click', () => {
+            isPaused = !isPaused;
+            if (isPaused) {
+                mainCatContainer.classList.remove('animate-float');
+                pauseBtn.style.opacity = '0.4';
+            } else {
+                mainCatContainer.classList.add('animate-float');
+                pauseBtn.style.opacity = '1';
+            }
+        });
+    </script>
+</body>
+</html>
