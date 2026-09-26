@@ -3,46 +3,23 @@
   background-color: #020202;
   z-index: 1;
 }
+
 .slide-1-2 {
   /* 0.6 artinya background memiliki tingkat transparansi 60% */
-  background-color: rgba(2, 2, 2, 0.6); 
-  
+  background-color: rgba(2, 2, 2, 0.6);
+
   /* Atau jika menggunakan gradasi transparan: */
   /* background: linear-gradient(180deg, rgba(2, 2, 2, 0.8), rgba(2, 2, 2, 0.2)); */
-  
+
   z-index: 1;
 }
-/* Buat section sebagai acuan posisi */
-.slide-2 {
-  position: relative;
-  width: 100%;
-  min-height: 100vh; /* Agar tinggi slide penuh layar */
-  overflow: hidden;
-}
 
-/* Mengubah gambar HTML biasa menjadi background full-cover */
-.slide-2 .slide-bg-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Agar gambar tidak gepeng/distorsi */
-  object-position: center;
-  z-index: 0; /* Menempatkan gambar di lapisan paling belakang */
-  pointer-events: none; /* Mencegah gambar mengganggu klik mouse */
-}
-
-/* Memastikan konten teks/elemen berada di depan gambar background */
-.slide-2 .slide-content-2 {
-  position: relative;
-  z-index: 1;
-}
 
 /* Gambar di dalamnya dijamin 100% solid dan tidak terpengaruh */
 .slide-1-2 img {
   opacity: 100%;
 }
+
 /* ============================================================
    SLIDE 1 konten — Tindak Tutur Barudak
   
@@ -55,10 +32,14 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;      /* Susun elemen dari atas ke bawah */
-  align-items: center;         /* Rata tengah secara horizontal */
-  justify-content: flex-start; /* PAKSA elemen mulai dari PALING ATAS */
-  padding-top: 20px;          /* Atur jarak dari tepi layar atas (bisa diset 0 jika ingin mentok 100%) */
+  flex-direction: column;
+  /* Susun elemen dari atas ke bawah */
+  align-items: center;
+  /* Rata tengah secara horizontal */
+  justify-content: flex-start;
+  /* PAKSA elemen mulai dari PALING ATAS */
+  padding-top: 20px;
+  /* Atur jarak dari tepi layar atas (bisa diset 0 jika ingin mentok 100%) */
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -81,7 +62,8 @@
 /* 3. Atur Container Konten Teks */
 .slide-content-1 {
   position: relative;
-  z-index: 2;              /* pastikan teks di atas gambar background */
+  z-index: 2;
+  /* pastikan teks di atas gambar background */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,25 +77,28 @@
 .project-title-1 {
   width: 100%;
   text-align: center;
-  margin-top: 0 !important;   /* Menghapus margin bawaan <h2> */
+  margin-top: 0 !important;
+  /* Menghapus margin bawaan <h2> */
   padding-top: 0 !important;
   margin-bottom: 10px;
-  
+
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 800;
   color: hsl(41, 100%, 50%);
   line-height: 1.1;
 }
+
 .project-title-2 {
   width: 100%;
   text-align: center;
-  margin-top: 0 !important;   /* Menghapus margin bawaan <h2> */
+  margin-top: 0 !important;
+  /* Menghapus margin bawaan <h2> */
   padding-top: 0 !important;
   margin-bottom: 10px;
-  
+
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 700;
-   color: hsl(0, 7%, 97%);
+  color: hsl(0, 7%, 97%);
   line-height: 1.9;
 }
 
@@ -125,7 +110,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  
+
   font-size: 1.1rem;
   color: hsl(41, 100%, 50%);
   max-width: 600px;
@@ -138,7 +123,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  
+
   font-size: 1.1rem;
   color: hsl(0, 0%, 2%);
   max-width: 600px;
@@ -146,7 +131,7 @@
 
 .img-awan {
   position: absolute;
-  top: 20%; 
+  top: 20%;
   left: -50%;
   z-index: 0;
   object-fit: contain;
@@ -154,7 +139,7 @@
   height: 100%;
   /* Terapkan pembesaran secara langsung agar gambarnya diam & tetap besar */
   object-fit: contain;
-/* Atur nilai khusus di sini agar tidak tertimpa animasi */
+  /* Atur nilai khusus di sini agar tidak tertimpa animasi */
 
   --base-transform: scale(1.9);
   /* Jeda waktu animasi (langsung/tanpa delay) */
@@ -167,16 +152,17 @@
 
 .img-belakang-awan {
   position: absolute;
-  top: 30%; 
+  top: 30%;
   left: -33%;
-  z-index: 0;  object-fit: contain;
+  z-index: 0;
   object-fit: contain;
-/* Atur nilai khusus di sini agar tidak tertimpa animasi */
+  object-fit: contain;
+  /* Atur nilai khusus di sini agar tidak tertimpa animasi */
 
   --base-transform: scale(1.5);
   /* Jeda waktu animasi (langsung/tanpa delay) */
   --delay: 0.5s;
- 
+
 
 
   /* Masking pudar kiri & kanan */
@@ -187,8 +173,9 @@
 .img-logo,
 .img-logo-merek {
   position: absolute;
-  top: 0%; 
-  left: -55%; /* Ubah dari -50% ke 50% untuk menentukan titik tengah */
+  top: 0%;
+  left: -55%;
+  /* Ubah dari -50% ke 50% untuk menentukan titik tengah */
   z-index: 0;
   object-fit: contain;
   transform: scale(1.5);
@@ -201,9 +188,10 @@
    ============================================================ */
 /* Saat ditekan Spasi, hapus delay (0s) agar animasi langsung jalan instan */
 
-body.is-space-pressed .img-awan{
-   --delay: 0.2s !important; 
+body.is-space-pressed .img-awan {
+  --delay: 0.2s !important;
 }
+
 body.is-space-pressed .img-belakang-awan {
   --delay: 0.3s !important;
 }
@@ -213,18 +201,23 @@ body.is-space-pressed .img-belakang-awan {
 
 .img-logo-ai {
   position: absolute;
-  top: 35%; 
-  left: 30%; /* Ubah dari -50% ke 50% untuk menentukan titik tengah */
+  top: 35%;
+  left: 30%;
+  /* Ubah dari -50% ke 50% untuk menentukan titik tengah */
   z-index: 0;
   object-fit: contain;
   transform: scale(0.1);
 }
+
 /* Posisi Melayang di Pojok Kanan Bawah */
 .btn-pdf-vertical {
-position: absolute;
-  bottom: 50px;    /* Jarak dari batas bawah layar */
-  left: -90%;     /* Jarak dari batas kanan layar */
-  z-index: 999;    /* Memastikan tombol selalu berada paling depan di atas elemen lain */
+  position: absolute;
+  bottom: 50px;
+  /* Jarak dari batas bawah layar */
+  left: -90%;
+  /* Jarak dari batas kanan layar */
+  z-index: 999;
+  /* Memastikan tombol selalu berada paling depan di atas elemen lain */
 
   /* Styling Tombol (Vertikal) */
   display: inline-flex;
@@ -233,8 +226,10 @@ position: absolute;
   justify-content: center;
   gap: 8px;
   padding: 12px 16px;
-  background-color: rgba(0, 0, 0, 0.75); /* Background gelap agar kontras */
-  backdrop-filter: blur(8px);             /* Efek kaca buram modern */
+  background-color: rgba(0, 0, 0, 0.75);
+  /* Background gelap agar kontras */
+  backdrop-filter: blur(8px);
+  /* Efek kaca buram modern */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   text-decoration: none;
@@ -268,7 +263,8 @@ position: absolute;
 }
 
 .btn-pdf-vertical:hover .btn-pdf-text {
-  color: #000000; /* Teks berubah hitam saat tombol di-hover */
+  color: #000000;
+  /* Teks berubah hitam saat tombol di-hover */
 }
 
 .btn-pdf-vertical:hover .btn-pdf-icon {
@@ -301,15 +297,19 @@ position: absolute;
 }
 
 .img-logo-kartu {
-  top: -12%;   /* Sesuaikan posisi atas typo */
-  left: -90%;  /* Sesuaikan posisi kiri typo */
+  top: -12%;
+  /* Sesuaikan posisi atas typo */
+  left: -90%;
+  /* Sesuaikan posisi kiri typo */
   transform: scale(0.9);
 }
 
 .img-logo-typo {
-top: 30%;    /* Sesuaikan posisi atas kartu */
-left: -50%;   /* Sesuaikan posisi kiri kartu */
-transform: scale(0.8);
+  top: 30%;
+  /* Sesuaikan posisi atas kartu */
+  left: -50%;
+  /* Sesuaikan posisi kiri kartu */
+  transform: scale(0.8);
 }
 
 
@@ -328,10 +328,10 @@ transform: scale(0.8);
   pointer-events: none;
   opacity: 0;
   will-change: transform, opacity;
-  
+
   /* Transisi ini akan berlaku baik saat MASUK (.in-view) maupun KELUAR */
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) var(--delay, 0s),
-              opacity 0.4s ease var(--delay, 0s);
+    opacity 0.4s ease var(--delay, 0s);
 }
 
 .scatter-item img {
@@ -375,24 +375,3 @@ body.is-space-pressed .scatter-item {
 .img-logo {
   --delay: 0s !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const totalFoto = 11;
+  const totalFoto = 21;
   const folderPath = "asset_pixel/ttb/"; // Ditambahkan '/' agar folder benar
   const fileNamePrefix = "asset_";
   const fileExtension = ".webp";
@@ -29,6 +29,19 @@ const layoutPattern = [
   "item-square", // Foto 10: Ilustrasi poster buronan (lebar 3 kolom)
   "item-square",     // Foto 11: Kotak teks informasi kanan
 
+  // BARIS 5
+  "item-square",, // Foto 1: Poster utama (lebar 3 kolom)
+  "item-square",       // Foto 2: Karakter sheriff berdiri di kanan (tinggi 2 baris)
+  "item-square",     // Foto 3: Menu Pengaturan
+  "item-square",     // Foto 4: Karakter tengah
+  "item-square", 
+
+
+    // BARIS 6
+  "item-square",     // Foto 6: In-game gameplay 1
+  "item-square",     // Foto 7: In-game gameplay 2
+  "item-square",     // Foto 8: In-game gameplay 3
+  "item-square",     // Foto 9: Ilustrasi siluet kanan
 
 ];
 

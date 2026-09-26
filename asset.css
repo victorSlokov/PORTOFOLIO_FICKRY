@@ -5,7 +5,7 @@
   display: block;
   overflow: hidden;
 
-  background-image: url('asset_pixel/ttb/bg.webp');
+  background-image: url("asset_pixel/ttb/bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,9 +24,12 @@
    ============================================================ */
 .wrapper-char-1 {
   position: absolute;
-  top: 35%;             /* Posisi vertikal Karakter 1 */
-  left: 25%;            /* Posisi horizontal Karakter 1 */
-  width: 200px;         /* Ukuran lebar Karakter 1 */
+  top: 30%;
+  /* Posisi vertikal Karakter 1 */
+  left: 25%;
+  /* Posisi horizontal Karakter 1 */
+  width: 200px;
+  /* Ukuran lebar Karakter 1 */
   z-index: 2;
 }
 
@@ -35,21 +38,21 @@
    ============================================================ */
 .wrapper-char-2 {
   position: absolute;
-  top: 35%;               /* Atur posisi vertikal khusus Karakter 2 */
-  left: 59%;            /* Atur posisi horizontal khusus Karakter 2 */
-  width: 200px;         /* Ukuran lebar Karakter 2 */
+  top: 30%;
+  /* Atur posisi vertikal khusus Karakter 2 */
+  left: 59%;
+  /* Atur posisi horizontal khusus Karakter 2 */
+  width: 200px;
+  /* Ukuran lebar Karakter 2 */
   z-index: 2;
 }
-
-
 
 /* Efek jeda saat gambar di-hover (diarahkan kursor) */
 .wrapper-char-1:hover img,
 .wrapper-char-2:hover img {
-  filter: grayscale(50%); /* Contoh efek visual */
+  filter: grayscale(50%);
+  /* Contoh efek visual */
 }
-
-
 
 /* Menghapus efek sticky khusus slide logomark agar ter-scroll normal ke bawah */
 .normal-flow-slide-2 {
@@ -57,7 +60,8 @@
   top: auto !important;
   width: 100%;
   min-height: 100vh;
-  z-index: 10; /* Memastikan slide ini mendorong dan menutupi stack wrapper di atasnya saat di-scroll */
+  z-index: 10;
+  /* Memastikan slide ini mendorong dan menutupi stack wrapper di atasnya saat di-scroll */
   background-color: #ffffff;
 }
 
@@ -104,7 +108,7 @@
 
 .logomark-title-slide-2 {
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 2.2rem;
   letter-spacing: 6px;
@@ -119,10 +123,11 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #ffffff;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
-  background-size: 32px 32px; /* Ukuran kotak grid */
+  background-size: 32px 32px;
+  /* Ukuran kotak grid */
   position: relative;
 }
 
@@ -175,11 +180,12 @@
   width: 140px;
   height: 140px;
   background-color: #000000;
-  border-radius: 35px; /* Sudut tumpul persis gambar */
+  border-radius: 35px;
+  /* Sudut tumpul persis gambar */
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Mini Icon di Tengah Pembatas Bawah */
@@ -188,8 +194,9 @@
   height: 120px;
   border-radius: 30px;
   position: absolute;
-  top: -60px; /* Nangkring tepat di tengah garis pembatas bawah */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  top: -60px;
+  /* Nangkring tepat di tengah garis pembatas bawah */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   z-index: 15;
 }
 
@@ -217,7 +224,8 @@
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
-  pointer-events: none; /* Supaya tidak menghalangi klik di sekitarnya */
+  pointer-events: none;
+  /* Supaya tidak menghalangi klik di sekitarnya */
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
@@ -226,7 +234,7 @@
 .key-cap-slide-2 {
   background: #ffffff;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-size: 11px;
   padding: 3px 8px;
@@ -243,14 +251,16 @@
 .gallery-section-slide-2 {
   position: relative;
   z-index: 99;
-  background-image: url('asset_pixel/ttb/tanah.webp');
-  background-size: 100%; /* Memakai ukuran asli gambar agar tidak ter-zoom */
-  background-repeat: repeat; /* Mengulang tekstur ke samping dan bawah */
+  background-image: url("asset_pixel/ttb/tanah.webp");
+  background-size: 100%;
+  /* Memakai ukuran asli gambar agar tidak ter-zoom */
+  background-repeat: repeat;
+  /* Mengulang tekstur ke samping dan bawah */
   background-position: top left;
   padding: 80px 20px;
   width: 100%;
   box-sizing: border-box;
-} 
+}
 
 .gallery-header-slide-2 {
   text-align: center;
@@ -258,7 +268,7 @@
 }
 
 .gallery-title-slide-2 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: 2px;
@@ -274,7 +284,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 220px;
-  gap: 8px; /* Celah tipis antar gambar */
+  gap: 8px;
+  /* Celah tipis antar gambar */
 }
 
 .gallery-item {
@@ -292,9 +303,12 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
   background-color: #000000;
-  filter: grayscale(100%); /* Mengubah gambar menjadi Hitam-Putih */
+  filter: grayscale(100%);
+  /* Mengubah gambar menjadi Hitam-Putih */
 }
 
 /* 2. Kondisi Hover: Gambar kembali berwarna normal */
@@ -329,15 +343,19 @@
    ========================================== */
 
 .modal-overlay-slide-2 {
-  display: none; /* Sembunyikan default */
+  display: none;
+  /* Sembunyikan default */
   position: fixed;
-  z-index: 9999; /* Selalu di paling depan */
+  z-index: 9999;
+  /* Selalu di paling depan */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.85); /* Background hitam transparan */
-  backdrop-filter: blur(5px); /* Efek blur latar belakang */
+  background-color: rgba(0, 0, 0, 0.85);
+  /* Background hitam transparan */
+  backdrop-filter: blur(5px);
+  /* Efek blur latar belakang */
   justify-content: center;
   align-items: center;
   opacity: 0;
@@ -359,11 +377,13 @@
   transform: scale(0.8);
   transition: transform 0.3s ease;
   object-fit: contain;
-  filter: grayscale(0%) !important; /* Dipastikan gambar di pop-up berwarna penuh */
+  filter: grayscale(0%) !important;
+  /* Dipastikan gambar di pop-up berwarna penuh */
 }
 
 .modal-overlay-slide-2.active .modal-content {
-  transform: scale(1); /* Efek Zoom In saat muncul */
+  transform: scale(1);
+  /* Efek Zoom In saat muncul */
 }
 
 /* Tombol Close (Silang) Slide 2 */
@@ -387,10 +407,8 @@
    ========================================== */
 
 .gallery-container-slide-2 .gallery-item:nth-child(1) img {
- 
   background-color: transparent !important;
   filter: grayscale(0%) !important;
-
 }
 
 .gallery-container-slide-2 .gallery-item:nth-child(1):hover img {
@@ -424,8 +442,6 @@
   grid-row: span 1;
 }
 
-
-
 .concept-sheet-slide-footer-header {
   position: relative;
   width: 100%;
@@ -433,10 +449,11 @@
   display: block;
   overflow: hidden;
 
-  background-color: #5e3404;
+  background: linear-gradient(135deg, #423A33 0%, rgb(112, 81, 2) 50%, #bd8310 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 999;
 }
 
 /* Style dasar untuk gambar di dalam wrapper */
@@ -452,17 +469,17 @@
    ============================================================ */
 .wrapper-char-kumpul {
   position: absolute;
-  top: 35%;             /* Posisi vertikal Karakter 1 */
-  left: 25%;            /* Posisi horizontal Karakter 1 */
-  width: 200px;         /* Ukuran lebar Karakter 1 */
+  top: 35%;
+  /* Posisi vertikal Karakter 1 */
+  left: 25%;
+  /* Posisi horizontal Karakter 1 */
+  width: 200px;
+  /* Ukuran lebar Karakter 1 */
   z-index: 2;
 }
 
-
-
 /* Efek jeda saat gambar di-hover (diarahkan kursor) */
-.wrapper-char-kumpul:hover img
- {
-  filter: grayscale(50%); /* Contoh efek visual */
+.wrapper-char-kumpul:hover img {
+  filter: grayscale(50%);
+  /* Contoh efek visual */
 }
-
