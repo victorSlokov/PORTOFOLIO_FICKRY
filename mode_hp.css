@@ -1,0 +1,31 @@
+/* ==================================================
+   MENYEMBUNYIKAN ELEMEN DI MODE HP
+   ================================================== */
+@media (max-width: 768px) {
+
+    /* Masukkan class/ID elemen yang ingin dihilangkan */
+    .space-hint,
+    #android {
+        display: none !important;
+    }
+
+    .ig-handle {
+        position: absolute;
+        top: 90%;
+        right: 20px;
+        /* Contoh: menempel di pojok kanan */
+    }
+
+
+    .barcode-bottom {
+        font-size: xx-large;
+    }
+
+    #typed-text {
+
+        display: inline-block;
+        /* Menjaga kalkulasi lebar animasi ketik */
+        font-size: 8px;
+        white-space: nowrap;
+    }
+}

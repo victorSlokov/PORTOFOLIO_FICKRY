@@ -1,12 +1,10 @@
-
-
 html {
   scroll-behavior: smooth;
 }
 
 /* Gaya Dasar Dashboard */
 .dashboard-nav {
-  
+
   /* Efek animasi perpindahan halus */
   transition: transform 0.10s ease-in-out;
 }
@@ -34,56 +32,6 @@ body {
 
 
 
-/* Style Tampilan Blokir Mobile */
-#mobile-blocker {
-  display: none; /* Sembunyikan secara default di Desktop */
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #0d0d0d;
-  color: #ffffff;
-  z-index: 99999; /* Memastikan menutupi seluruh halaman */
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.blocker-content {
-  max-width: 320px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.blocker-icon {
-  font-size: 48px;
-  margin-bottom: 16px;
-}
-
-.blocker-content h2 {
-  font-size: 20px;
-  font-weight: 800;
-  margin-bottom: 8px;
-  letter-spacing: 1px;
-}
-
-.blocker-content p {
-  font-size: 14px;
-  color: #a0a0a0;
-  line-height: 1.5;
-}
-
-/* Tampilkan Blokir HANYA jika dibuka di HP / Tablet (Layar < 768px) */
-@media (max-width: 768px) {
-  #mobile-blocker {
-    display: flex; /* Tampilkan overlay di HP */
-  }
-  
-  /* Sembunyikan scrollbar di HP agar halaman di belakang tidak bisa di-scroll */
-  body {
-    overflow: hidden !important;
-  }
-}
 
 
 
@@ -106,6 +54,7 @@ body {
   align-items: center;
   height: calc(100vh - 88px);
   width: 100%;
+  background-color: white;
 }
 
 /* Card Utama */
@@ -230,8 +179,15 @@ body {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Container Utama Kanan */
@@ -304,7 +260,7 @@ body {
 /* Gambar Depan */
 .img-front {
   position: relative;
-  top: 10%; 
+  top: 10%;
   z-index: 2;
   height: 100%;
   display: block;
@@ -314,7 +270,7 @@ body {
 /* Gambar Belakang */
 .img-back {
   position: absolute;
-  top: 0%; 
+  top: 0%;
   left: -50%;
   z-index: -1;
   width: 190%;
@@ -328,7 +284,7 @@ body {
 
 .img-onion {
   position: absolute;
-  top: 30%; 
+  top: 30%;
   left: 0%;
   z-index: 0;
   width: 100%;
@@ -342,7 +298,7 @@ body {
 
 .img-onion_2 {
   position: absolute;
-  top: -3%; 
+  top: -3%;
   left: 20%;
   z-index: 0;
   width: 100%;
@@ -361,11 +317,13 @@ body {
     opacity: 0;
     transform: translateX(40px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 /* ============================================================
    SLIDE 2 — ABOUT ME (FULL LAYAR)
    ============================================================ */
@@ -394,7 +352,7 @@ body {
   width: 60px;
   height: 60px;
   font-size: 15px;
-  
+
 }
 
 /* -------- Dekorasi blob abu-abu (kanan atas) -------- */
@@ -416,9 +374,28 @@ body {
   border-radius: 999px;
 }
 
-.blob-deco .b1 { top: -30px;  right: 120px; width: 340px; height: 90px;  transform: rotate(90deg); }
-.blob-deco .b2 { top: 60px;   right: -40px; width: 300px; height: 90px; }
-.blob-deco .b3 { top: 150px;  right: 260px; width: 480px; height: 90px; background-color:#ececec; }
+.blob-deco .b1 {
+  top: -30px;
+  right: 120px;
+  width: 340px;
+  height: 90px;
+  transform: rotate(90deg);
+}
+
+.blob-deco .b2 {
+  top: 60px;
+  right: -40px;
+  width: 300px;
+  height: 90px;
+}
+
+.blob-deco .b3 {
+  top: 150px;
+  right: 260px;
+  width: 480px;
+  height: 90px;
+  background-color: #ececec;
+}
 
 /* -------- Kolom Kiri: Ilustrasi + tombol -------- */
 .about-left {
@@ -454,8 +431,15 @@ body {
 }
 
 @keyframes fadeSlideInLeft {
-  from { opacity: 0; transform: translateX(-50px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .view-cv-btn {
@@ -503,20 +487,21 @@ body {
   margin-bottom: 28px;
 }
 
-    .about-card {
-      position: relative;
-      flex: 1;
-      max-height: 60vh;
-      /* Gunakan RGBA dengan opacity 0.5 pada warnanya */
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(242, 242, 242, 0.5) 100%);
-      /* Opsional: Efek kaca buram (Glassmorphism) */
-      backdrop-filter: blur(8px); 
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-radius: 18px;
-      padding: 36px;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-    }
+.about-card {
+  position: relative;
+  flex: 1;
+  max-height: 60vh;
+  /* Gunakan RGBA dengan opacity 0.5 pada warnanya */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(242, 242, 242, 0.5) 100%);
+  /* Opsional: Efek kaca buram (Glassmorphism) */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+  padding: 36px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
 .about-card-text {
   position: relative;
   z-index: 2;
@@ -557,13 +542,22 @@ body {
     padding: 100px 6vw 60px;
     gap: 32px;
   }
-  .about-left, .about-right {
+
+  .about-left,
+  .about-right {
     flex: none;
     width: 100%;
     min-height: unset;
   }
-  .about-card-text { max-width: 100%; }
-  .blob-deco { width: 100%; opacity: 0.6; }
+
+  .about-card-text {
+    max-width: 100%;
+  }
+
+  .blob-deco {
+    width: 100%;
+    opacity: 0.6;
+  }
 }
 
 
@@ -572,8 +566,8 @@ body {
   opacity: 0;
   transform: var(--anim-slide, translateX(0)) var(--base-transform, );
   /* Tambahkan transition-delay di sini */
-  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) var(--delay, 0s), 
-              opacity 0.8s ease var(--delay, 0s);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) var(--delay, 0s),
+    opacity 0.8s ease var(--delay, 0s);
   will-change: transform, opacity;
 }
 
@@ -597,13 +591,13 @@ body {
 
 .img-onion-netral-1 {
   position: absolute;
-  top: -6%; 
+  top: -6%;
   left: 30%;
   z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-/* Atur nilai khusus di sini agar tidak tertimpa animasi */
+  /* Atur nilai khusus di sini agar tidak tertimpa animasi */
   --target-opacity: 0.2;
   --base-transform: scale(1.2);
   /* Jeda waktu animasi (langsung/tanpa delay) */
@@ -613,13 +607,13 @@ body {
 
 .img-onion-netral {
   position: absolute;
-  top: 30%; 
+  top: 30%;
   left: 0%;
   z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-/* Atur nilai khusus di sini agar tidak tertimpa animasi */
+  /* Atur nilai khusus di sini agar tidak tertimpa animasi */
   --target-opacity: 0.2;
   --base-transform: scale(1.2);
   /* Jeda waktu animasi (langsung/tanpa delay) */
@@ -629,13 +623,13 @@ body {
 
 .img-onion-netral-2 {
   position: absolute;
-  top: -10%; 
+  top: -10%;
   left: -90%;
   z-index: 0;
   width: 50%;
   height: 50%;
   object-fit: contain;
-/* Atur nilai khusus di sini agar tidak tertimpa animasi */
+  /* Atur nilai khusus di sini agar tidak tertimpa animasi */
   --target-opacity: 0.2;
   --base-transform: scale(1.2);
   /* Jeda waktu animasi (langsung/tanpa delay) */
@@ -709,7 +703,8 @@ body {
 }
 
 .exp-item.org-item {
-  border-left-color: #d1d5db; /* Garis abu-abu untuk organisasi */
+  border-left-color: #d1d5db;
+  /* Garis abu-abu untuk organisasi */
 }
 
 .exp-item h3 {
@@ -743,6 +738,7 @@ body {
   background-color: #e5e7eb;
   margin-bottom: 40px;
 }
+
 /* Section Grid Software (>10 Logo) */
 .skills-grid {
   display: flex;
@@ -762,7 +758,8 @@ body {
   justify-content: center;
   transition: all 0.25s ease;
   cursor: pointer;
-  z-index: 1; /* Posisi awal agar tertata rapi */
+  z-index: 1;
+  /* Posisi awal agar tertata rapi */
 }
 
 .skill-card img {
@@ -777,11 +774,13 @@ body {
   background-color: #000000;
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 20; /* MENAIKKAN POSISI KARTU YANG DI-HOVER KE PALING ATAS */
+  z-index: 20;
+  /* MENAIKKAN POSISI KARTU YANG DI-HOVER KE PALING ATAS */
 }
 
 .skill-card:hover img {
-  filter: brightness(0) invert(1); /* Membuat logo putih saat dihover */
+  filter: brightness(0) invert(1);
+  /* Membuat logo putih saat dihover */
 }
 
 /* Tooltip Nama Software */
@@ -802,7 +801,8 @@ body {
   visibility: hidden;
   transition: all 0.2s ease;
   pointer-events: none;
-  z-index: 30; /* Tooltip selalu berada di atas kartu */
+  z-index: 30;
+  /* Tooltip selalu berada di atas kartu */
 }
 
 .skill-card:hover::after {
@@ -812,7 +812,7 @@ body {
 }
 
 
-/*2. gambar model dengan text box kiri-kanan*/ 
+/*2. gambar model dengan text box kiri-kanan*/
 /* ============================================================
    SHOWCASE LAYOUT (Judul & Teks di Atas, 2 Gambar di Bawah)
    ============================================================ */
@@ -822,7 +822,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1000px; /* Lebar maksimal area showcase */
+  max-width: 1000px;
+  /* Lebar maksimal area showcase */
   margin: 0 auto;
   padding: 1px;
   box-sizing: border-box;
@@ -831,7 +832,8 @@ body {
 /* --- BAGIAN ATAS: TEKS --- */
 .model-header-text {
   text-align: center;
-  max-width: 780px; /* Membatasi lebar paragraf agar nyaman dibaca seperti contoh */
+  max-width: 780px;
+  /* Membatasi lebar paragraf agar nyaman dibaca seperti contoh */
   margin-bottom: 40px;
 }
 
@@ -849,7 +851,8 @@ body {
   line-height: 1.7;
   color: #dbdbdb;
   margin-bottom: 16px;
-  text-align: center; /* Menyesuaikan style teks rata tengah seperti gambar */
+  text-align: center;
+  /* Menyesuaikan style teks rata tengah seperti gambar */
 }
 
 .model-header-text p:last-child {
@@ -859,7 +862,8 @@ body {
 /* --- BAGIAN BAWAH: GALLERY 2 GAMBAR --- */
 .model-gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 Kolom Sejajar */
+  grid-template-columns: 1fr 1fr;
+  /* 2 Kolom Sejajar */
   gap: 24px;
   width: 100%;
 }
@@ -875,20 +879,23 @@ body {
 .img-gallery {
   width: 100%;
   height: 100%;
-  max-height: 380px; /* Tinggi maksimal gambar */
+  max-height: 380px;
+  /* Tinggi maksimal gambar */
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
 
 .gallery-item:hover .img-gallery {
-  transform: scale(1.02); /* Efek zoom halus saat di-hover */
+  transform: scale(1.02);
+  /* Efek zoom halus saat di-hover */
 }
 
 /* --- RESPONSIF UNTUK LAYAR HP/TABLET --- */
 @media (max-width: 768px) {
   .model-gallery {
-    grid-template-columns: 1fr; /* Menjadi 1 kolom menumpuk ke bawah di HP */
+    grid-template-columns: 1fr;
+    /* Menjadi 1 kolom menumpuk ke bawah di HP */
     gap: 16px;
   }
 
@@ -906,11 +913,11 @@ body {
 
 
 
-.img-logo-kiri{
+.img-logo-kiri {
   height: 90px;
 }
 
-.img-logo-kanan{
+.img-logo-kanan {
   z-index: 10000;
   height: 50px;
 }
