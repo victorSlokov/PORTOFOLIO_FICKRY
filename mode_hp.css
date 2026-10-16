@@ -1,31 +1,58 @@
 /* ==================================================
-   MENYEMBUNYIKAN ELEMEN DI MODE HP
+   PENYESUAIAN TAMPILAN MOBILE (HP & TABLET)
    ================================================== */
 @media (max-width: 768px) {
 
-    /* Masukkan class/ID elemen yang ingin dihilangkan */
+    /* 1. Menyembunyikan elemen desktop */
     .space-hint,
     #android {
         display: none !important;
     }
 
+    /* 2. Mengatur posisi .ig-handle dengan unit relatif agar tidak geser di HP fisik */
     .ig-handle {
         position: absolute;
-        top: 90%;
-        right: 20px;
-        /* Contoh: menempel di pojok kanan */
+        bottom: 20px;
+        /* Menggunakan bottom agar menempel rapi dari bawah */
+        top: auto;
+        /* Reset nilai top dari desktop agar tidak bentrok */
+        right: 15px;
     }
 
+    /* 3. Menyesuaikan ukuran font barcode agar responsif */
+    .barcode-bottom {
+        font-size: 1.2rem;
+        /* Ganti xx-large (terlalu besar di HP) ke ukuran rem yang fleksibel */
+        letter-spacing: 1px;
+        /* Menjaga jarak antar baris/karakter tetap rapi */
+    }
+
+    /* 4. Menjaga kerapian animasi teks ketik */
+    #typed-text {
+        display: inline-block;
+        font-size: 0.75rem;
+        /* Sekitar 12px (8px terlalu kecil untuk dibaca di HP) */
+        white-space: nowrap;
+        max-width: 100%;
+        /* Mencegah teks meluap/jebol ke kanan layar HP */
+        overflow: hidden;
+    }
+
+}
+
+/* ==================================================
+   PENYESUAIAN KHUSUS HP LAYAR KECIL (<= 480px)
+   ================================================== */
+@media (max-width: 480px) {
 
     .barcode-bottom {
-        font-size: xx-large;
+        font-size: 1rem;
+        /* Diperkecil sedikit lagi khusus untuk layar HP kecil */
     }
 
-    #typed-text {
-
-        display: inline-block;
-        /* Menjaga kalkulasi lebar animasi ketik */
-        font-size: 8px;
-        white-space: nowrap;
+    .ig-handle {
+        bottom: 15px;
+        right: 10px;
     }
+
 }
