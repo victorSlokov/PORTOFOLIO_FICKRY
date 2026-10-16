@@ -44,10 +44,11 @@
 
     .ig-handle {
         position: absolute;
-        top: 90%;
-        right: 20px;
+        top: 59%;
+        right: 70%;
         /* Contoh: menempel di pojok kanan */
     }
+
 
 
     .barcode-bottom {
