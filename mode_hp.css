@@ -1,8 +1,7 @@
 /* ==================================================
    MENYEMBUNYIKAN ELEMEN DI MODE HP
    ================================================== */
-@media (max-width: 768px),
-(max-width: 480px) {
+@media (max-width: 480px) {
 
     /* Masukkan class/ID elemen yang ingin dihilangkan */
     .space-hint,
