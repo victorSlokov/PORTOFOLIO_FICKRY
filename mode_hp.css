@@ -36,29 +36,43 @@
    ================================================== */
 @media (max-width: 480px) {
 
-    /* Masukkan class/ID elemen yang ingin dihilangkan */
+    /* 1. Menyembunyikan elemen desktop */
     .space-hint,
     #android {
         display: none !important;
     }
 
+    /* 2. Mengatur posisi .ig-handle dengan unit relatif agar tidak geser di HP fisik */
     .ig-handle {
         position: absolute;
-        top: 90%;
-        right: 20px;
-        /* Contoh: menempel di pojok kanan */
+        bottom: 20px;
+        /* Menggunakan bottom agar menempel rapi dari bawah */
+        top: auto;
+        /* Reset nilai top dari desktop agar tidak bentrok */
+        right: 15px;
     }
 
-
-    .barcode-bottom {
-        font-size: 1rem;
-    }
-
+    /* 4. Menjaga kerapian animasi teks ketik */
     #typed-text {
-
         display: inline-block;
-        /* Menjaga kalkulasi lebar animasi ketik */
-        font-size: 8px;
+        font-size: 0.75rem;
+        /* Sekitar 12px (8px terlalu kecil untuk dibaca di HP) */
         white-space: nowrap;
+        max-width: 100%;
+        /* Mencegah teks meluap/jebol ke kanan layar HP */
+        overflow: hidden;
     }
+
+}
+
+.barcode-bottom {
+    font-size: 1rem;
+}
+
+#typed-text {
+
+    display: inline-block;
+    /* Menjaga kalkulasi lebar animasi ketik */
+    font-size: 8px;
+    white-space: nowrap;
 }
