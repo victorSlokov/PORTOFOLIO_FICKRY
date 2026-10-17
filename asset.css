@@ -19,32 +19,26 @@
   display: block;
 }
 
-/* ============================================================
-   1. PENGATURAN POSISI & UKURAN KARAKTER 1
-   ============================================================ */
 .wrapper-char-1 {
   position: absolute;
-  top: 30%;
-  /* Posisi vertikal Karakter 1 */
+  top: 65%;
   left: 25%;
-  /* Posisi horizontal Karakter 1 */
   width: 200px;
-  /* Ukuran lebar Karakter 1 */
   z-index: 2;
+  transform: translate(-50%, -50%);
+  /* Menjaga titik tengah karakter tetap di 25% */
+  will-change: transform;
 }
 
-/* ============================================================
-   2. PENGATURAN POSISI & UKURAN KARAKTER 2 (FARMGIRL)
-   ============================================================ */
 .wrapper-char-2 {
   position: absolute;
-  top: 30%;
-  /* Atur posisi vertikal khusus Karakter 2 */
+  top: 65%;
   left: 59%;
-  /* Atur posisi horizontal khusus Karakter 2 */
   width: 200px;
-  /* Ukuran lebar Karakter 2 */
   z-index: 2;
+  transform: translate(45%, -50%);
+  /* Menjaga titik tengah karakter tetap di 59% */
+  will-change: transform;
 }
 
 /* Efek jeda saat gambar di-hover (diarahkan kursor) */

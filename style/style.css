@@ -443,8 +443,12 @@ body {
 }
 
 .view-cv-btn {
-  align-self: flex-start;
-  margin-top: 24px;
+  display: block;
+  /* Ubah ke block agar margin auto bekerja */
+  margin: 32px auto 24px;
+  /* 32px gap atas, auto (tengah) kiri-kanan, 24px gap bawah */
+  width: fit-content;
+  /* Menjaga ukuran tombol tetap pas dengan teksnya */
   padding: 14px 28px;
   background-color: #e6e6e6;
   border: none;
@@ -455,7 +459,6 @@ body {
   color: #111;
   cursor: pointer;
   text-decoration: none;
-  display: inline-block;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 

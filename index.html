@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofolio - Fickry Abdi Rabbani</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-
   <!-- Google Fonts: Montserrat & Libre Barcode 39 -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Montserrat:wght@400;700;900&display=swap"
     rel="stylesheet">
@@ -56,7 +56,7 @@
       <div class="left-section">
         <div>
           <div class="header-title">
-            <h1 class="main-title">PORTO</h1>
+            <h1 class="main-title" id="porto">PORTO</h1>
             <div class="barcode-top-wrapper">
               <span class="barcode-top">*FOLIA*</span>
               <span class="sub-top">FOLIA</span>
@@ -109,8 +109,9 @@
     </div>
 
     <!-- Kolom Kiri: ilustrasi + tombol View CV -->
-    <div class="about-left">
-      <div class="about-illustration-wrap">
+    <div class="about-left shadow-md" style="border-radius: 5%; ">
+      <div class="about-illustration-wrap shadow-xl "
+        style="background-color: rgb(194, 194, 194);border-radius: 16px 16px 0 0;">
         <img src="about_character.webp" alt="Ilustrasi Fickry Abdi Rabbani" id="aboutImg">
       </div>
       <a href="cv/Cv ATS.pdf" target="_blank" rel="noopener noreferrer" class="view-cv-btn" id="viewCvBtn">View Cv</a>
@@ -131,11 +132,11 @@
 
         <br></br>
 
-
         <div class="about-card-id">
           <div class="barcode-mini">*Fickry.A.R*</div>
           <div class="name-mini">FICKRY ABDI RABBANI</div>
         </div>
+
       </div>
     </div>
 
@@ -398,6 +399,7 @@
           <h3 class="model-title">HISTORI TINDAKTUTUR BARUDAK</h3>
 
           <p>
+            <b>Tugas Project Kampus</b>
             Kata tindak tutur berarti tindakan berbicara atau menyampaikan pesan dan barudak mengartikan anak-anak. Jadi
             arti Tindak Tutur Barudak yaitu "Anak-anak yang menyampaikan suatu pesan". Brand ini menyampaikan bagaimana
             cerita dan ekspresi melalui produk pakaian. Kata "barudak" yang berarti anak muda dalam Bahasa Sunda
@@ -690,8 +692,8 @@
             <script src="lastScrollTop.js" defer></script>
             <script src="scatter-animation.js" defer></script>
             <!-- Panggil Script Galeri Terpisah di Sini -->
-            <script src="gallery/gallery.js"></script>
-            <script src="asset_pixel/pixel.js"></script>
+            <script src="gallery/gallery.js" defer></script>
+            <script src="asset_pixel/pixel.js" defer></script>
 
             <script>
               document.addEventListener('keydown', function (e) {
