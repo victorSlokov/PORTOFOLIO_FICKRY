@@ -242,19 +242,15 @@
 
 /* Layout Utama Galeri */
 /* Layout Utama Galeri (Pengulangan Tekstur) */
-.gallery-section-slide-2 {
+.gallery-section-slide-2,
+.tanah {
   position: relative;
   z-index: 99;
-  background-image: url("asset_pixel/ttb/tanah.webp");
-  background-size: 100%;
-  /* Memakai ukuran asli gambar agar tidak ter-zoom */
-  background-repeat: repeat;
-  /* Mengulang tekstur ke samping dan bawah */
-  background-position: top left;
-  padding: 80px 20px;
+  padding: 0px 0px;
   width: 100%;
   box-sizing: border-box;
 }
+
 
 .gallery-header-slide-2 {
   text-align: center;
@@ -443,12 +439,13 @@
   display: block;
   overflow: hidden;
 
-  background: linear-gradient(135deg, #423A33 0%, rgb(112, 81, 2) 50%, #bd8310 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 999;
 }
+
+
 
 /* Style dasar untuk gambar di dalam wrapper */
 .img-dekorasi {
