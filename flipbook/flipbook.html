@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tindak Tutur Barudak</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<section class="pdf-viewer-section" id="pdf-viewer">
+  <div class="pdf-container" id="pdf-container"></div>
+</section>
+<script>
+  // 1. Generate Halaman Otomatis
+  const totalHalaman = 26; 
+  const folderPath = "ttb/";
+  const fileNamePrefix = "Tindak Tutur Barudak-page-";
+
+  const container = document.getElementById("pdf-container");
+
+  for (let i = 1; i <= totalHalaman; i++) {
+    const pageDiv = document.createElement("div");
+    pageDiv.className = "pdf-page";
+
+    const img = document.createElement("img");
+    img.src = `${folderPath}${fileNamePrefix}${i}.webp`;
+    img.alt = `Halaman ${i}`;
+
+    if (i > 2) {
+      img.loading = "lazy";
+    }
+
+    pageDiv.appendChild(img);
+    container.appendChild(pageDiv);
+  }
+
+  // 2. KONTROL SPASI YANG SUPER SMOOTH
+  window.addEventListener('keydown', function(e) {
+    // Mengecek apakah tombol yang ditekan adalah SPASI
+    if (e.code === 'Space') {
+      e.preventDefault(); // Mematikan loncatan kasar bawaan browser
+      
+      // Jika tekan Shift + Spasi = Scroll ke atas. Jika Spasi saja = Scroll ke bawah
+      const arahScroll = e.shiftKey ? -window.innerHeight : window.innerHeight;
+      
+      // Memberikan perintah scroll halus sejauh 1 layar penuh (100vh)
+      container.scrollBy({
+        top: arahScroll,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
