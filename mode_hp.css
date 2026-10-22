@@ -1,0 +1,119 @@
+/* ==================================================
+   MENYEMBUNYIKAN ELEMEN DI MODE HP
+   ================================================== */
+@media (max-width: 480px) {
+
+    /* Masukkan class/ID elemen yang ingin dihilangkan */
+    .space-hint,
+    #android {
+        display: none !important;
+    }
+
+    .ig-handle {
+        display: none;
+        position: absolute;
+        top: 70%;
+        right: 60%;
+        /* Contoh: menempel di pojok kanan */
+    }
+
+
+
+    .barcode-bottom {
+        font-size: 2rem;
+    }
+
+    #typed-text {
+        display: inline-block;
+        /* Menjaga kalkulasi lebar animasi ketik */
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .card-container {
+
+        height: 100%;
+    }
+
+    .barcode-top-wrapper,
+    .barcode-top,
+    .sub-top {
+
+        display: none;
+
+
+    }
+
+    #porto {
+        font-size: 0;
+        /* Sembunyikan teks asli "PORTO" */
+    }
+
+    #porto::after {
+        content: "PORTOFOLIO";
+        font-size: 2.5rem;
+        /* Tampilkan teks baru dengan ukuran normal */
+    }
+
+    .right-section img:nth-child(1) {
+        height: 400px !important;
+        /* Gunakan ukuran px yang realistis dulu */
+        max-height: none !important;
+        /* Hapus batasan tinggi maksimal */
+        max-width: none !important;
+        /* Hapus batasan lebar maksimal */
+        width: auto !important;
+        /* Agar proporsi lebar mengikuti tingginya */
+        left: 30%;
+    }
+
+    .right-section img:nth-child(2) {
+
+        display: none;
+
+    }
+
+    .right-section img:nth-child(3) {
+        top: 20%;
+        height: 100px !important;
+        /* Gunakan ukuran px yang realistis dulu */
+        max-height: none !important;
+        /* Hapus batasan tinggi maksimal */
+        max-width: none !important;
+        /* Hapus batasan lebar maksimal */
+        width: auto !important;
+        /* Agar proporsi lebar mengikuti tingginya */
+
+    }
+
+    .right-section img:nth-child(4) {
+        top: 60%;
+        height: 100px !important;
+        /* Gunakan ukuran px yang realistis dulu */
+        max-height: none !important;
+        /* Hapus batasan tinggi maksimal */
+        max-width: none !important;
+        /* Hapus batasan lebar maksimal */
+        width: auto !important;
+        /* Agar proporsi lebar mengikuti tingginya */
+
+    }
+
+
+}
+
+
+/* RESPONSIF UNTUK HP */
+@media (max-width: 600px) {
+    .square-gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 10px;
+    }
+}
+
+/* Responsive untuk HP */
+@media (max-width: 768px) {
+    .mixed-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
