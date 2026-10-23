@@ -5,17 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofolio - Fickry Abdi Rabbani</title>
-  <link rel="stylesheet" href="dist/output.css">
-  <!-- Google Fonts: Montserrat & Libre Barcode 39 -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Montserrat:wght@400;700;900&display=swap"
+
+  <!-- Tailwind CSS v3 via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Montserrat & Libre Barcode 39 & Pixel Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Montserrat:wght@400;700;900&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
     rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
-    rel="stylesheet">
+
   <!-- File CSS Eksternal -->
   <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="mode_hp.css">
-
-
 
 </head>
 
@@ -28,20 +30,15 @@
     </div>
   </div>
 
-
-
+  <!-- HEADER / NAVBAR -->
   <header id="dashboard-header" class="dashboard-nav">
     <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
       <h1 class="text-2xl font-bold">@FCRYBDIBBI</h1>
-      <div class="space-x-6 text-gray-600">
-
-      </div>
+      <div class="space-x-6 text-gray-600"></div>
     </nav>
   </header>
 
-
-
-  <!-- Indikator Navigasi Spasi (Bisa ditaruh sebelum </body>) -->
+  <!-- Indikator Navigasi Spasi -->
   <div class="space-hint">
     <span class="hint-text">Press</span>
     <kbd class="key-cap">SPACE</kbd>
@@ -88,24 +85,44 @@
           width="1920" height="1080">
       </div>
     </div>
+
+    <p class="tech-announcement">
+      Website ini dibuat dengan bantuan
+      <span class="inline-tech tech-gemini">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="Gemini AI">
+        Gemini AI
+      </span>,
+      <span class="inline-tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+        HTML
+      </span>,
+      <span class="inline-tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+        CSS
+      </span>,
+      <span class="inline-tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+        Node.js <small>(sebagai runtime CLI)</small>
+      </span>, dan
+      <span class="inline-tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+          alt="Tailwind v3">
+        Tailwind CSS v3 <small>(via CLI).</small>
+      </span>
+      <b>Hasilnya sebagai portofolio saya dan hobi.</b>
+    </p>
   </section>
 
-
-  <!-- =========================================================
-       SLIDE 2 — ABOUT ME (FULL LAYAR, slide baru di bawah cover)
-       ========================================================= -->
+  <!-- SLIDE 2 — ABOUT ME -->
   <section class="about-slide" id="about">
-
     <div class="badge-far">FAR</div>
 
-    <!-- Dekorasi blob abu-abu -->
     <div class="blob-deco" aria-hidden="true">
       <span class="b1"></span>
       <span class="b2"></span>
       <span class="b3"></span>
     </div>
 
-    <!-- Gambar Ilustrasi Kanan -->
     <div class="right-section-2">
       <img src="union_4x.webp" alt="Illustration_onion" class="img-onion-netral-1" data-animate="slide-right"
         loading="lazy" decoding="async" width="1920" height="1080">
@@ -115,17 +132,15 @@
         loading="lazy" decoding="async" width="1920" height="1080">
     </div>
 
-    <!-- Kolom Kiri: ilustrasi + tombol View CV -->
-    <div class="about-left shadow-md" style="border-radius: 5%; ">
-      <div class="about-illustration-wrap shadow-xl "
-        style="background-color: rgb(194, 194, 194);border-radius: 16px 16px 0 0;">
+    <div class="about-left shadow-md" style="border-radius: 5%;">
+      <div class="about-illustration-wrap shadow-xl"
+        style="background-color: rgb(194, 194, 194); border-radius: 16px 16px 0 0;">
         <img src="about_character.webp" alt="Ilustrasi Fickry Abdi Rabbani" id="aboutImg" loading="lazy"
-          decoding="async" width="1920" height="1080">
+          decoding="async" width="1191" height="1440">
       </div>
       <a href="cv/Cv ATS.pdf" target="_blank" rel="noopener noreferrer" class="view-cv-btn" id="viewCvBtn">View Cv</a>
     </div>
 
-    <!-- Kolom Kanan: judul + kartu bio -->
     <div class="about-right" data-animate="slide-right">
       <h2 class="main-title">About Me</h2>
       <div class="about-subtitle">Graphic Designer</div>
@@ -133,590 +148,882 @@
       <div class="about-card">
         <p class="about-card-text">
           Halo, saya Fickry Abdi Rabbani seorang graphic designer memiliki keahlian di bidang pengeditan dengan aplikasi
-          adobe ilustrasi, figma,
-          microsoft office dan sedikit menyukai html, css untuk membuat website sederhana. <b>Portofolio ini menamplkan
-            beberapa keahlian saya di bidang desain yang telah di pelajari selama kuliah.</b>
-          <br>
-          Zodiak : Aries (api)
-          <br>
+          Adobe Illustrator, Figma, Microsoft Office, dan menyukai html, css untuk membuat website sederhana.
+          <b>Portofolio ini menampilkan beberapa keahlian saya di bidang desain yang telah dipelajari selama kuliah.</b>
+          <br><br>
+          Zodiak : Aries (api)<br>
           Jack of all trades
         </p>
-
-        <br></br>
 
         <div class="about-card-id">
           <div class="barcode-mini">*Fickry.A.R*</div>
           <div class="name-mini">FICKRY ABDI RABBANI</div>
         </div>
-
       </div>
     </div>
-
   </section>
 
-
-  <!-- SLIDE EXPERIENCE & SOFTWARE SKILLS -->
+  <!-- SLIDE 3 — EXPERIENCE & SOFTWARE SKILLS -->
   <section class="experience-section" id="experience">
     <div class="exp-container">
-
-      <!-- GRID EXPERIENCE & ORGANIZATION -->
-      <div class="exp-grid">
-
-        <!-- KOLOM 1: EXPERIENCE -->
+      <div class="exp-grid" data-animate="slide-left">
         <div class="exp-col">
-          <h2 class="exp-title">Pendidikan </h2>
-
+          <h2 class="exp-title">Pendidikan</h2>
           <div class="exp-list">
             <div class="exp-item org-item">
-              <h3>SDN KARANG S ETIA 03 </h3>
+              <h3>SDN KARANG SETIA 03</h3>
               <span class="date">(2014-2015)</span>
             </div>
-
             <div class="exp-item org-item">
-              <h3>MTS AL-MUJAHIDIN </h3>
+              <h3>MTS AL-MUJAHIDIN</h3>
               <span class="date">(2017-2018)</span>
             </div>
-
             <div class="exp-item org-item">
               <h3>MA AL-ISHLAH</h3>
-              <span class="date">( 2020-2021)</span>
+              <span class="date">(2020-2021)</span>
             </div>
-
             <div class="exp-item org-item">
-              <h3>POLITEKNIK BINA MADANI </h3>
+              <h3>POLITEKNIK BINA MADANI</h3>
               <p class="company">Program Studi Desain Media</p>
-              <span class="date"> (2022 - 2026) </span>
+              <span class="date">(2022 - 2026)</span>
             </div>
-
           </div>
         </div>
 
-
-
-
-
-        <!-- KOLOM 1: EXPERIENCE -->
-        <div class="exp-col">
-          <h2 class="exp-title">Pengalaman </h2>
-
+        <div class="exp-col" data-animate="slide-left">
+          <h2 class="exp-title">Pengalaman</h2>
           <div class="exp-list">
             <div class="exp-item">
               <h3>TOKO CAT DELUCEN’T</h3>
               <p class="company">Menjaga toko cat sebagai pelayan dan kasir</p>
-
             </div>
-
             <div class="exp-item">
-              <h3>PT PROKEMAS ADIKARYA (Packing) </h3>
+              <h3>PT PROKEMAS ADIKARYA (Packing)</h3>
               <p class="company">Menyortir beberapa produksi kardus minuman</p>
             </div>
-
             <div class="exp-item">
               <h3>MAGANG PT DAMBIRO (Creative Assistant)</h3>
               <p class="company">Membantu membuat konten sosial media</p>
             </div>
-
           </div>
         </div>
-
-
-
-
-
-
-
-
-
       </div>
 
       <hr class="exp-divider">
 
-      <!-- SOFTWARE SKILLS (>10 LOGO) -->
-      <div class="skills-wrapper">
+      <div class="skills-wrapper" data-animate="slide-left">
         <h2 class="exp-title">SOFTWARES & TOOLS</h2>
-
         <div class="skills-grid">
-
-
           <div class="skill-card" data-tooltip="Illustrator">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg"
-              alt="Illustrator" loading="lazy" decoding="async" width="1920" height="1080">
+              alt="Illustrator" loading="lazy" decoding="async" width="128" height="128">
           </div>
-
           <div class="skill-card" data-tooltip="Adobe XD">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" alt="Adobe XD" loading="lazy"
-              decoding="async" width="1920" height="1080">
+              decoding="async" width="128" height="128">
           </div>
-
           <div class="skill-card" data-tooltip="Figma">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
-              loading="lazy" decoding="async" width="1920" height="1080">
+              loading="lazy" decoding="async" width="128" height="128">
           </div>
-
-
           <div class="skill-card" data-tooltip="Canva">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva"
-              loading="lazy" decoding="async" width="1920" height="1080">
+              loading="lazy" decoding="async" width="128" height="128">
           </div>
-
-
-
-          <!-- KARTU LOGO GOOGLE GEMINI (ONLINE CDN) -->
           <div class="skill-card" data-tooltip="Google Gemini">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="Google Gemini"
-              loading="lazy" decoding="async" width="1920" height="1080">
+              loading="lazy" decoding="async" width="128" height="128">
           </div>
-
-
           <div class="skill-card" data-tooltip="Adobe InDesign">
             <img src="https://img.icons8.com/?size=100&id=GuWUhoT5K5Gg&format=png&color=000000" alt="Adobe InDesign"
-              loading="lazy" decoding="async" width="1920" height="1080">
+              loading="lazy" decoding="async" width="128" height="128">
           </div>
-
           <div class="skill-card" data-tooltip="Microsoft Word">
             <img src="https://img.icons8.com/?size=100&id=pGHcje298xSl&format=png&color=000000" alt="Microsoft Word"
-              loading="lazy" decoding="async" width="1920" height="1080">
+              loading="lazy" decoding="async" width="128" height="128">
           </div>
-
           <div class="skill-card" data-tooltip="Microsoft Powerpoint">
             <img src="https://img.icons8.com/?size=100&id=ifP93G7BXUhU&format=png&color=000000"
-              alt="Microsoft Powerpoint" loading="lazy" decoding="async" width="1920" height="1080">
+              alt="Microsoft Powerpoint" loading="lazy" decoding="async" width="128" height="128">
           </div>
-
           <div class="skill-card" data-tooltip="Microsoft Excel">
-            <img src="https://img.icons8.com/?size=100&id=UECmBSgBOvPT&format=png&color=000000"
-              alt="Microsoft Powerpoint" loading="lazy" decoding="async" width="1920" height="1080">
+            <img src="https://img.icons8.com/?size=100&id=UECmBSgBOvPT&format=png&color=000000" alt="Microsoft Excel"
+              loading="lazy" decoding="async" width="128" height="128">
           </div>
-
         </div>
       </div>
-
-
-
-
-
 
       <hr class="exp-divider">
-      <!-- SOFTWARE SKILLS (>10 LOGO) -->
-      <div class="skills-wrapper">
+
+      <div class="skills-wrapper" data-animate="slide-left">
         <h2 class="exp-title">SOFTWARES HOBBY</h2>
-
         <div class="skills-grid">
-
-
           <div class="skill-card" data-tooltip="VS Code">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"
-              loading="lazy" decoding="async" width="1920" height="1080">
+              loading="lazy" decoding="async" width="128" height="128">
           </div>
-
           <div class="skill-card" data-tooltip="HTML5">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
-              loading="lazy" decoding="async" width="1920" height="1080">
+              loading="lazy" decoding="async" width="128" height="128">
           </div>
-
           <div class="skill-card" data-tooltip="CSS3">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
-              loading="lazy" decoding="async" width="1920" height="1080">
+              loading="lazy" decoding="async" width="128" height="128">
           </div>
-
-
-          <div class="skill-card" data-tooltip="Godot engine">
+          <div class="skill-card" data-tooltip="Godot Engine">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
-              alt="Godot engine" loading="lazy" decoding="async" width="1920" height="1080">
+              alt="Godot Engine" loading="lazy" decoding="async" width="128" height="128">
           </div>
-
-
-          <div class="skill-card" data-tooltip="Git">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy"
-              decoding="async" width="1920" height="1080">
-          </div>
-
-
-          <!-- KARTU LOGO IBIS PAINT X -->
           <div class="skill-card" data-tooltip="ibis Paint X">
             <img src="https://brandlogos.sgp1.digitaloceanspaces.com/svg/arcticons/ibispaint-x.svg" alt="ibis Paint X"
-              loading="lazy" decoding="async" width="1920" height="1080">
+              loading="lazy" decoding="async" width="128" height="128">
           </div>
-
-
         </div>
       </div>
-
     </div>
   </section>
 
+  <!--==========================================SLIDE 4 — PROJECT TTB==========================================-->
 
+  <!--==========================================SLIDE 4 — PROJECT TTB==========================================-->
 
+  <!-- ============ SLIDE 4 — Pengembangan Produk ============ -->
+  <section
+    class="relative z-10 w-full min-h-[auto] sm:min-h-screen overflow-hidden border-b border-white/10 bg-black flex flex-col justify-start py-6 sm:py-10"
+    id="project-1">
+    <img src="Adobe_ilustrasi/awan2.png" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
+      [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)] 
+      [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
 
+    <div class="relative z-10 flex h-full flex-col items-center px-4 pt-2 sm:pt-6 text-center">
+      <h2 class="text-[clamp(1.8rem,4vw,3.5rem)] font-extrabold leading-tight text-[hsl(41,100%,50%)]">Pengembangan
+        Produk</h2>
+      <p class="mt-1 text-base sm:text-lg font-semibold text-[hsl(41,100%,50%)]">Tindak Tutur Barudak</p>
 
-
-
-
-
-
-
-
-
-
-  <!-- =========================================================
-       SLIDE 3 — TTB
-       ========================================================= -->
-  <div class="stack-wrapper">
-
-    <!-- SLIDE 3 -->
-    <section class="stack-slide-1 slide-1" id="project-1">
-      <div class="slide-background">
-        <img src="Adobe_ilustrasi/awan.webp" alt="Illustration_onion" class="img-belakang-awan"
-          data-animate="slide-right" loading="lazy" decoding="async" width="1920" height="1080">
-      </div>
-      <div class="about-subtitle">
-        <div class="slide-content-1">
-          <h2 class="project-title-1">Pengembangan Produk</h2>
-          <p class="project-desc-1">Tindak Tutur Barudak</p>
+      <div class="mt-4 sm:mt-8 grid w-full max-w-5xl grid-cols-1 items-center gap-4 sm:gap-6 sm:grid-cols-2">
+        <div class="flex h-[150px] sm:h-[260px] items-center justify-center">
+          <img src="Adobe_ilustrasi/logo 1.png" alt="Logo 1" data-animate="slide-left"
+            class="max-h-full max-w-full object-contain">
+        </div>
+        <div class="flex h-[150px] sm:h-[260px] items-center justify-center">
+          <img src="Adobe_ilustrasi/logo 2.png" alt="Logo 2" data-animate="slide-right"
+            class="max-h-full max-w-full object-contain [--delay:0.2s]">
         </div>
       </div>
 
-      <!-- Gambar Ilustrasi Kanan -->
-      <div class="right-section-2">
-        <img src="Adobe_ilustrasi/awan.webp" alt="Illustration_onion" class="img-awan" data-animate="slide-left"
-          loading="lazy" decoding="async" width="1920" height="1080">
-        <img src="Adobe_ilustrasi/logo.webp" alt="Illustration_onion" class="img-logo-merek" loading="lazy"
-          decoding="async" width="1920" height="1080">
-        <img src="Adobe_ilustrasi/logo_ai.webp" alt="Illustration_onion" class="img-logo-ai" loading="lazy"
-          decoding="async" width="1920" height="1080">
+      <div data-animate="slide-right" class="mt-4 sm:mt-6 flex flex-col items-center gap-1 sm:gap-2 [--delay:0.3s]">
+        <img src="Adobe_ilustrasi/logo_ai.webp" alt="Adobe Illustrator"
+          class="h-16 w-16 sm:h-20 sm:w-20 object-contain">
+        <span class="text-xs sm:text-sm font-bold text-[hsl(41,100%,50%)]">Adobe Ilustator</span>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
+  <!-- ============ SLIDE 5 — Deskripsi Produk ============ -->
+  <section
+    class="relative z-10 w-full min-h-[auto] sm:min-h-screen overflow-hidden border-b border-white/10 bg-black flex flex-col justify-start py-6 sm:py-10">
+    <img src="Adobe_ilustrasi/awan2.png" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
+      [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)] 
+      [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
+    <img src="Adobe_ilustrasi/awan.webp" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
+      [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)] 
+      [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
+    <div class="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center px-4 pt-2 sm:pt-6 text-center">
+      <h2 class="text-[clamp(1.8rem,4vw,3.5rem)] font-extrabold leading-tight text-[hsl(41,100%,50%)]">Deskripsi Produk
+      </h2>
 
+      <h3 class="mt-4 sm:mt-8 text-xl sm:text-[28px] font-extrabold tracking-wide text-white">HISTORI TINDAK TUTUR
+        BARUDAK</h3>
 
-  <!-- =========================================================
-       SLIDE 4 — dekripsi singkat
-       ========================================================= -->
-  <div class="stack-wrapper">
-
-    <!-- SLIDE 4 -->
-    <section class="stack-slide-1 slide-1" id="project-1">
-      <div class="slide-background">
-        <img src="Adobe_ilustrasi/awan.webp" alt="Illustration_onion" class="img-belakang-awan"
-          data-animate="slide-right" loading="lazy" decoding="async" width="1920" height="1080">
+      <div class="mt-3 sm:mt-5 max-w-3xl space-y-3 sm:space-y-4 text-xs sm:text-sm leading-relaxed text-neutral-200">
+        <p>
+          <b class="block">Tugas Project Kampus</b>
+          Kata tindak tutur berarti tindakan berbicara atau menyampaikan pesan dan barudak mengartikan anak-anak.
+          Jadi arti Tindak Tutur Barudak yaitu "Anak-anak yang menyampaikan suatu pesan". Brand ini menyampaikan
+          bagaimana cerita dan ekspresi melalui produk pakaian.
+        </p>
+        <p>
+          Warna emas kami pilih untuk memberi kesan keberuntungan, kemewahan, dan keindahan sejalan dengan
+          kebudayaan di Indonesia yang beragam. Biru dongker melambangkan kepercayaan, martabat, kecerdasan,
+          dan otoritas.
+        </p>
       </div>
-      <div class="about-subtitle">
-        <div class="slide-content-1">
-          <h2 class="project-title-1">Dekripsi Produk</h2>
-          <p class="project-desc-1"></p>
+
+      <div class="mt-4 sm:mt-8 grid w-full grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 pb-4">
+        <div class="overflow-hidden rounded-lg" data-animate="slide-left">
+          <img src="flipbook/ttb/Tindak Tutur Barudak-page-14.webp" alt="Mockup TTB 1"
+            class="h-full max-h-[250px] sm:max-h-[380px] w-full object-cover" onclick="openZoom(this)"
+            id="fotografi_pointer">
+        </div>
+        <div class="overflow-hidden rounded-lg [--delay:0.2s]" data-animate="slide-right">
+          <img src="flipbook/ttb/Tindak Tutur Barudak-page-24.webp" alt="Mockup TTB 2"
+            class="h-full max-h-[250px] sm:max-h-[380px] w-full object-cover" onclick="openZoom(this)"
+            id="fotografi_pointer">
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Gambar Ilustrasi Kanan -->
-      <div class="right-section-2">
-        <img src="Adobe_ilustrasi/awan.webp" alt="Illustration_onion" class="img-awan" data-animate="slide-left"
-          loading="lazy" decoding="async" width="1920" height="1080">
-      </div>
+  <!-- ============ SLIDE 7 — Mockup Produk ============ -->
+  <section
+    class="relative z-10 w-full min-h-[auto] sm:min-h-screen overflow-hidden border-b border-white/10 bg-black flex flex-col justify-start py-6 sm:py-10">
+    <img src="Adobe_ilustrasi/awan2.png" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
+      [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)] 
+      [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
 
+    <div class="relative z-10 flex h-full flex-col items-center px-4 pt-2 sm:pt-6">
+      <h2 class="text-[clamp(1.8rem,4vw,3.5rem)] font-extrabold leading-tight text-[hsl(41,100%,50%)]">Mockup Produk
+      </h2>
 
-      <!-- *2. gambar model dengan text box kiri-kanan*/ 
-/* ============================================================
-   SHOWCASE LAYOUT (Judul & Teks di Atas, 2 Gambar di Bawah)
-   ============================================================ */ -->
-      <div class="model-showcase-v2">
-
-        <!-- 1. Bagian Atas: Judul & Deskripsi Teks -->
-        <div class="model-header-text">
-          <h3 class="model-title">HISTORI TINDAK TUTUR BARUDAK</h3>
-
-          <p>
-            <b>Tugas Project Kampus</b>
-            Kata tindak tutur berarti tindakan berbicara atau menyampaikan pesan dan barudak mengartikan anak-anak. Jadi
-            arti Tindak Tutur Barudak yaitu "Anak-anak yang menyampaikan suatu pesan". Brand ini menyampaikan bagaimana
-            cerita dan ekspresi melalui produk pakaian. Kata "barudak" yang berarti anak muda dalam Bahasa Sunda
-            menegaskan akar budaya lokal dan target utama brand, yaitu generasi muda Indonesia yang kreatif dan dinamis.
-          </p>
-
-          <p>
-            Warna emas kami pilih untuk memberi kesan keberuntungan, kemewahan, dan keindahan sejalan dengan kebudayaan
-            di Indonesia yang beragam. Biru dongker melambangkan kepercayaan, martabat, kecerdasan, dan otoritas,
-            walaupun warna ini hanya dipakai sebagai warna sekunder seperti pada postcard dan produk packaging.
-          </p>
+      <div class="mt-4 flex w-full max-w-6xl flex-col items-center">
+        <div class="flex w-full flex-col sm:flex-row gap-2 sm:gap-0">
+          <img src="flipbook/ttb/Tindak Tutur Barudak-page-18.webp" alt="Design Folcard" data-animate="slide-left"
+            class="w-full object-contain sm:w-1/2 max-h-[200px] sm:max-h-none">
+          <img src="flipbook/ttb/Tindak Tutur Barudak-page-17.webp" alt="Kemasan produk" data-animate="slide-right"
+            class="w-full object-contain sm:w-1/2 max-h-[200px] sm:max-h-none [--delay:0.2s]">
         </div>
-
-        <!-- 2. Bagian Bawah: Grid 2 Gambar Mockup -->
-        <div class="model-gallery">
-          <div class="gallery-item">
-            <img src="flipbook/ttb/Tindak Tutur Barudak-page-14.webp" alt="Mockup TTB 1" class="img-gallery"
-              loading="lazy" decoding="async" width="1920" height="1080">
-          </div>
-          <div class="gallery-item">
-            <!-- Ganti src ke gambar mockup kedua Anda -->
-            <img src="flipbook/ttb/Tindak Tutur Barudak-page-24.webp" alt="Mockup TTB 2" class="img-gallery"
-              loading="lazy" decoding="async" width="1920" height="1080">
-          </div>
-        </div>
-
+        <img src="flipbook/ttb/Tindak Tutur Barudak-page-16.webp" alt="Logo merek dan t-shirt"
+          data-animate="slide-right"
+          class="max-h-[25vh] sm:max-h-[38vh] w-full max-w-3xl object-contain [--delay:0.4s] mt-2">
       </div>
+    </div>
+  </section>
 
-    </section>
-  </div>
+  <!-- ============ SLIDE 8 — Mockup Model ============ -->
+  <section
+    class="relative z-10 w-full min-h-[auto] sm:min-h-screen overflow-hidden border-b border-white/10 bg-black flex flex-col justify-start py-6 sm:py-10">
+    <img src="Adobe_ilustrasi/awan2.png" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
+      [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)] 
+      [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
 
-  <!-- =========================================================
-       SLIDE 5 — TTB Font & Logo Branding
-       ========================================================= -->
-  <div class="stack-wrapper">
-
-    <!-- SLIDE 5 -->
-    <section class="stack-slide-1 slide-1" id="project-1">
-      <div class="slide-background">
-        <img src="Adobe_ilustrasi/awan.webp" alt="Illustration_onion" class="img-belakang-awan"
-          data-animate="slide-right" loading="lazy" decoding="async" width="1920" height="1080">
+    <div class="relative z-10 flex h-full items-center py-4">
+      <div class="grid w-full grid-cols-1 sm:grid-cols-2 gap-4">
+        <img src="flipbook/ttb/Tindak Tutur Barudak-page-25.webp" alt="Mockup model 1" data-animate="slide-left"
+          class="w-full object-contain max-h-[300px] sm:max-h-none">
+        <img src="flipbook/ttb/Tindak Tutur Barudak-page-26.webp" alt="Mockup model 2" data-animate="slide-right"
+          class="w-full object-contain max-h-[300px] sm:max-h-none [--delay:0.2s]">
       </div>
-      <div class="about-subtitle">
-        <div class="slide-content-1">
-          <h2 class="project-title-1">Font & Logo Branding</h2>
-          <p class="project-desc-1"></p>
-        </div>
-      </div>
-
-      <!-- Gambar Ilustrasi Kanan -->
-      <div class="right-section-2">
-        <img src="Adobe_ilustrasi/awan.webp" alt="Illustration_onion" class="img-awan" data-animate="slide-left"
-          loading="lazy" decoding="async" width="1920" height="1080">
-
-        <!-- 2. gambar model -->
-        <img src="flipbook/ttb/Tindak Tutur Barudak-page-14.webp" alt="Illustration_onion" class="img-logo"
-          loading="lazy" decoding="async" width="1920" height="1080">
-
-
-
-      </div>
-    </section>
-  </div>
-
-
-  <!-- =========================================================
-       SLIDE 6 — TTB Mockup Produk Model
-       ========================================================= -->
-  <div class="stack-wrapper">
-
-    <!-- SLIDE 6 -->
-    <section class="stack-slide-1 slide-1" id="project-1">
-      <div class="slide-background">
-        <img src="Adobe_ilustrasi/awan.webp" alt="Illustration_onion" class="img-belakang-awan"
-          data-animate="slide-right">
-      </div>
-      <div class="about-subtitle">
-        <div class="slide-content-1">
-          <h2 class="project-title-1">Mockup Model</h2>
-          <p class="project-desc-1"></p>
-        </div>
-      </div>
-
-      <!-- Gambar Ilustrasi Kanan -->
-      <div class="right-section-2">
-        <img src="Adobe_ilustrasi/awan.webp" alt="Illustration_onion" class="img-awan" data-animate="slide-left"
-          loading="lazy" decoding="async" width="1920" height="1080">
-
-        <!-- 2. gambar model -->
-        <img src="flipbook/ttb/Tindak Tutur Barudak-page-25.webp" alt="Illustration_onion" class="img-logo-kiri"
-          data-animate="slide-left" loading="lazy" decoding="async" width="1920" height="1080">
-        <img src="flipbook/ttb/Tindak Tutur Barudak-page-26.webp" alt="Illustration_onion" class="img-logo-kanan"
-          data-animate="slide-right" loading="lazy" decoding="async" width="1920" height="1080">
-
-
-      </div>
-    </section>
-  </div>
-
-
-
-  <!-- SLIDE 7 (Mockup Produk kemasan, tiket, tipografi) -->
-  <div class="stack-wrapper">
-    <section class="stack-slide-1 slide-1" id="project-3">
-      <div class="slide-background">
-        <img src="Adobe_ilustrasi/awan.webp" alt="Illustration_onion" class="img-belakang-awan"
-          data-animate="slide-right">
-      </div>
-      <div class="about-subtitle">
-        <div class="slide-content-1">
-          <h2 class="project-title-1">Mockup Produk</h2>
-          <p class="project-desc-1"></p>
-        </div>
-      </div>
-
-      <!-- Gambar Ilustrasi Kanan -->
-      <div class="right-section-2">
-        <img src="Adobe_ilustrasi/awan.webp" alt="Illustration_onion" class="img-awan" data-animate="slide-left"
-          loading="lazy" decoding="async" width="1920" height="1080">
-
-        <div class="scatter-item scatter-kemasan">
-          <img src="flipbook/ttb/Tindak Tutur Barudak-page-17.webp" alt="Illustration_onion" class="img-logo-kemasan">
-        </div>
-
-        <div class="scatter-item scatter-kartu">
-          <img src="flipbook/ttb/Tindak Tutur Barudak-page-18.webp" alt="Illustration_onion" class="img-logo-kartu"
-            loading="lazy" decoding="async" width="1920" height="1080">
-        </div>
-
-        <div class="scatter-item scatter-typo">
-          <img src="flipbook/ttb/Tindak Tutur Barudak-page-16.webp" alt="Illustration_onion" class="img-logo-typo"
-            loading="lazy" decoding="async" width="1920" height="1080">
-        </div>
-
-        <a href="https://drive.google.com/file/d/1sm1iXnrQtOAV0-pJyXa1WimI-oC-3t0G/view?usp=drive_open" target="_blank"
-          rel="noopener noreferrer" class="btn-pdf-vertical" loading="lazy" decoding="async" width="1920" height="1080">
-          <!-- Gambar Ikon di Atas -->
-          <img src="Adobe_ilustrasi/btnwebp.webp" alt="PDF Icon" class="btn-pdf-icon" loading="lazy" decoding="async"
-            width="1920" height="1080">
-
-          <!-- Teks di Bawah -->
-          <span class="btn-pdf-text">Lihat Full Webp</span>
-        </a>
-
-        <img src="Adobe_ilustrasi/logo_ai.webp" alt="Illustration_onion" class="img-logo-ai" loading="lazy"
-          decoding="async" width="1920" height="1080">
-      </div>
-    </section>
-  </div>
-
-
-
-
-
-
-
-
-
-  <!-- =========================================================
-     SLIDE asset game asset header
-     ========================================================= -->
-
-  <div class=" stack-wrapper">
-
-    <section class="stack-slide-1 slide-1 concept-sheet-slide-2-header">
-      <img src="asset_pixel/ttb/bg.webp" id="bg_pixel" loading="lazy" decoding="async" width="2809" height="1612">
-      <!-- KONTAINER KARAKTER 1 -->
-      <div class="wrapper-char-1">
-        <img src="asset_pixel/ttb/karakter_1.gif" alt="Karakter 1" class="img-dekorasi" loading="lazy" decoding="async"
-          width="1920" height="1080">
-      </div>
-
-      <!-- KONTAINER KARAKTER 2 -->
-      <div class="wrapper-char-2">
-        <img src="asset_pixel/ttb/farmgirl.gif" alt="Farmgirl 1" class="img-dekorasi" loading="lazy" decoding="async"
-          width="1920" height="1080">
-      </div>
-
-
-    </section>
-
-
-
-    <!-- SECTION GALERI KOTAK -->
-    <section class="square-gallery-section" id="grid-gallery">
-      <div class="square-gallery-header">
-        <h2 class="square-gallery-title">PORTFOLIO GALLERY</h2>
-        <p class="square-gallery-subtitle">Klik gambar untuk melihat lebih jelas</p>
-      </div>
-
-      <!-- Container Grid Gambar Kotak -->
-      <div class="square-gallery-grid">
-
-        <div class="gallery-item item-wide">
-          <img src="asset_pixel/ttb/asset_01.webp" alt="Featured Asset" loading="lazy">
-        </div>
-
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_02.webp" alt="Asset 2" loading="lazy"
-            onclick="openZoom(this)"></div>
-
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_03.webp" alt="Asset 3" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_04.webp" alt="Asset 4" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_05.webp" alt="Asset 5" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_06.webp" alt="Asset 6" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_07.webp" alt="Asset 7" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_08.webp" alt="Asset 8" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_09.webp" alt="Asset 9" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_10.webp" alt="Asset 10" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_11.webp" alt="Asset 11" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_12.webp" alt="Asset 12" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_13.webp" alt="Asset 13" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_14.webp" alt="Asset 14" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_15.webp" alt="Asset 15" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_16.webp" alt="Asset 16" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_17.webp" alt="Asset 17" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_18.webp" alt="Asset 18" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_19.webp" alt="Asset 19" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_20.webp" alt="Asset 20" loading="lazy"
-            onclick="openZoom(this)"></div>
-        <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_21.webp" alt="Asset 21" loading="lazy"
-            onclick="openZoom(this)"></div>
-
-
-        <!-- Ulangi onclick="openZoom(this)" untuk gambar selebihnya -->
-      </div>
-    </section>
-
-    <!-- MODAL / POP-UP ZOOM (Di luar section galeri) -->
-    <div id="imageZoomModal" class="zoom-modal" onclick="closeZoom()">
-      <span class="zoom-close-btn" onclick="closeZoom()">&times;</span>
-      <img class="zoom-modal-content" id="zoomedImage" alt="Zoomed View">
     </div>
 
+    <!-- Tombol Lihat Full Webp -->
+    <a href="https://drive.google.com/file/d/1sm1iXnrQtOAV0-pJyXa1WimI-oC-3t0G/view?usp=drive_open" target="_blank"
+      rel="noopener noreferrer" data-animate="slide-left"
+      class="group absolute bottom-6 sm:bottom-12 left-4 sm:left-6 z-30 flex flex-col items-center gap-1.5 rounded-xl border border-white/20 bg-black/75 px-3 py-2 sm:px-4 sm:py-3 shadow-xl backdrop-blur hover:bg-white hover:border-white">
+      <img src="Adobe_ilustrasi/btnwebp.webp" alt=""
+        class="h-[35px] w-[35px] sm:h-[50px] sm:w-[50px] object-contain transition group-hover:scale-110">
+      <span class="text-[10px] sm:text-[11px] font-semibold tracking-wide text-white group-hover:text-black">Lihat Full
+        Webp</span>
+    </a>
+  </section>
 
-    <!-- FOOTER SECTION -->
-    <footer class="custom-footer">
-      <div class="footer-container">
+  <!-- SLIDE 9 — ASSET GAME PIXEL (POSISI RESPONSIF HP & KOMPUTER) -->
+  <div class="stack-wrapper">
+    <section
+      class="sticky top-0 w-full min-h-screen relative block overflow-hidden bg-cover bg-center bg-no-repeat z-10 [top:-10%]"
+      style="background-image: url('asset_pixel/ttb/bg.webp');">
 
-        <!-- Sisi Kiri: Teks & Tombol -->
-        <div class="footer-left">
-          <div class="box">
-            <h3 class="footer-title">EXPLORE MY WORKS</h3>
+      <!-- Gambar Background Utama -->
+      <img src="asset_pixel/ttb/bg.webp" alt="bg" id="bg_pixel"
+        class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none -z-10 min-h-screen"
+        loading="lazy" decoding="async" width="2809" height="1612">
 
-            <p class="footer-description">
-              Lihat prototipe game, dan aset pixel art lainnya di halaman itch.io resmi saya. <b>Free download asset &
-                Demo</b>
+      <!-- Wrapper Kontainer Karakter -->
+      <div class="absolute inset-0 w-full h-full flex justify-between items-center px-4 sm:px-12 md:block">
+
+        <!-- Karakter 1 (Sebelah Kiri) -->
+        <!-- Di HP posisinya agak ke bawah (top-[75%]), di komputer/tablet kembali ke top-[65%] -->
+        <div
+          class="absolute top-[70%] sm:top-[65%] left-[20%] sm:left-[25%] w-[120px] sm:w-[160px] md:w-[200px] z-20 -translate-x-1/2 -translate-y-1/2 will-change-transform group cursor-pointer">
+          <img src="asset_pixel/ttb/karakter_1.gif" alt="Karakter 1"
+            class="w-full h-auto object-cover block transition-all duration-300 group-hover:grayscale-[50%]"
+            loading="lazy" decoding="async" width="1920" height="1080">
+        </div>
+
+        <!-- Farmgirl / Karakter 2 (Sebelah Kanan) -->
+        <!-- Di HP posisinya agak ke bawah (top-[72%]), di komputer/tablet kembali ke top-[60%] -->
+        <div
+          class="absolute top-[70%] sm:top-[65%] left-[80%] sm:left-[59%] w-[120px] sm:w-[160px] md:w-[200px] z-20 -translate-x-1/2 sm:translate-x-[45%] -translate-y-1/2 will-change-transform group cursor-pointer">
+          <img src="asset_pixel/ttb/farmgirl.gif" alt="Farmgirl 1"
+            class="w-full h-auto object-cover block transition-all duration-300 group-hover:grayscale-[50%]"
+            loading="lazy" decoding="async" width="1920" height="1080">
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+  <!-- SECTION GALERI GRID KOTAK ASSET -->
+  <section class="w-full min-h-[400px] bg-repeat bg-auto" style="background-image: url('asset_pixel/ttb/tanah.webp');">
+
+    <div class="square-gallery-header">
+      <h2 class="square-gallery-title">PORTFOLIO GALLERY</h2>
+      <p class="square-gallery-subtitle">Scrool kebawah untuk melihat tamplian penuh</p>
+    </div>
+
+    <div class="square-gallery-grid ">
+      <div class="gallery-item item-wide">
+        <img src="asset_pixel/ttb/asset_01.webp" alt="Featured Asset" loading="lazy">
+      </div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_02.webp" alt="Asset 2" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_03.webp" alt="Asset 3" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_04.webp" alt="Asset 4" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_05.webp" alt="Asset 5" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_06.webp" alt="Asset 6" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_07.webp" alt="Asset 7" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_08.webp" alt="Asset 8" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_09.webp" alt="Asset 9" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_10.webp" alt="Asset 10" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_11.webp" alt="Asset 11" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_12.webp" alt="Asset 12" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_13.webp" alt="Asset 13" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_14.webp" alt="Asset 14" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_15.webp" alt="Asset 15" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_16.webp" alt="Asset 16" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_17.webp" alt="Asset 17" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_18.webp" alt="Asset 18" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_19.webp" alt="Asset 19" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_20.webp" alt="Asset 20" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_21.webp" alt="Asset 21" loading="lazy"
+          onclick="openZoom(this)"></div>
+    </div>
+  </section>
+
+  <!-- MODAL POP-UP ZOOM -->
+  <div id="imageZoomModal" class="zoom-modal" onclick="closeZoom()">
+    <span class="zoom-close-btn" onclick="closeZoom()">&times;</span>
+    <img class="zoom-modal-content" id="zoomedImage" alt="Zoomed View">
+  </div>
+  </div>
+
+  <!-- FOOTER SECTION (Paling Bawah) -->
+  <section class="w-full">
+    <footer
+      class="w-full bg-repeat bg-auto text-white px-4 sm:px-[5vw] pt-[60px] pb-5 box-border overflow-hidden border-t border-white/10"
+      style="background-image: url('asset_pixel/ttb/tanah.webp');">
+
+      <!-- Container Utama Footer -->
+      <div class="max-w-[1100px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+
+        <!-- SISI KIRI (Teks, Kotak Box, & Tombol) -->
+        <div class="flex-1 w-full max-w-[500px]">
+
+          <!-- Kotak Deskripsi -->
+          <div class="bg-black rounded-[5px] p-4 sm:p-5 box-border mb-6">
+            <h3
+              class="font-['Montserrat',sans-serif] text-[1.6rem] sm:text-[1.8rem] font-extrabold mb-3 tracking-[1px]">
+              EXPLORE MY WORKS</h3>
+            <p
+              class="font-['Montserrat',Arial,Helvetica,sans-serif] text-[0.95rem] sm:text-[0.98rem] text-[#fdfdfd] leading-[1.6] mb-0">
+              Lihat demo prototipe game (Mobile and Desktop), dan aset pixel art lainnya di halaman itch.io resmi
+              saya.
+              <br><strong class="font-bold">Free download asset & Demo</strong>
             </p>
           </div>
 
-          <!-- Tombol itch.io -->
-          <a href="https://fickry.itch.io" target="_blank" rel="noopener noreferrer" class="itch-btn">
-            <svg class="itch-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <!-- Tombol Itch.io -->
+          <a href="https://fickry.itch.io" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2.5 px-6 py-3 bg-[#fa5c5c] text-white font-['Montserrat',sans-serif] text-[0.95rem] font-bold rounded-lg shadow-[0_4px_14px_rgba(250,92,92,0.35)] hover:bg-[#ff4747] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(250,92,92,0.5)] transition-all duration-300">
+            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
                 d="M3.29 2C2.58 2 2 2.58 2 3.29v17.42C2 21.42 2.58 22 3.29 22h17.42c.71 0 1.29-.58 1.29-1.29V3.29C22 2.58 21.42 2 20.71 2H3.29zm2.42 4.29h12.58v1.71H5.71V6.29zm0 3.43h12.58v1.71H5.71V9.72zm2.57 3.43h7.43v1.71H8.28v-1.71zm1.72 3.43h4v1.71h-4v-1.71z" />
             </svg>
             <span>View on itch.io</span>
           </a>
+
+        </div>
+
+        <!-- SISI KANAN (Gambar Miring / Tilted Showcase) -->
+        <div class="flex justify-center items-center w-full lg:w-auto my-6 lg:my-0">
+          <div
+            class="relative rotate-[-6deg] [transform:rotate(-6deg)_rotateY(-8deg)] hover:rotate-0 transition-transform duration-400">
+            <img src="asset_pixel/ttb/asset_ui_ux.webp" alt="Footer Showcase"
+              class="w-full max-w-[280px] sm:max-w-[340px] h-auto rounded-2xl block object-cover pointer-events-none"
+              loading="lazy">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div
+        class="max-w-[1100px] mx-auto mt-10 pt-5 border-t-[5px] border-[#fcfafa] text-center text-[0.85rem] text-[#fffdfd]">
+        <p>&copy; 2026 Fickry Abdi Rabbani. All rights reserved.</p>
+      </div>
+
+    </footer>
+  </section>
+
+  <!-- SLIDE 10 — GALERI PORTOFOLIO PAGE 1 - 10 -->
+  <section class="py-16" id="fotografi-gallery">
+    <div class="container px-5 py-12 mx-auto flex flex-wrap">
+
+      <!-- Judul & Deskripsi Gallery -->
+      <div class="flex w-full mb-12 flex-wrap">
+        <h1 class="sm:text-3xl text-2xl font-bold title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">
+          GALERI FOTOGRAFI
+        </h1>
+        <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base text-gray-600">
+          Kumpulan fotografi selama perkulihaan. (scrool kebawah)
+        </p>
+      </div>
+
+      <!-- Grid Layout Gambar (10 Halaman) -->
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <!-- SISI KIRI (PAGE 1 - 5) -->
+        <div class="flex flex-wrap w-full md:w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 1" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+              src="gallery/foto_01.webp" loading="lazy" decoding="async" width="500" height="300"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 2" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+              src="gallery/foto_02.webp" loading="lazy" decoding="async" width="501" height="301"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+          <div class="md:p-2 p-1 w-full">
+            <img alt="Gallery Page 3" class="w-full h-full object-cover object-center block rounded-lg shadow-sm"
+              src="gallery/foto_03.webp" loading="lazy" decoding="async" width="600" height="360"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 4" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+              src="gallery/foto_04.webp" loading="lazy" decoding="async" width="502" height="302"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 5" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+              src="gallery/foto_06.webp" loading="lazy" decoding="async" width="503" height="303"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+        </div>
+
+        <!-- SISI KANAN (PAGE 6 - 10) -->
+        <div class="flex flex-wrap w-full md:w-1/2">
+          <div class="md:p-2 p-1 w-full">
+            <img alt="Gallery Page 6" class="w-full h-full object-cover object-center block rounded-lg shadow-sm"
+              src="gallery/foto_09.webp" loading=" lazy" decoding="async" width="601" height="361"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 7" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+              src="gallery/foto_07.webp" loading="lazy" decoding="async" width="504" height="304"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 8" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+              src="gallery/foto_08.webp" loading="lazy" decoding="async" width="505" height="305"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 9" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+              src="gallery/foto_10.webp" loading="lazy" decoding="async" width="506" height="306"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 10" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+              src="gallery/foto_11.webp" loading="lazy" decoding="async" width="507" height="307"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
         </div>
 
 
-        <!-- Sisi Kanan: Gambar Miring -->
-        <div class="footer-right">
-          <div class="tilted-image-wrapper">
-            <img src="asset_pixel/ttb/asset_ui_ux.webp" alt="Footer Showcase" class="tilted-img" loading="lazy">
+
+        <!-- SISI kiri (PAGE 11 - 15) -->
+
+        <div class="flex flex-wrap w-full md:w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 11" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+              src="gallery/ttb/page_01.webp" loading="lazy" decoding="async" width="500" height="300"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 12" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+              src="gallery/ttb/page_07.webp" loading="lazy" decoding="async" width="501" height="301"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+
+        </div>
+
+        <div class="flex flex-wrap w-full md:w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 13" class="w-full h-full object-cover object-center block rounded-lg shadow-sm"
+              src="gallery/foto_12.webp" loading="lazy" decoding="async" width="600" height="360"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="Gallery Page 13" class="w-full h-full object-cover object-center block rounded-lg shadow-sm"
+              src="gallery/ttb/page_08.webp" loading="lazy" decoding="async" width="600" height="360"
+              onclick="openZoom(this)" id="fotografi_pointer">
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- SECTION PORTFOLIO / SHOWCASE -->
+  <section class="w-full bg-black py-16 px-4 sm:px-8 font-sans text-white">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Header Title -->
+      <div class="text-center mb-10">
+        <h2 class="text-3xl sm:text-4xl font-light tracking-wide uppercase">POSTER</h2>
+        <p class="text-gray-400 text-sm sm:text-base mt-2">Adobe Illustrator, Figma & Photoshop</p>
+        <p class="text-gray-500 text-xs sm:text-sm mt-1 max-w-xl mx-auto">
+
+        </p>
+      </div>
+
+      <!-- Case Header -->
+      <div class="flex justify-between items-end border-b border-gray-800 pb-3 mb-6">
+        <span class="text-gray-400 text-sm">Poster untuk media Instagram CV Dambiro</span>
+        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200">01 WB Trans</span>
+      </div>
+
+      <!-- MAIN GRID CONTAINER -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+
+        <!-- KOLOM KIRI: 1 Poster Utama Besar (Rasio 4:5 Pas Poster IG) -->
+        <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 relative group aspect-[4/5]">
+          <img src="poster/poster_06.webp" alt="Poster Utama WB Trans" class="w-full h-full object-cover "
+            loading="lazy" decoding="async">
+
+          <!-- Label Overlay -->
+          <div
+            class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 text-[11px] text-white tracking-wider">
+            Adobe Illustrator & Photoshop
+          </div>
+        </div>
+
+        <!-- KOLOM KANAN: Grid 2x2 (4 Poster Kecil dengan Rasio 4:5 Sesuai Gambar) -->
+        <div class="grid grid-cols-2 gap-3">
+
+          <!-- Poster Kecil 1 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_07.webp" alt="Poster 1" class="w-full h-full object-cover" loading="lazy"
+              decoding="async">
+          </div>
+
+          <!-- Poster Kecil 2 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_12.webp" alt="Poster 2" class="w-full h-full object-cover" loading="lazy"
+              decoding="async">
+          </div>
+
+          <!-- Poster Kecil 3 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_09.webp" alt="Poster 3" class="w-full h-full object-cover " loading="lazy"
+              decoding="async">
+          </div>
+
+          <!-- Poster Kecil 4 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_10.webp" alt="Poster 4" class="w-full h-full object-cover " loading="lazy"
+              decoding="async">
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Case Header 2-->
+      <div class="flex justify-between items-end border-b border-gray-800 pb-3 mb-6">
+        <span class="text-gray-400 text-sm">Poster untuk media Instagram CV Dambiro</span>
+        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200">02 WB Trans</span>
+      </div>
+
+      <!-- MAIN GRID CONTAINER -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+
+        <!-- KOLOM KIRI: 1 Poster Utama Besar (Rasio 4:5 Pas Poster IG) -->
+        <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 relative group aspect-[4/5]">
+          <img src="poster/poster_01.webp" alt="Poster Utama WB Trans" class="w-full h-full object-cover "
+            loading="lazy" decoding="async">
+
+          <!-- Label Overlay -->
+          <div
+            class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 text-[11px] text-white tracking-wider">
+            Adobe Illustrator & Photoshop
+          </div>
+        </div>
+
+
+        <!-- KOLOM KANAN: Grid 2x2 (4 Poster Kecil dengan Rasio 4:5 Sesuai Gambar) -->
+        <div class="grid grid-cols-2 gap-3">
+
+          <!-- Poster Kecil 1 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_13.webp" alt="Poster 1" class="w-full h-full object-cover" loading="lazy"
+              decoding="async">
+          </div>
+
+          <!-- Poster Kecil 2 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_11.webp" alt="Poster 2" class="w-full h-full object-cover" loading="lazy"
+              decoding="async">
+          </div>
+
+          <!-- Poster Kecil 3 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_15.webp" alt="Poster 3" class="w-full h-full object-cover " loading="lazy"
+              decoding="async">
+          </div>
+
+          <!-- Poster Kecil 4 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_14.webp" alt="Poster 4" class="w-full h-full object-cover " loading="lazy"
+              decoding="async">
           </div>
 
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2026 Fickry Abdi Rabbani. All rights reserved.</p>
+      <!-- Case Header 3-->
+      <div class="flex justify-between items-end border-b border-gray-800 pb-3 mb-6">
+        <span class="text-gray-400 text-sm">Poster untuk PO Laju Prima </span>
+        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200">02 WB Trans</span>
       </div>
-    </footer>
+
+      <!-- MAIN GRID CONTAINER -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+
+        <!-- KOLOM KIRI: 1 Poster Utama Besar (Rasio 4:5 Pas Poster IG) -->
+        <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 relative group aspect-[4/5]">
+          <img src="poster/poster_05.webp" alt="Poster Utama WB Trans" class="w-full h-full object-cover "
+            loading="lazy" decoding="async">
+
+          <!-- Label Overlay -->
+          <div
+            class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 text-[11px] text-white tracking-wider">
+            Adobe Illustrator & Photoshop
+          </div>
+        </div>
+
+
+        <!-- KOLOM KANAN: Grid 2x2 (4 Poster Kecil dengan Rasio 4:5 Sesuai Gambar) -->
+        <div class="grid grid-cols-2 gap-3">
+
+          <!-- Poster Kecil 1 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_04.webp" alt="Poster 1" class="w-full h-full object-cover" loading="lazy"
+              decoding="async">
+          </div>
+
+          <!-- Poster Kecil 2 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_03.webp" alt="Poster 2" class="w-full h-full object-cover" loading="lazy"
+              decoding="async">
+          </div>
+
+          <!-- Poster Kecil 3 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_02.webp" alt="Poster 3" class="w-full h-full object-cover " loading="lazy"
+              decoding="async">
+          </div>
+
+          <!-- Poster Kecil 4 -->
+          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+            <img src="poster/poster_16.webp" alt="Poster 4" class="w-full h-full object-cover " loading="lazy"
+              decoding="async">
+          </div>
+
+        </div>
+  </section>
+
+
+  <section class="text-gray-600 body-font bg-black">
+    <div class="w-full bg-black text-white font-sans py-6 px-2 overflow-hidden">
+
+
+      <!-- BARIS BAWAH: TEKS "TORCH" LEBIH BESAR -->
+      <div class="relative w-full overflow-hidden text-center leading-none">
+        <h1
+          class="text-[22vw] sm:text-[190px] font-black tracking-tighter uppercase bg-clip-text text-transparent bg-cover bg-center select-none scale-y-125 my-3"
+          style="background-image: url('gallery/ttb/page_23.png');background-position: center 25%; font-family: 'Impact', 'Arial Black', sans-serif;">
+          IBIS PAINT X
+
+        </h1>
+      </div>
+    </div>
+    <!-- BARIS BAWAH: TEKS "TORCH" LEBIH BESAR -->
+    <div class="relative w-full overflow-hidden text-center leading-none">
+      <h1
+        class="text-[22vw] sm:text-[90px] font-black tracking-tighter uppercase bg-clip-text text-transparent bg-cover bg-center select-none scale-y-125 my-3"
+        style="background-color: rgb(255, 254, 254);background-position: center 25%; font-family: 'Impact', 'Arial Black', sans-serif;">
+        <p class="text-[22vw] sm:text-[40px]" style="font-family: 'Montserrat'">Art By</p>
+        IBIS PAINT X
+      </h1>
+    </div>
+
+
+    <!-- CONTAINER BANNER HORIZON BERTUMPUK -->
+    <div class="w-full max-w-5xl mx-auto py-12 px-4 font-mono">
+
+      <!-- Header Title -->
+      <div class="mb-6 border-b-4 border-black pb-2 flex justify-between items-end">
+        <h3 class="text-xl sm:text-2xl font-black uppercase tracking-wider text-gray-900">Beberapa Art Ibis Paint X
+        </h3>
+        <span class="text-xs text-gray-500 font-bold">Arahkan kursor untuk membuka penuh</span>
+      </div>
+
+      <!-- Wrapper Bertumpuk Ke Bawah (Flex Column / Vertical Stack) -->
+      <div class="flex flex-col gap-4">
+
+        <!-- BANNER 1 (PANJANG KE SAMPING) -->
+        <a href="gallery/ttb/page_23.png" target="_blank" rel="noopener noreferrer"
+          class="group relative block w-full h-[140px] hover:h-[480px] bg-gray-900 border-4 border-black rounded-xl overflow-hidden transition-all duration-500 ease-in-out shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+
+          <!-- Label / Badge -->
+          <div class="absolute top-3 left-3 z-20 bg-white text-black text-xs font-bold px-2.5 py-1  "
+            style="border-radius: 5px;">
+            BANNER #01
+          </div>
+
+          <!-- Container Gambar -->
+          <div class="w-full h-full relative overflow-hidden">
+            <img src="gallery/ttb/page_23.png" alt="Artwork Horizontal 1"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              loading="lazy" decoding="async">
+
+            <!-- Overlay Gradasi (Hilang saat Hover) -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent group-hover:opacity-0 transition-opacity duration-300">
+            </div>
+
+            <!-- Hint Text di Kanan Bawah -->
+            <div
+              class="absolute bottom-3 right-4 z-10 text-white text-xs font-bold tracking-wider group-hover:opacity-0 transition-opacity duration-300 flex items-center gap-1">
+              <span>EXPAND IMAGE</span>
+              <span class="text-amber-400">▼</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- BANNER 2 (PANJANG KE SAMPING) -->
+        <a href="gallery/ttb/page_24.png" target="_blank" rel="noopener noreferrer"
+          class="group relative block w-full h-[140px] hover:h-[480px] bg-gray-900 border-4 border-black rounded-xl overflow-hidden transition-all duration-500 ease-in-out shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+
+          <div class="absolute top-3 left-3 z-20 bg-white text-black text-xs font-bold px-2.5 py-1  "
+            style="border-radius: 5px;">
+            BANNER #02
+          </div>
+
+          <div class="w-full h-full relative overflow-hidden">
+            <img src="gallery/ttb/page_24.png" alt="Artwork Horizontal 2"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              loading="lazy" decoding="async">
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent group-hover:opacity-0 transition-opacity duration-300">
+            </div>
+
+            <div
+              class="absolute bottom-3 right-4 z-10 text-white text-xs font-bold tracking-wider group-hover:opacity-0 transition-opacity duration-300 flex items-center gap-1">
+              <span>EXPAND IMAGE</span>
+              <span class="text-amber-400">▼</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- BANNER 3 (PANJANG KE SAMPING) -->
+        <a href="gallery/ttb/page_25.webp" target="_blank" rel="noopener noreferrer"
+          class="group relative block w-full h-[140px] hover:h-[480px] bg-gray-900 border-4 border-black rounded-xl overflow-hidden transition-all duration-500 ease-in-out shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+
+          <div class="absolute top-3 left-3 z-20 bg-white text-black text-xs font-bold px-2.5 py-1  "
+            style="border-radius: 5px;">
+            BANNER #03
+          </div>
+
+          <div class="w-full h-full relative overflow-hidden">
+            <img src="gallery/ttb/page_25.webp" alt="Artwork Horizontal 3"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              loading="lazy" decoding="async">
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent group-hover:opacity-0 transition-opacity duration-300">
+            </div>
+
+            <div
+              class="absolute bottom-3 right-4 z-10 text-white text-xs font-bold tracking-wider group-hover:opacity-0 transition-opacity duration-300 flex items-center gap-1">
+              <span>EXPAND IMAGE</span>
+              <span class="text-amber-400">▼</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <p class="font-['broken']  relative w-full overflow-hidden text-center leading-none text-[22vw] sm:text-[90px] font-black tracking-tighter uppercase bg-clip-text text-transparent bg-cover bg-center select-none scale-y-125 my-3"
+      style="background-color: rgb(255, 254, 254);background-position: center 25%; ">
+      Art
+      <br>Ilustrasi</br>
+    </p>
+    <div class="square-gallery-grid" style="padding-bottom: 5%;">
+
+      <div class="square-gallery-item" style="border-radius: 0%;"><img src="gallery/ttb/page_13.webp" alt="Asset"
+          loading="lazy" onclick="openZoom(this)"></div>
+
+      <div class="square-gallery-item" style="border-radius: 0%;"><img src="gallery/ttb/page_14.webp" alt="Asset"
+          loading="lazy" onclick="openZoom(this)"></div>
+
+
+      <div class="square-gallery-item" style="border-radius: 0%;"><img src="gallery/ttb/page_15.webp" alt="Asset"
+          loading="lazy" onclick="openZoom(this)"></div>
+
+
+      <div class="square-gallery-item" style="border-radius: 0%;"><img src="gallery/ttb/page_16.webp" alt="Asset"
+          loading="lazy" onclick="openZoom(this)"></div>
+
+
+      <div class="square-gallery-item" style="border-radius: 0%;"><img src="gallery/ttb/page_17.webp" alt="Asset"
+          loading="lazy" onclick="openZoom(this)"></div>
+
+
+      <div class="square-gallery-item" style="border-radius: 0%;"><img src="gallery/ttb/page_18.webp" alt="Asset"
+          loading="lazy" onclick="openZoom(this)"></div>
+
+
+      <div class="square-gallery-item" style="border-radius: 0%;"><img src="gallery/ttb/page_19.webp" alt="Asset"
+          loading="lazy" onclick="openZoom(this)"></div>
+
+
+      <div class="square-gallery-item" style="border-radius: 0%;"><img src="gallery/ttb/page_20.webp" alt="Asset"
+          loading="lazy" onclick="openZoom(this)"></div>
+
+
+      <div class="square-gallery-item" style="border-radius: 0%;"><img src="gallery/ttb/page_21.webp" alt="Asset"
+          loading="lazy" onclick="openZoom(this)"></div>
+
+
+      <div class="square-gallery-item" style="border-radius: 0%;"><img src="gallery/ttb/page_22.webp" alt="Asset"
+          loading="lazy" onclick="openZoom(this)"></div>
+
+
+  </section>
+  </section>
 
 
 
@@ -725,27 +1032,148 @@
 
 
 
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Beberapa karya lainnya</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">sisa beberapa karya yang saya buat .</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <a href="https://drive.google.com/file/d/1G64aY5c0Ze66yiObwq62z5kXsnVMLcvd/view" target="_blank"
+          rel="noopener noreferrer">
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                src="A.indesign/foto_01.webp">
+              <div
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">EPUB (BUKU DIGITAL)
+                </h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Adobe Indesign</h1>
+                <p class="leading-relaxed">Memahami adobe indesign seperti pembuatan epub statis maupun animation.</p>
+        </a>
+      </div>
+    </div>
+    </div>
+    <div class="lg:w-1/3 sm:w-1/2 p-4">
+      <a href="https://chipper-horse-a3ec5f.netlify.app/" target="_blank" rel="noopener noreferrer"
+        class="text-indigo-600">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+            src="gallery/ttb/splash_art.webp">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">MOTION SPLASH ART</h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Charackter GEnshin Kokomi</h1>
+            <p class="leading-relaxed">Saya membuatnya dengan mengambil projeck Github orang lain dan saya edit
+              lagi.</p>
+      </a>
+    </div>
+    </div>
+    </div>
+    <div class="lg:w-1/3 sm:w-1/2 p-4">
+      <div class="flex relative">
+        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+          src="https://dummyimage.com/603x363">
+        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+          <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+          <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
+          <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+            tousled waistcoat.</p>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/3 sm:w-1/2 p-4">
+      <div class="flex relative">
+        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+          src="https://dummyimage.com/602x362">
+        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+          <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+          <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
+          <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+            tousled waistcoat.</p>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/3 sm:w-1/2 p-4">
+      <div class="flex relative">
+        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+          src="https://dummyimage.com/605x365">
+        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+          <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+          <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
+          <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+            tousled waistcoat.</p>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/3 sm:w-1/2 p-4">
+      <div class="flex relative">
+        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+          src="https://dummyimage.com/606x366">
+        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+          <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+          <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
+          <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
+            tousled waistcoat.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
 
 
 
 
+  <!-- File JavaScript Eksternal -->
+  <script src="script.js" defer></script>
 
+  <!-- Script Navigasi Tombol Spasi -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const spaceHintEl = document.querySelector('.space-hint');
 
+      // ============================================================
+      // DAFTAR INDEKS SLIDE YANG INGIN DI-HIDE HINT-NYA
+      // Indeks dimulai dari 0:
+      // - Slide 11 (buffer 90)  = Index 10
+      // - Slide 12 (buffer 100) = Index 11 (Slide terakhir)
+      // Masukkan indeks slide mana saja di sini secara manual:
+      // ============================================================
+      const hiddenHintSlides = [9, 11, 12, 13, 14];
 
-    <!-- File JavaScript Eksternal -->
-    <script src="script.js" defer></script>
+      // 1. Fungsi untuk mengecek posisi scroll & toggle visibilitas hint
+      function updateSpaceHintVisibility() {
+        if (!spaceHintEl) return;
 
-    <!-- Panggil Script Galeri Terpisah di Sini -->
+        const sections = Array.from(document.querySelectorAll('section, .cover-slide, .about-slide'))
+          .filter(el => el.id !== 'dashboard-header' && !el.classList.contains('dashboard-nav'));
 
+        if (sections.length === 0) return;
 
-    <script>
+        const headerEl = document.getElementById('dashboard-header');
+        const headerOffset = headerEl ? headerEl.offsetHeight : 88;
+        const currentScroll = window.scrollY + headerOffset + 10;
+
+        // Cari slide terdekat saat ini
+        const activeIndex = sections.findIndex(section => section.offsetTop > currentScroll);
+
+        // Cek apakah posisi scroll saat ini (atau slide berikutnya/terakhir) ada di daftar hide
+        const currentIndex = activeIndex === -1 ? sections.length - 1 : activeIndex;
+
+        if (hiddenHintSlides.includes(currentIndex) || activeIndex === -1) {
+          spaceHintEl.style.display = 'none';
+        } else {
+          spaceHintEl.style.display = 'flex';
+        }
+      }
+
+      // 2. Event Listener Tombol SPACE (Navigasi & Jarak Tetap Utuh)
       document.addEventListener('keydown', function (e) {
         if (e.code === 'Space' || e.keyCode === 32) {
           e.preventDefault();
-
           document.body.classList.add('is-space-pressed');
 
-          // 1. Ambil HANYA elemen section/slide
           const sections = Array.from(document.querySelectorAll('section, .cover-slide, .about-slide'))
             .filter(el => el.id !== 'dashboard-header' && !el.classList.contains('dashboard-nav'));
 
@@ -755,29 +1183,14 @@
           const headerOffset = headerEl ? headerEl.offsetHeight : 88;
           const currentScroll = window.scrollY + headerOffset + 10;
 
-          // 2. Cari indeks section berikutnya
           const nextIndex = sections.findIndex(section => section.offsetTop > currentScroll);
 
           if (nextIndex !== -1) {
             const nextSection = sections[nextIndex];
 
-            // ============================================================
-            // PENGATURAN MANUAL EXTRA BUFFER HINGGA TIAP SLIDE (DESIRED SETTINGS)
-            // Index 0 = Slide 1, Index 1 = Slide 2, Index 2 = Slide 3, dst.
-            // ============================================================
-            const bufferList = [
-              120, // Slide 1
-              80, // Slide 2
-              120, // Slide 3
-              80, // Slide 4
-              80, // Slide 5
-              80,  // Slide 6 
-              80,   // Slide 7
-              80  // Slide 8 
-
-            ];
-
-            // Jika indeks slide lebih banyak dari daftar, gunakan nilai default (misal 100)
+            // bufferList milikmu utuh tanpa diubah nilainya
+            //                   1    2   3    4   5   6   7   8   9   10  11  12   13  14  15
+            const bufferList = [120, 80, 120, 80, 80, 80, 80, 80, 80, 90, 100, 90, 90, 150];
             const extraBuffer = bufferList[nextIndex] !== undefined ? bufferList[nextIndex] : 100;
 
             window.scrollTo({
@@ -785,18 +1198,20 @@
               behavior: 'smooth'
             });
           } else {
-            // Kembali ke paling atas
             window.scrollTo({
               top: 0,
               behavior: 'smooth'
             });
           }
+
+          // Perbarui visibilitas hint setelah pencetan spasi
+          setTimeout(updateSpaceHintVisibility, 100);
         }
       });
 
-      // -------------------------------------------------------------
-      // RESET KEMBALI KE DELAY SCROLL BIASA SAAT KURSOR / TOUCH DIMAINKAN
-      // -------------------------------------------------------------
+      // 3. Pantau scroll biasa (wheel/touch) untuk update tampilan hint
+      window.addEventListener('scroll', updateSpaceHintVisibility, { passive: true });
+
       window.addEventListener('wheel', () => {
         document.body.classList.remove('is-space-pressed');
       }, { passive: true });
@@ -804,7 +1219,11 @@
       window.addEventListener('touchmove', () => {
         document.body.classList.remove('is-space-pressed');
       }, { passive: true });
-    </script>
+
+      // Jalankan sekali saat halaman pertama dimuat
+      updateSpaceHintVisibility();
+    });
+  </script>
 </body>
 
 </html>

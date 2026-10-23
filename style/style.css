@@ -30,9 +30,25 @@ body {
 
 
 
+@font-face {
+  font-family: 'DancingVampyrish';
+  /* Gunakan ../ jika folder font berada di luar folder CSS */
+  src: url('../font/DancingVampyrish.ttf') format('truetype');
 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'broken';
+  /* Gunakan ../ jika folder font berada di luar folder CSS */
+  src: url('../font/BROKEN15.TTF') format('truetype');
 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ==========================================
    PRELOADER / LOADING SCREEN
@@ -376,6 +392,48 @@ body {
   }
 }
 
+/* Teks Pengumuman Kecil & Sederhana */
+.tech-announcement {
+  position: absolute;
+  top: 90%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #666666;
+  text-align: center;
+  margin: 16px auto;
+  padding: 0 12px;
+}
+
+/* Penataan Logo Inline Umum */
+.inline-tech {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: #222222;
+  vertical-align: middle;
+}
+
+.inline-tech img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* Khusus Logo Gemini (Ukuran 2x Lipat: 28px) */
+.inline-tech.tech-gemini img {
+  width: 28px;
+  height: 28px;
+}
+
+.inline-tech small {
+  font-weight: 400;
+  font-size: 10px;
+  color: #888888;
+}
+
+
 /* ============================================================
    SLIDE 2 — ABOUT ME (FULL LAYAR)
    ============================================================ */
@@ -533,14 +591,6 @@ body {
 
 
 
-.about-subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: clamp(18px, 2vw, 24px);
-  color: #3b2fe0;
-  margin-top: 4px;
-  margin-bottom: 28px;
-}
 
 .about-card {
   position: relative;
@@ -1120,7 +1170,7 @@ body {
 /* Indikator Navigasi Spasi */
 .space-hint {
   position: fixed;
-  bottom: 24px;
+  bottom: 55px;
   right: 24px;
   z-index: 99;
   display: flex;
@@ -1417,75 +1467,10 @@ body {
   padding: 0;
 }
 
-/* 3. Atur Container Konten Teks */
-.slide-content-1 {
-  position: relative;
-  z-index: 2;
-  /* pastikan teks di atas gambar background */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
 
-/* 4. Judul Mentok ke Atas */
-.project-title-1 {
-  width: 100%;
-  text-align: center;
-  margin-top: 0 !important;
-  /* Menghapus margin bawaan <h2> */
-  padding-top: 0 !important;
-  margin-bottom: 10px;
 
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 800;
-  color: hsl(41, 100%, 50%);
-  line-height: 1.1;
-}
 
-.project-title-2 {
-  width: 100%;
-  text-align: center;
-  margin-top: 0 !important;
-  /* Menghapus margin bawaan <h2> */
-  padding-top: 0 !important;
-  margin-bottom: 10px;
 
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 700;
-  color: hsl(0, 7%, 97%);
-  line-height: 1.9;
-}
-
-/* 5. Deskripsi Teks */
-.project-desc-1 {
-  width: 100%;
-  text-align: center;
-  margin-top: 0 !important;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-
-  font-size: 1.1rem;
-  color: hsl(41, 100%, 50%);
-  max-width: 600px;
-}
-
-.project-desc-2 {
-  width: 100%;
-  text-align: center;
-  margin-top: 0 !important;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-
-  font-size: 1.1rem;
-  color: hsl(0, 0%, 2%);
-  max-width: 600px;
-}
 
 .img-awan {
   position: absolute;
@@ -1508,25 +1493,6 @@ body {
   mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
 }
 
-.img-belakang-awan {
-  position: absolute;
-  top: 30%;
-  left: -33%;
-  z-index: 0;
-  object-fit: contain;
-  object-fit: contain;
-  /* Atur nilai khusus di sini agar tidak tertimpa animasi */
-
-  --base-transform: scale(1.5);
-  /* Jeda waktu animasi (langsung/tanpa delay) */
-  --delay: 0.5s;
-
-
-
-  /* Masking pudar kiri & kanan */
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
-}
 
 .img-logo,
 .img-logo-merek {
@@ -1560,11 +1526,11 @@ body.is-space-pressed .img-belakang-awan {
 .img-logo-ai {
   position: absolute;
   top: 35%;
-  left: 30%;
+  left: -50%;
   /* Ubah dari -50% ke 50% untuk menentukan titik tengah */
   z-index: 0;
   object-fit: contain;
-  transform: scale(0.1);
+  transform: scale(0.2);
 }
 
 /* Posisi Melayang di Pojok Kanan Bawah */
@@ -1735,18 +1701,6 @@ body.is-space-pressed .scatter-item {
 }
 
 
-.concept-sheet-slide-2-header,
-#bg_pixel {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: block;
-  overflow: hidden;
-  top: -10%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 /* Style dasar untuk gambar di dalam wrapper */
 .img-dekorasi {
@@ -1756,34 +1710,6 @@ body.is-space-pressed .scatter-item {
   display: block;
 }
 
-.wrapper-char-1 {
-  position: absolute;
-  top: 65%;
-  left: 25%;
-  width: 200px;
-  z-index: 2;
-  transform: translate(-50%, -50%);
-  /* Menjaga titik tengah karakter tetap di 25% */
-  will-change: transform;
-}
-
-.wrapper-char-2 {
-  position: absolute;
-  top: 65%;
-  left: 59%;
-  width: 200px;
-  z-index: 2;
-  transform: translate(45%, -50%);
-  /* Menjaga titik tengah karakter tetap di 59% */
-  will-change: transform;
-}
-
-/* Efek jeda saat gambar di-hover (diarahkan kursor) */
-.wrapper-char-1:hover img,
-.wrapper-char-2:hover img {
-  filter: grayscale(50%);
-  /* Contoh efek visual */
-}
 
 /* Menghapus efek sticky khusus slide logomark agar ter-scroll normal ke bawah */
 .normal-flow-slide-2 {
@@ -1946,21 +1872,7 @@ body.is-space-pressed .scatter-item {
 /* ============================================================
    SECTION GALERI GAMBAR KOTAK (HTML/CSS ONLY)
    ============================================================ */
-.square-gallery-section {
-  width: 100%;
-  padding: 80px 5vw;
-  box-sizing: border-box;
-  /* Atur warna background section galeri di sini: */
-  /* MEMANGGIL GAMBAR BACKGROUND */
-  background-image: url('../asset_pixel/ttb/tanah.webp');
-  /* Ganti dengan path gambar Anda */
-  background-size: cover;
-  /* Memastikan gambar memenuhi seluruh latar */
-  background-position: center;
-  /* Memosisikan gambar di tengah */
-  background-repeat: no-repeat;
-  /* Mencegah gambar berulang/di-tile */
-}
+
 
 .square-gallery-header {
   text-align: center;
@@ -2010,15 +1922,10 @@ body.is-space-pressed .scatter-item {
   object-fit: cover;
   /* Mencegah gambar menjadi gepeng */
   display: block;
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-/* Efek Hover Zoom */
-.square-gallery-item:hover img {
-  transform: scale(1.08);
-  filter: brightness(1.1);
   cursor: pointer;
 }
+
+
 
 
 
@@ -2090,152 +1997,15 @@ body.no-scroll {
 }
 
 
-/* ============================================================
-   FOOTER DENGAN GAMBAR MIRING (TILTED SHOWCASE)
-   ============================================================ */
-.custom-footer {
-  width: 100%;
-  box-sizing: border-box;
-  /* Atur warna background section galeri di sini: */
-  /* MEMANGGIL GAMBAR BACKGROUND */
-  background-image: url('../asset_pixel/ttb/tanah.webp');
-  /* Ganti dengan path gambar Anda */
-  background-size: cover;
-  /* Memastikan gambar memenuhi seluruh latar */
-  background-position: center;
-  /* Memosisikan gambar di tengah */
-  background-repeat: no-repeat;
-  /* Mencegah gambar berulang/di-tile */
-  color: #ffffff;
-  padding: 60px 5vw 20px;
-  box-sizing: border-box;
-  overflow: hidden;
-  /* Mencegah gambar miring keluar dari batas layar */
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+
+/* SLIDE 10*/
+#fotografi_pointer {
+  cursor: pointer;
 }
 
-
-.footer-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-/* SISI KIRI (Teks & Tombol) */
-.footer-left {
-  flex: 1;
-  max-width: 500px;
-}
-
-.footer-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-
-.footer-description {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  color: #a0a0a0;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.footer-description,
-.box {
-  background-color: #0a0a0a;
-  border-radius: 5px;
-  padding: 16px 20px;
-  /* Jarak dalam kotak agar teks tidak dempet */
-  box-sizing: border-box;
-
-  /* MENAMBAHKAN JARAK LUAR KE BWAH (MEMISAHKAN DENGAN BUTTON) */
-  margin-bottom: 24px;
-  /* Atur jarak sesuai keinginan (misal: 16px - 24px) */
-}
-
-/* TOMBOL ITCH.IO */
-.itch-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 24px;
-  background-color: #fa5c5c;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(250, 92, 92, 0.35);
-  transition: all 0.3s ease;
-}
-
-.itch-icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.itch-btn:hover {
-  background-color: #ff4747;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(250, 92, 92, 0.5);
-}
-
-/* SISI KANAN (Gambar Miring) */
-
-.tilted-image-wrapper {
-  position: relative;
-  /* Properti miring: rotate(-6deg) dan sedikit sudut 3D */
-  transform: rotate(-6deg) rotateY(-8deg);
-  transition: transform 0.4s ease;
-}
-
-.tilted-img {
-  width: 100%;
-  max-width: 340px;
-  height: auto;
-  border-radius: 16px;
-  border: 3px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-  display: block;
-  object-fit: cover;
-  pointer-events: none;
-}
-
-
-
-/* BOTTOM COPYRIGHT */
-.footer-bottom {
-  max-width: 1100px;
-  margin: 40px auto 0;
-  padding-top: 20px;
-  border-top: 5px solid rgb(252, 250, 250);
-  text-align: center;
-  font-size: 0.85rem;
-  color: #fffdfd;
-}
-
-/* RESPONSIVE UNTUK HP */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-left {
-    max-width: 100%;
-  }
-
-  .tilted-image-wrapper {
-    transform: rotate(-3deg);
-    /* Kemiringan lebih sedikit di HP */
-    margin-top: 20px;
+@media (max-width: 1024px) {
+  .space-hint {
+    display: none !important;
   }
 }
