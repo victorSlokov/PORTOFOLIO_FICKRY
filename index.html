@@ -454,16 +454,23 @@
   </div>
 
   <!-- SECTION GALERI GRID KOTAK ASSET -->
-  <section class="w-full min-h-[400px] bg-repeat bg-auto" style="background-image: url('asset_pixel/ttb/tanah.webp');">
+  <!-- SECTION GALERI GRID KOTAK ASSET -->
+  <section class="w-full min-h-[400px] bg-repeat bg-auto py-8"
+    style="background-image: url('asset_pixel/ttb/tanah.webp');">
 
-    <div class="square-gallery-header">
-      <h2 class="square-gallery-title">PORTFOLIO GALLERY</h2>
-      <p class="square-gallery-subtitle">Scrool kebawah untuk melihat tamplian penuh</p>
+    <div class="square-gallery-header mb-6 text-center px-4">
+      <h2 class="square-gallery-title text-xl sm:text-2xl font-bold">PORTFOLIO GALLERY</h2>
+      <p class="square-gallery-subtitle text-xs sm:text-sm text-neutral-300">Scroll kebawah untuk melihat tampilan penuh
+      </p>
     </div>
 
-    <div class="square-gallery-grid ">
-      <div class="gallery-item item-wide">
-        <img src="asset_pixel/ttb/asset_01.webp" alt="Featured Asset" loading="lazy">
+    <!-- Tambahkan utility Tailwind grid responsif di sini -->
+    <div
+      class="square-gallery-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 px-4 max-w-5xl mx-auto">
+
+      <!-- Jika asset_01 ingin dibuat normal seukuran kotak lain di HP, hilangkan/ubah kelas item-wide atau buat ukurannya seragam -->
+      <div class="gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
+        <img src="asset_pixel/ttb/asset_01.webp" alt="Featured Asset" class="w-full h-full object-cover" loading="lazy">
       </div>
       <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
         <img src="asset_pixel/ttb/asset_02.webp" alt="Asset 2" class="w-full h-full object-cover cursor-pointer"
