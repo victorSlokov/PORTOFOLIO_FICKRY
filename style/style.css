@@ -31,7 +31,7 @@ body {
 
 
 @font-face {
-  font-family: 'DancingVampyrish';
+  font-family: 'vam';
   /* Gunakan ../ jika folder font berada di luar folder CSS */
   src: url('../font/DancingVampyrish.ttf') format('truetype');
 
@@ -50,6 +50,16 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'clash';
+  /* Gunakan ../ jika folder font berada di luar folder CSS */
+  src: url('../font/clash.otf') format('opentype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ==========================================
    PRELOADER / LOADING SCREEN
    ========================================== */
@@ -59,24 +69,30 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #000000;
-  /* Warna layar loading */
   z-index: 99999;
-  /* Memastikan preloader berada di paling depan */
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  /* Menggunakan clip-path untuk efek lingkaran */
+  clip-path: circle(150% at 50% 50%);
+  transition: clip-path 0.9s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.9s ease;
 }
 
-/* Saat loading selesai, sembunyikan preloader */
+/* Saat loading selesai, layar hitam akan terbuka dari tengah berbentuk bulat */
 #preloader.preloader-hidden {
-  opacity: 0;
+  clip-path: circle(0% at 50% 50%);
   visibility: hidden;
   pointer-events: none;
 }
 
 .loader-content {
   text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+/* Saat preloader mulai menutup, teks/spinner di tengah memudar cepat */
+#preloader.preloader-hidden .loader-content {
+  opacity: 0;
 }
 
 /* Animasi Spinner Sederhana */
@@ -111,327 +127,6 @@ body {
 
 
 
-/* ============================================================
-   SLIDE 1 — COVER
-   Tidak diubah sama sekali: tetap kartu kecil 900x400,
-   hanya dibungkus section agar bisa ditumpuk dengan slide berikutnya.
-   ============================================================ */
-.cover-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 88px);
-  width: 100%;
-  background-color: white;
-}
-
-/* Card Utama */
-.card-container {
-  position: relative;
-  width: 900px;
-  height: 400px;
-  background-color: #ffffff;
-  border: 2px solid #000;
-  border-radius: 1%;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Badge Pojok Kiri Atas */
-.badge-far {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 50px;
-  height: 50px;
-  background-color: #d1d1d1;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-/* Section Kiri */
-.left-section {
-  padding: 60px 40px 30px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 55%;
-  z-index: 2;
-}
-
-/* Block Header / Judul */
-.header-title {
-  display: flex;
-  align-items: flex-end;
-  gap: 10px;
-}
-
-.main-title {
-  font-size: 64px;
-  font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -2px;
-  color: #1a1a1a;
-}
-
-.barcode-top-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.barcode-top {
-  font-family: 'Libre Barcode 39', cursive;
-  font-size: 42px;
-  line-height: 0.1;
-}
-
-.sub-top {
-  font-size: 20px;
-  letter-spacing: 10px;
-  color: #666;
-  margin-top: 2px;
-}
-
-/* Tagline */
-.tagline {
-  margin-top: 25px;
-  font-size: 18px;
-  color: #222;
-  line-height: 1.3;
-}
-
-.tagline strong {
-  font-weight: 900;
-}
-
-/* Section Barcode Bawah & Typing Text */
-.bottom-barcode-container {
-  margin-top: auto;
-}
-
-.barcode-bottom {
-  font-family: 'Libre Barcode 39', cursive;
-  font-size: 48px;
-  line-height: 0.8;
-  letter-spacing: 2px;
-}
-
-.typing-container {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 7px;
-  color: #1a1a1a;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  margin-top: 4px;
-}
-
-/* Kursor Mengetik */
-.cursor {
-  display: inline-block;
-  width: 2px;
-  height: 14px;
-  background-color: #000;
-  margin-left: 3px;
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
-/* Container Utama Kanan */
-.right-section {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  z-index: 1;
-}
-
-.right-section img {
-  height: 100%;
-  object-fit: contain;
-  object-position: right center;
-}
-
-/* Container Utama Kanan */
-.right-section-2 {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  z-index: 1;
-}
-
-.right-section-2 img {
-  height: 100%;
-  object-fit: contain;
-  object-position: right center;
-}
-
-
-/* Handle Instagram Tag */
-.ig-handle {
-  position: absolute;
-  top: 90px;
-  right: 30px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #000;
-  z-index: 3;
-}
-
-/* Wadah Pembungkus Gambar */
-.image-wrapper {
-  position: relative;
-  display: inline-block;
-  height: 100%;
-}
-
-/* Base Animasi Gambar */
-.img-front,
-.img-back,
-.img-onion,
-.img-onion_2 {
-  opacity: 0;
-  animation: fadeSlideLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-
-/* Gambar Depan */
-.img-front {
-  position: relative;
-  top: 10%;
-  z-index: 2;
-  height: 100%;
-  display: block;
-  animation-delay: 0.2s;
-}
-
-/* Gambar Belakang */
-.img-back {
-  position: absolute;
-  top: 0%;
-  left: -50%;
-  z-index: -1;
-  width: 190%;
-  height: 120%;
-  object-fit: contain;
-  transform: scale(1.2);
-  transform-origin: center;
-  animation-delay: 0.8s;
-  max-width: 150%;
-}
-
-.img-onion {
-  position: absolute;
-  top: 30%;
-  left: 0%;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transform: scale(1.2);
-  transform-origin: center;
-  animation-delay: 1.4s;
-  filter: opacity(0.5);
-}
-
-.img-onion_2 {
-  position: absolute;
-  top: -3%;
-  left: 20%;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transform: scale(1.2);
-  transform-origin: center;
-  animation-delay: 1.9s;
-  filter: opacity(0.5);
-}
-
-
-/* Keyframe Animasi Fade ke Kiri */
-@keyframes fadeSlideLeft {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Teks Pengumuman Kecil & Sederhana */
-.tech-announcement {
-  position: absolute;
-  top: 90%;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  line-height: 1.8;
-  color: #666666;
-  text-align: center;
-  margin: 16px auto;
-  padding: 0 12px;
-}
-
-/* Penataan Logo Inline Umum */
-.inline-tech {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-weight: 600;
-  color: #222222;
-  vertical-align: middle;
-}
-
-.inline-tech img {
-  width: 14px;
-  height: 14px;
-  object-fit: contain;
-}
-
-/* Khusus Logo Gemini (Ukuran 2x Lipat: 28px) */
-.inline-tech.tech-gemini img {
-  width: 28px;
-  height: 28px;
-}
-
-.inline-tech small {
-  font-weight: 400;
-  font-size: 10px;
-  color: #888888;
-}
 
 
 /* ============================================================

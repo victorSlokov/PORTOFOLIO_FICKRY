@@ -5,8 +5,9 @@ module.exports = {
     extend: {
       fontFamily: {
         // Nama key bebas, contoh di sini diberi nama 'vampyrish'
-        'vampyrish': ['DancingVampyrish', 'sans-serif'],
+        'vam': ['DancingVampyrish', 'sans-serif'],
         'broken': ['BROKEN15', 'sans-serif'],
+        'clash': ['clash', 'bold'],
       },
     },
   },

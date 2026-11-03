@@ -36,6 +36,8 @@
       <h1 class="text-2xl font-bold">@FCRYBDIBBI</h1>
       <div class="space-x-6 text-gray-600"></div>
     </nav>
+
+
   </header>
 
   <!-- Indikator Navigasi Spasi -->
@@ -46,123 +48,189 @@
   </div>
 
   <!-- SLIDE 1 — COVER -->
-  <section class="cover-slide">
-    <div class="card-container">
-      <div class="badge-far">FAR</div>
-      <div class="ig-handle">@FCRYBDIBBI</div>
+  <!-- SLIDE 1 — COVER (Responsif Mobile & Desktop) -->
+  <section class="cover-slide relative w-full min-h-screen flex flex-col justify-between 
+    items-center overflow-hidden bg-white text-black px-6 py-5">
 
-      <div class="left-section">
-        <div>
-          <div class="header-title">
-            <h1 class="main-title" id="porto">PORTO</h1>
-            <div class="barcode-top-wrapper">
-              <span class="barcode-top">*FOLIA*</span>
-              <span class="sub-top">FOLIA</span>
-            </div>
-          </div>
+    <!-- Kontainer Utama Cover -->
+    <div
+      class="w-full max-w-7xl mx-auto flex-1 flex flex-col md:flex-row items-center justify-between relative my-auto w-full">
 
-          <p class="tagline">
-            Designing <strong>with purpose</strong><br>
-            <strong>and precision.</strong>
-          </p>
+      <!-- Bagian Kiri: Tahun & Teks "port" + Tagline -->
+      <div class="z-35 flex flex-col items-center md:items-start justify-center text-center md:text-left mb-4 md:mb-0">
+        <span class="text-lg sm:text-2xl font-black tracking-widest text-neutral-800">2026</span>
+        <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-tighter uppercase leading-none select-none">
+          port
+        </h1>
+        <p class="tagline text-xs sm:text-sm font-medium text-neutral-600 mt-2 max-w-[200px] ">
+          Designing <strong>with purpose</strong> and <strong>precision.</strong>
+        </p>
+      </div>
+
+      <!-- Bagian Tengah: Lingkaran Dekoratif + Ilustrasi Karakter Utama -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20 overflow-hidden my-auto">
+
+        <!-- Lingkaran di Belakang Gambar (Background Circle) -->
+        <div class="absolute w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] md:w-[520px] md:h-[520px] 
+          rounded-full bg-neutral-200/80 -z-10 scale-95 sm:scale-100">
         </div>
 
-        <div class="bottom-barcode-container">
-          <div class="barcode-bottom">*Fickry.A.R*</div>
-          <div class="typing-container">
-            <span id="typed-text"></span><span class="cursor"></span>
-          </div>
+        <!-- Gambar Karakter -->
+        <img src="gambar_1_1_4x.webp" alt="Illustration Character" class="w-[280px] sm:w-[480px] md:w-[600px] h-auto object-contain 
+          select-none translate-x-0 md:translate-x-4 opacity-90 sm:opacity-100" loading="lazy" decoding="async"
+          width="800" height="600" />
+      </div>
+
+      <!-- Bagian Kanan: Teks "folio." & Keterangan Kecil -->
+      <div class="z-35 flex flex-col items-center md:items-end justify-center text-center md:text-right mt-4 md:mt-0">
+        <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-tighter lowercase leading-none select-none">
+          folio.
+        </h1>
+        <div class="text-[11px] sm:text-xs text-neutral-500 font-mono tracking-wider mt-2 leading-relaxed">
+          Selected hard skills<br class="hidden md:inline">
+          graphic design,<br class="hidden md:inline">
+          illustration,<br class="hidden md:inline">
+          &amp; asset games.
         </div>
       </div>
 
-      <div class="right-section">
-        <img src="gambar_1_1_4x.webp" alt="Illustration" class="img-front" loading="lazy" width="800" height="600">
-        <img src="mask_group_1_1x.webp" alt="Illustration_belakang" class="img-back" loading="lazy" width="800"
-          height="600">
-        <img src="union_4x.webp" alt="Illustration_onion" class="img-onion" loading="lazy" decoding="async" width="1920"
-          height="1080">
-        <img src="union2.webp" alt="Illustration_onion_2" class="img-onion_2" loading="lazy" decoding="async"
-          width="1920" height="1080">
-      </div>
     </div>
 
-    <p class="tech-announcement">
-      Website ini dibuat dengan bantuan
-      <span class="inline-tech tech-gemini">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="Gemini AI">
-        Gemini AI
-      </span>,
-      <span class="inline-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-        HTML
-      </span>,
-      <span class="inline-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-        CSS
-      </span>,
-      <span class="inline-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-        Node.js <small>(sebagai runtime CLI)</small>
-      </span>, dan
-      <span class="inline-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-          alt="Tailwind v3">
-        Tailwind CSS v3 <small>(via CLI).</small>
-      </span>
-      <b>Hasilnya sebagai portofolio saya dan hobi.</b>
-    </p>
+    <!-- Bagian Footer / Tech Announcement Responsif Mobile (Sesuai Kode Anda) -->
+    <div class="w-full max-w-4xl mx-auto px-4 z-30 mt-6 mb-4">
+      <p
+        class="tech-announcement flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-neutral-600 text-center leading-relaxed">
+
+        <span>Website ini dibuat dengan bantuan</span>
+
+        <span
+          class="inline-flex items-center gap-1 bg-neutral-100 border border-neutral-300 px-2 py-0.5 rounded-md font-medium shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="Gemini AI"
+            class="w-3.5 h-3.5 sm:w-4 sm:h-4">
+          Gemini AI (model 3)
+        </span>,
+
+        <span
+          class="inline-flex items-center gap-1 bg-neutral-100 border border-neutral-300 px-2 py-0.5 rounded-md font-medium shadow-sm">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"
+            class="w-3.5 h-3.5 sm:w-4 sm:h-4">
+          HTML
+        </span>,
+
+        <span
+          class="inline-flex items-center gap-1 bg-neutral-100 border border-neutral-300 px-2 py-0.5 rounded-md font-medium shadow-sm">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
+            class="w-3.5 h-3.5 sm:w-4 sm:h-4">
+          CSS
+        </span>,
+
+        <span
+          class="inline-flex items-center gap-1 bg-neutral-100 border border-neutral-300 px-2 py-0.5 rounded-md font-medium shadow-sm">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+            class="w-3.5 h-3.5 sm:w-4 sm:h-4">
+          Node.js <small class="text-[10px]">(CLI)</small>
+        </span>, dan
+
+        <span
+          class="inline-flex items-center gap-1 bg-neutral-100 border border-neutral-300 px-2 py-0.5 rounded-md font-medium shadow-sm">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+            alt="Tailwind v3" class="w-3.5 h-3.5 sm:w-4 sm:h-4">
+          Tailwind CSS v3
+        </span>.
+
+        <b class="w-full text-center mt-1 text-neutral-800 font-semibold text-xs">Hasilnya sebagai portofolio &amp;
+          hobi.</b>
+      </p>
+    </div>
+
   </section>
 
-  <!-- SLIDE 2 — ABOUT ME -->
-  <section class="about-slide" id="about">
-    <div class="badge-far">FAR</div>
 
-    <div class="blob-deco" aria-hidden="true">
-      <span class="b1"></span>
-      <span class="b2"></span>
-      <span class="b3"></span>
+  <!-- SLIDE 2 — ABOUT ME (FULL LAYAR DENGAN TAILWIND) -->
+  <section
+    class="about-slide relative w-full min-h-[calc(100vh-88px)] bg-white border-t-2 border-black overflow-hidden flex flex-col lg:flex-row items-center justify-between px-6 sm:px-[6vw] py-16 gap-8 lg:gap-[4vw]"
+    id="about">
+
+    <!-- Dekorasi Blob Abu-abu di Kanan Atas -->
+    <div
+      class="blob-deco absolute top-0 right-0 w-full lg:w-[55%] h-[60%] z-0 pointer-events-none overflow-hidden opacity-60 lg:opacity-100"
+      aria-hidden="true">
+      <span
+        class="absolute block bg-[#e2e2e2] rounded-full -top-[30px] right-[120px] w-[340px] h-[90px] rotate-90"></span>
+      <span class="absolute block bg-[#e2e2e2] rounded-full top-[60px] -right-[40px] w-[300px] h-[90px]"></span>
+      <span class="absolute block bg-[#ececec] rounded-full top-[150px] right-[260px] w-[480px] h-[90px]"></span>
     </div>
 
-    <div class="right-section-2">
-      <img src="union_4x.webp" alt="Illustration_onion" class="img-onion-netral-1" data-animate="slide-right"
-        loading="lazy" decoding="async" width="1920" height="1080">
-      <img src="union2.webp" alt="Illustration_onion_2" class="img-onion-netral" data-animate="slide-right"
-        loading="lazy" decoding="async" width="1920" height="1080">
-      <img src="union_4x.webp" alt="Illustration_onion" class="img-onion-netral-2" data-animate="slide-right"
-        loading="lazy" decoding="async" width="1920" height="1080">
+    <!-- Dekorasi Gambar Latar Belakang (Onion) -->
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none z-0 hidden xl:block opacity-30">
+      <img src="union_4x.webp" alt="Illustration_onion" class="absolute right-10 w-96 h-auto" loading="lazy"
+        decoding="async">
     </div>
 
-    <div class="about-left shadow-md" style="border-radius: 5%;">
-      <div class="about-illustration-wrap shadow-xl"
-        style="background-color: rgb(194, 194, 194); border-radius: 16px 16px 0 0;">
-        <img src="about_character.webp" alt="Ilustrasi Fickry Abdi Rabbani" id="aboutImg" loading="lazy"
-          decoding="async" width="1191" height="1440">
+    <!-- KOLOM KIRI: Ilustrasi Karakter + Tombol CV -->
+    <div
+      class="about-left relative z-10 w-full lg:w-[34%] flex flex-col justify-end h-full bg-[#c2c2c2] border-4 rounded-lg">
+
+      <!-- Bungkus Ilustrasi Karakter -->
+      <!-- Bungkus Ilustrasi Karakter (Tanpa Animasi Slide) -->
+      <div
+        class="about-illustration-wrap relative w-full flex justify-center bg-[#c2c2c2] rounded-t-2xl shadow-xl pt-6 px-4">
+        <img src="about_character.webp" alt="Ilustrasi Fickry Abdi Rabbani" id="aboutImg"
+          class="max-w-full h-auto max-h-[50vh] sm:max-h-[62vh] object-contain" loading="lazy" decoding="async"
+          width="1191" height="1440">
       </div>
-      <a href="cv/Cv ATS.pdf" target="_blank" rel="noopener noreferrer" class="view-cv-btn" id="viewCvBtn">View Cv</a>
+
+      <!-- Tombol View CV -->
+      <a href="cv/Cv ATS.pdf" target="_blank" rel="noopener noreferrer" id="viewCvBtn"
+        class="view-cv-btn block mx-auto mt-8 mb-6 px-7 py-3.5 bg-[#e6e6e6] hover:bg-[#d3d3d3] text-[#111] font-bold text-[15px] rounded-lg tracking-wide shadow-md transition-all duration-200 hover:-translate-y-0.5 text-center w-fit">
+        View Cv
+      </a>
     </div>
 
-    <div class="about-right" data-animate="slide-right">
-      <h2 class="main-title">About Me</h2>
-      <div class="about-subtitle">Graphic Designer</div>
+    <!-- KOLOM KANAN: Judul + Kartu Bio -->
+    <div class="about-right relative z-10 w-full lg:flex-1 flex flex-col justify-center h-full">
 
-      <div class="about-card">
-        <p class="about-card-text">
-          Halo, saya Fickry Abdi Rabbani seorang graphic designer memiliki keahlian di bidang pengeditan dengan aplikasi
-          Adobe Illustrator, Figma, Microsoft Office, dan menyukai html, css untuk membuat website sederhana.
-          <b>Portofolio ini menampilkan beberapa keahlian saya di bidang desain yang telah dipelajari selama kuliah.</b>
-          <br><br>
-          Zodiak : Aries (api)<br>
-          Jack of all trades
+      <!-- Judul Section di Mobile/Tablet (Opsional, jika ingin dimunculkan) -->
+      <div class="mb-4 ">
+        <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight">About Me</h2>
+        <p class="text-sm font-semibold text-neutral-600 tracking-wider">Graphic Designer</p>
+      </div>
+
+      <!-- Kartu Bio Glassmorphism -->
+      <div data-animate="slide-right" class="about-card relative w-full bg-gradient-to-b from-white/50 to-[#f2f2f2]/50 backdrop-blur-md 
+        border border-black/20 rounded-[18px] 
+        p-5 sm:p-9 overflow-hidden 
+        shadow-[0_15px_35px_rgba(0,0,0,0.08)] flex flex-col justify-between min-h-[320px]">
+
+        <!-- Teks Deskripsi Bio -->
+        <p
+          class="about-card-text relative z-10 font-sans text-xs sm:text-[15px] leading-relaxed text-black max-w-full lg:max-w-[75%] pb-12 sm:pb-0">
+          Halo, saya Fickry Abdi Rabbani seorang graphic designer memiliki ketertarikan Mengeksplor hal baru.
+          Softskil saya di bidang Desain Grafis, brainstorming, poster media sosial, Ilustrasi, pembuatan epub dan
+          Ui/Ux,
+          memiliki tambahan keahlian di bidang Post-Production, pengeditan video (kinemaster, capcut) dan
+          hoby/ketertarikan dengan frontend
+          <b class="block mt-2">Portofolio ini menampilkan beberapa softskil saya di bidang desain yang telah dipelajari
+            selama kuliah.</b>
         </p>
 
-        <div class="about-card-id">
-          <div class="barcode-mini">*Fickry.A.R*</div>
-          <div class="name-mini">FICKRY ABDI RABBANI</div>
+        <!-- Barcode + Nama di Pojok Kanan Bawah Kartu Bio (Sudah dioptimasi agar tidak menyatu di HP) -->
+        <div class="about-card-id absolute right-4 sm:right-8 bottom-4 sm:bottom-6 z-10 text-right">
+          <div class="barcode-mini font-['Libre_Barcode_39',cursive] text-2xl sm:text-3xl leading-[0.7]">
+            *Fickry.A.R*
+          </div>
+          <div
+            class="name-mini text-[9px] sm:text-[11px] font-bold tracking-[2px] sm:tracking-[4px] text-[#1a1a1a] mt-1">
+            FICKRY ABDI RABBANI
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
+
+
+    </div>
+
+  </section>
   <!-- SLIDE 3 — EXPERIENCE & SOFTWARE SKILLS -->
   <section class="experience-section" id="experience">
     <div class="exp-container">
@@ -234,6 +302,11 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="Google Gemini"
               loading="lazy" decoding="async" width="128" height="128">
           </div>
+          <!-- Kartu Baru: Wix -->
+          <div class="skill-card" data-tooltip="Wix">
+            <img width="32" height="32" src="https://img.icons8.com/windows/32/wix.png" alt="wix" alt="Wix"
+              loading="lazy" decoding="async" width="128" height="128">
+          </div>
           <div class="skill-card" data-tooltip="Adobe InDesign">
             <img src="https://img.icons8.com/?size=100&id=GuWUhoT5K5Gg&format=png&color=000000" alt="Adobe InDesign"
               loading="lazy" decoding="async" width="128" height="128">
@@ -285,15 +358,15 @@
 
   <!--==========================================SLIDE 4 — PROJECT TTB==========================================-->
 
-  <!--==========================================SLIDE 4 — PROJECT TTB==========================================-->
-
   <!-- ============ SLIDE 4 — Pengembangan Produk ============ -->
-  <section
-    class="relative z-10 w-full min-h-[auto] sm:min-h-screen overflow-hidden border-b border-white/10 bg-black flex flex-col justify-start py-6 sm:py-10"
-    id="project-1">
-    <img src="Adobe_ilustrasi/awan2.png" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
+  <section class="relative z-10 w-full min-h-[auto] sm:min-h-screen overflow-hidden border-b border-white/10 
+    bg-black flex flex-col justify-start py-6 sm:py-10" id="project-1">
+
+    <img src="Adobe_ilustrasi/awan1.webp" alt="" data-animate="slide-right" class="pointer-events-none absolute 
+    inset-0 z-0 h-full w-full object-cover object-bottom 
       [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)] 
       [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
+
 
     <div class="relative z-10 flex h-full flex-col items-center px-4 pt-2 sm:pt-6 text-center">
       <h2 class="text-[clamp(1.8rem,4vw,3.5rem)] font-extrabold leading-tight text-[hsl(41,100%,50%)]">Pengembangan
@@ -322,12 +395,10 @@
   <!-- ============ SLIDE 5 — Deskripsi Produk ============ -->
   <section
     class="relative z-10 w-full min-h-[auto] sm:min-h-screen overflow-hidden border-b border-white/10 bg-black flex flex-col justify-start py-6 sm:py-10">
-    <img src="Adobe_ilustrasi/awan2.png" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
+    <img src="Adobe_ilustrasi/awan2.webp" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
       [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)] 
       [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
-    <img src="Adobe_ilustrasi/awan.webp" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
-      [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)] 
-      [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
+
     <div class="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center px-4 pt-2 sm:pt-6 text-center">
       <h2 class="text-[clamp(1.8rem,4vw,3.5rem)] font-extrabold leading-tight text-[hsl(41,100%,50%)]">Deskripsi Produk
       </h2>
@@ -367,7 +438,7 @@
   <!-- ============ SLIDE 7 — Mockup Produk ============ -->
   <section
     class="relative z-10 w-full min-h-[auto] sm:min-h-screen overflow-hidden border-b border-white/10 bg-black flex flex-col justify-start py-6 sm:py-10">
-    <img src="Adobe_ilustrasi/awan2.png" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
+    <img src="Adobe_ilustrasi/awan2.webp" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
       [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)] 
       [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
 
@@ -392,7 +463,7 @@
   <!-- ============ SLIDE 8 — Mockup Model ============ -->
   <section
     class="relative z-10 w-full min-h-[auto] sm:min-h-screen overflow-hidden border-b border-white/10 bg-black flex flex-col justify-start py-6 sm:py-10">
-    <img src="Adobe_ilustrasi/awan2.png" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
+    <img src="Adobe_ilustrasi/awan1.webp" alt="" data-animate="slide-right" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-bottom 
       [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)] 
       [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
 
@@ -405,10 +476,10 @@
       </div>
     </div>
 
-    <!-- Tombol Lihat Full Webp -->
+    <!-- Tombol Lihat Full Webp (Posisi di Tengah) -->
     <a href="https://drive.google.com/file/d/1sm1iXnrQtOAV0-pJyXa1WimI-oC-3t0G/view?usp=drive_open" target="_blank"
       rel="noopener noreferrer" data-animate="slide-left"
-      class="group absolute bottom-6 sm:bottom-12 left-4 sm:left-6 z-30 flex flex-col items-center gap-1.5 rounded-xl border border-white/20 bg-black/75 px-3 py-2 sm:px-4 sm:py-3 shadow-xl backdrop-blur hover:bg-white hover:border-white">
+      class="group absolute bottom-6 sm:bottom-12 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-1.5 rounded-xl border border-white/20 bg-black/75 px-3 py-2 sm:px-4 sm:py-3 shadow-xl backdrop-blur hover:bg-white hover:border-white">
       <img src="Adobe_ilustrasi/btnwebp.webp" alt=""
         class="h-[35px] w-[35px] sm:h-[50px] sm:w-[50px] object-contain transition group-hover:scale-110">
       <span class="text-[10px] sm:text-[11px] font-semibold tracking-wide text-white group-hover:text-black">Lihat Full
@@ -416,16 +487,61 @@
     </a>
   </section>
 
+  <!-- Mockup lainnya -->
+  <section class="py-12 px-4 max-w-1xl mx-auto bg-[#000000]">
+    <!-- Judul Section -->
+    <div class="py-12 px-4 max-w-6xl mx-auto bg-[#000000] -z-10">
+      <h2 class="text-2xl font-bold text-center mb-8 text-white">Mockup Tugas Kampus Pon Aceh Rebrending</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-start">
+
+        <!-- Item Gambar 1 -->
+        <div class="overflow-hidden rounded-xl shadow-lg bg-gray-800 group">
+          <img src="mockup/pon01.webp" alt="Karya 1"
+            class="w-full h-auto object-contain  transition duration-300 cursor-pointer" onclick="openZoom(this)">
+        </div>
+
+        <!-- Item Gambar 2 -->
+        <div class="overflow-hidden rounded-xl shadow-lg bg-gray-800 group">
+          <img src="mockup/pon02.webp" alt="Karya 2"
+            class="w-full h-auto object-contain  transition duration-300 cursor-pointer" onclick="openZoom(this)">
+        </div>
+
+        <!-- Item Gambar 3 -->
+        <div class="overflow-hidden rounded-xl shadow-lg bg-gray-800 group">
+          <img src="mockup/pon03.webp" alt="Karya 3"
+            class="w-full h-auto object-contain  transition duration-300 cursor-pointer" onclick="openZoom(this)">
+        </div>
+
+        <!-- Item Gambar 4 -->
+        <div class="overflow-hidden rounded-xl shadow-lg bg-gray-800 group">
+          <img src="mockup/pon04.webp" alt="Karya 4"
+            class="w-full h-auto object-contain  transition duration-300 cursor-pointer" onclick="openZoom(this)">
+        </div>
+
+        <!-- Item Gambar 5 -->
+        <div class="overflow-hidden rounded-xl shadow-lg bg-gray-800 group">
+          <img src="mockup/pon05.webp" alt="Karya 5"
+            class="w-full h-auto object-contain  transition duration-300 cursor-pointer" onclick="openZoom(this)">
+        </div>
+
+        <!-- Item Gambar 6 -->
+        <div class="overflow-hidden rounded-xl shadow-lg bg-gray-800 group">
+          <img src="mockup/pon06.webp" alt="Karya 6"
+            class="w-full h-auto object-contain  transition duration-300 cursor-pointer" onclick="openZoom(this)">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
   <!-- SLIDE 9 — ASSET GAME PIXEL (POSISI RESPONSIF HP & KOMPUTER) -->
   <div class="stack-wrapper">
     <section
       class="sticky top-0 w-full min-h-screen relative block overflow-hidden bg-cover bg-center bg-no-repeat z-10 [top:-10%]"
       style="background-image: url('asset_pixel/ttb/bg.webp');">
 
-      <!-- Gambar Background Utama -->
-      <img src="asset_pixel/ttb/bg.webp" alt="bg" id="bg_pixel"
-        class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none -z-10 min-h-screen"
-        loading="lazy" decoding="async" width="2809" height="1612">
 
       <!-- Wrapper Kontainer Karakter -->
       <div class="absolute inset-0 w-full h-full flex justify-between items-center px-4 sm:px-12 md:block">
@@ -454,13 +570,15 @@
   </div>
 
   <!-- SECTION GALERI GRID KOTAK ASSET -->
-  <!-- SECTION GALERI GRID KOTAK ASSET -->
   <section class="w-full min-h-[400px] bg-repeat bg-auto py-8"
     style="background-image: url('asset_pixel/ttb/tanah.webp');">
 
     <div class="square-gallery-header mb-6 text-center px-4">
-      <h2 class="square-gallery-title text-xl sm:text-2xl font-bold">PORTFOLIO GALLERY</h2>
+      <h2 class="square-gallery-title text-xl sm:text-5xl font-bold">Asset Game Pixel Art</h2>
       <p class="square-gallery-subtitle text-xs sm:text-sm text-neutral-300">Scroll kebawah untuk melihat tampilan penuh
+      </p>
+
+      <p class="square-gallery-subtitle text-xs sm:text-sm text-neutral-300 block md:hidden">Clik 2x untuk zoom in
       </p>
     </div>
 
@@ -469,70 +587,48 @@
       class="square-gallery-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 px-4 max-w-5xl mx-auto">
 
       <!-- Jika asset_01 ingin dibuat normal seukuran kotak lain di HP, hilangkan/ubah kelas item-wide atau buat ukurannya seragam -->
-      <div class="gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_01.webp" alt="Featured Asset" class="w-full h-full object-cover" loading="lazy">
-      </div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_02.webp" alt="Asset 2" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_03.webp" alt="Asset 3" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_04.webp" alt="Asset 4" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_05.webp" alt="Asset 5" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_06.webp" alt="Asset 6" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_07.webp" alt="Asset 7" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_08.webp" alt="Asset 8" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_09.webp" alt="Asset 9" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_10.webp" alt="Asset 10" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_11.webp" alt="Asset 11" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_12.webp" alt="Asset 12" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_13.webp" alt="Asset 13" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_14.webp" alt="Asset 14" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_15.webp" alt="Asset 15" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_16.webp" alt="Asset 16" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_17.webp" alt="Asset 17" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_18.webp" alt="Asset 18" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_19.webp" alt="Asset 19" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_20.webp" alt="Asset 20" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
-      <div class="square-gallery-item aspect-square overflow-hidden rounded-lg bg-neutral-900 border-2 border-black">
-        <img src="asset_pixel/ttb/asset_21.webp" alt="Asset 21" class="w-full h-full object-cover cursor-pointer"
-          loading="lazy" onclick="openZoom(this)"></div>
 
+
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_02.webp" alt="Asset 2" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_03.webp" alt="Asset 3" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_04.webp" alt="Asset 4" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_05.webp" alt="Asset 5" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_06.webp" alt="Asset 6" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_07.webp" alt="Asset 7" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_08.webp" alt="Asset 8" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_09.webp" alt="Asset 9" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_10.webp" alt="Asset 10" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_11.webp" alt="Asset 11" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_12.webp" alt="Asset 12" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_13.webp" alt="Asset 13" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_14.webp" alt="Asset 14" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_15.webp" alt="Asset 15" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_16.webp" alt="Asset 16" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_17.webp" alt="Asset 17" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_18.webp" alt="Asset 18" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_19.webp" alt="Asset 19" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_20.webp" alt="Asset 20" loading="lazy"
+          onclick="openZoom(this)"></div>
+      <div class="square-gallery-item"><img src="asset_pixel/ttb/asset_21.webp" alt="Asset 21" loading="lazy"
+          onclick="openZoom(this)"></div>
     </div>
   </section>
 
@@ -602,76 +698,207 @@
   </section>
 
   <!-- SLIDE 10 — GALERI PORTOFOLIO PAGE 1 - 10 -->
-  <section class="py-16" id="fotografi-gallery">
-    <div class="container px-5 py-12 mx-auto flex flex-wrap">
+  <section class="py-16 relative overflow-hidden bg-[#0d0d0d] z-10" id="fotografi-gallery">
+    <img src="asset/counting_gallery.webp"
+      class="absolute inset-0 w-full h-full object-cover -z-10 opacity-100 pointer-events-none "
+      alt="Background Counting" data-animate="slide-right">
+
+    <img src="asset/counting_gallery2.webp"
+      class="absolute inset-0 w-full h-[30%] object-cover -z-10 opacity-100 pointer-events-none "
+      alt="Background Counting" data-animate="slide-right">
+
+
+
+
+    <div class="container px-5 py-12 mx-auto flex flex-wrap relative  -z-10">
 
       <!-- Judul & Deskripsi Gallery -->
-      <div class="flex w-full mb-12 flex-wrap">
-        <h1 class="sm:text-3xl text-2xl font-bold title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">
-          GALERI FOTOGRAFI
+      <div class="flex w-full mb-12 flex-wrap justify-center text-center">
+        <h1 class="font-['clash'] sm:text-7xl text-3xl font-black title-font w-full 
+          bg-gradient-to-r bg-[#FF933E]
+          bg-clip-text text-transparent == tracking-[-4px]">
+          FOTOGRAFI
         </h1>
-        <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base text-gray-600">
-          Kumpulan fotografi selama perkulihaan. (scrool kebawah)
-        </p>
-      </div>
 
+      </div>
+      <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base text-gray-600 block md:hidden">
+        klik 2x untuk zoom in
+      </p>
       <!-- Grid Layout Gambar (10 Halaman) -->
-      <div class="flex flex-wrap md:-m-2 -m-1">
+      <div class=" flex flex-wrap md:-m-2 -m-1">
         <!-- SISI KIRI (PAGE 1 - 5) -->
         <div class="flex flex-wrap w-full md:w-1/2">
-          <div class="md:p-2 p-1 w-1/2">
-            <img alt="Gallery Page 1" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
+
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group relative overflow-hidden group">
+            <img alt="Gallery Page 1"
+              class="w-full object-cover h-full object-center block rounded-lg shadow-sm transition-opacity duration-300 group-hover:opacity-90"
               src="gallery/foto_01.webp" loading="lazy" decoding="async" width="500" height="300"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp"
+              class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
-          <div class="md:p-2 p-1 w-1/2">
+
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group">
             <img alt="Gallery Page 2" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
               src="gallery/foto_02.webp" loading="lazy" decoding="async" width="501" height="301"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp"
+              class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
-          <div class="md:p-2 p-1 w-full">
+
+
+          <div class="md:p-2 p-1 w-full relative overflow-hidden group">
             <img alt="Gallery Page 3" class="w-full h-full object-cover object-center block rounded-lg shadow-sm"
               src="gallery/foto_03.webp" loading="lazy" decoding="async" width="600" height="360"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp"
+              class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
-          <div class="md:p-2 p-1 w-1/2">
+
+
+
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group">
             <img alt="Gallery Page 4" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
               src="gallery/foto_04.webp" loading="lazy" decoding="async" width="502" height="302"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp"
+              class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
-          <div class="md:p-2 p-1 w-1/2">
+
+
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group">
             <img alt="Gallery Page 5" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
               src="gallery/foto_06.webp" loading="lazy" decoding="async" width="503" height="303"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp"
+              class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
         </div>
 
         <!-- SISI KANAN (PAGE 6 - 10) -->
-        <div class="flex flex-wrap w-full md:w-1/2">
-          <div class="md:p-2 p-1 w-full">
+        <div class="flex flex-wrap w-full md:w-1/2 ">
+
+          <div class="md:p-2 p-1 w-full relative overflow-hidden group">
             <img alt="Gallery Page 6" class="w-full h-full object-cover object-center block rounded-lg shadow-sm"
               src="gallery/foto_09.webp" loading=" lazy" decoding="async" width="601" height="361"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out 
+               pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
-          <div class="md:p-2 p-1 w-1/2">
+
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group">
             <img alt="Gallery Page 7" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
               src="gallery/foto_07.webp" loading="lazy" decoding="async" width="504" height="304"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out 
+               pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
-          <div class="md:p-2 p-1 w-1/2">
+
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group">
             <img alt="Gallery Page 8" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
               src="gallery/foto_08.webp" loading="lazy" decoding="async" width="505" height="305"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out 
+               pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
-          <div class="md:p-2 p-1 w-1/2">
+
+
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group">
             <img alt="Gallery Page 9" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
               src="gallery/foto_10.webp" loading="lazy" decoding="async" width="506" height="306"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out 
+               pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
-          <div class="md:p-2 p-1 w-1/2">
+
+
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group">
             <img alt="Gallery Page 10" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
               src="gallery/foto_11.webp" loading="lazy" decoding="async" width="507" height="307"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out 
+               pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
         </div>
 
@@ -680,31 +907,79 @@
         <!-- SISI kiri (PAGE 11 - 15) -->
 
         <div class="flex flex-wrap w-full md:w-1/2">
-          <div class="md:p-2 p-1 w-1/2">
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group">
             <img alt="Gallery Page 11" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
               src="gallery/ttb/page_01.webp" loading="lazy" decoding="async" width="500" height="300"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none 
+               rounded-lg -z-10 will-change-transform backface-hidden" alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
-          <div class="md:p-2 p-1 w-1/2">
+
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group">
             <img alt="Gallery Page 12" class="w-full object-cover h-full object-center block rounded-lg shadow-sm"
               src="gallery/ttb/page_07.webp" loading="lazy" decoding="async" width="501" height="301"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp"
+              class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
 
         </div>
 
         <div class="flex flex-wrap w-full md:w-1/2">
-          <div class="md:p-2 p-1 w-1/2">
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group ">
             <img alt="Gallery Page 13" class="w-full h-full object-cover object-center block rounded-lg shadow-sm"
               src="gallery/foto_12.webp" loading="lazy" decoding="async" width="600" height="360"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp"
+              class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
-          <div class="md:p-2 p-1 w-1/2">
+
+
+          <div class="md:p-2 p-1 w-1/2 relative overflow-hidden group">
             <img alt="Gallery Page 13" class="w-full h-full object-cover object-center block rounded-lg shadow-sm"
               src="gallery/ttb/page_08.webp" loading="lazy" decoding="async" width="600" height="360"
               onclick="openZoom(this)" id="fotografi_pointer">
+
+            <img src="asset/as.webp" class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
+            <img src="asset/asb.webp"
+              class="absolute inset-0 w-full h-full object-cover transform translate-y-full
+               group-hover:translate-y-0 transition-transform duration-500 ease-out pointer-events-none rounded-lg -z-10 will-change-transform backface-hidden"
+              alt="Foto Kedua yang Muncul dari Bawah">
+
           </div>
         </div>
+
+
+
+
+
+
 
       </div>
   </section>
@@ -715,59 +990,63 @@
 
       <!-- Header Title -->
       <div class="text-center mb-10">
-        <h2 class="text-3xl sm:text-4xl font-light tracking-wide uppercase">POSTER</h2>
+        <h2 class="font-['vam'] text-3xl sm:text-4xl font-light tracking-wide uppercase">POSTER</h2>
         <p class="text-gray-400 text-sm sm:text-base mt-2">Adobe Illustrator, Figma & Photoshop</p>
         <p class="text-gray-500 text-xs sm:text-sm mt-1 max-w-xl mx-auto">
-
+        <div class="flex flex-col text-center w-full mb-1 block md:hidden">
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Klik dua kali untuk melihat detail.</p>
+        </div>
         </p>
       </div>
 
       <!-- Case Header -->
       <div class="flex justify-between items-end border-b border-gray-800 pb-3 mb-6">
         <span class="text-gray-400 text-sm">Poster untuk media Instagram CV Dambiro</span>
-        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200">01 WB Trans</span>
+        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200 hidden md:block">01 WB Trans</span>
       </div>
 
       <!-- MAIN GRID CONTAINER -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
 
         <!-- KOLOM KIRI: 1 Poster Utama Besar (Rasio 4:5 Pas Poster IG) -->
-        <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 relative group aspect-[4/5]">
+        <div
+          class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
           <img src="poster/poster_06.webp" alt="Poster Utama WB Trans" class="w-full h-full object-cover "
-            loading="lazy" decoding="async">
+            loading="lazy" decoding="async" onclick="openZoom(this)">
 
-          <!-- Label Overlay -->
-          <div
-            class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 text-[11px] text-white tracking-wider">
-            Adobe Illustrator & Photoshop
-          </div>
+
+
         </div>
 
         <!-- KOLOM KANAN: Grid 2x2 (4 Poster Kecil dengan Rasio 4:5 Sesuai Gambar) -->
         <div class="grid grid-cols-2 gap-3">
 
           <!-- Poster Kecil 1 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_07.webp" alt="Poster 1" class="w-full h-full object-cover" loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
           <!-- Poster Kecil 2 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_12.webp" alt="Poster 2" class="w-full h-full object-cover" loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
           <!-- Poster Kecil 3 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_09.webp" alt="Poster 3" class="w-full h-full object-cover " loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
           <!-- Poster Kecil 4 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_10.webp" alt="Poster 4" class="w-full h-full object-cover " loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
         </div>
@@ -779,22 +1058,17 @@
       <!-- Case Header 2-->
       <div class="flex justify-between items-end border-b border-gray-800 pb-3 mb-6">
         <span class="text-gray-400 text-sm">Poster untuk media Instagram CV Dambiro</span>
-        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200">02 WB Trans</span>
+        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200 hidden md:block">02 WB Trans</span>
       </div>
 
       <!-- MAIN GRID CONTAINER -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
 
         <!-- KOLOM KIRI: 1 Poster Utama Besar (Rasio 4:5 Pas Poster IG) -->
-        <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 relative group aspect-[4/5]">
+        <div
+          class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
           <img src="poster/poster_01.webp" alt="Poster Utama WB Trans" class="w-full h-full object-cover "
-            loading="lazy" decoding="async">
-
-          <!-- Label Overlay -->
-          <div
-            class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 text-[11px] text-white tracking-wider">
-            Adobe Illustrator & Photoshop
-          </div>
+            loading="lazy" decoding="async" onclick="openZoom(this)">
         </div>
 
 
@@ -802,27 +1076,31 @@
         <div class="grid grid-cols-2 gap-3">
 
           <!-- Poster Kecil 1 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_13.webp" alt="Poster 1" class="w-full h-full object-cover" loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
           <!-- Poster Kecil 2 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_11.webp" alt="Poster 2" class="w-full h-full object-cover" loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
           <!-- Poster Kecil 3 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_15.webp" alt="Poster 3" class="w-full h-full object-cover " loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
           <!-- Poster Kecil 4 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_14.webp" alt="Poster 4" class="w-full h-full object-cover " loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
         </div>
@@ -831,22 +1109,17 @@
       <!-- Case Header 3-->
       <div class="flex justify-between items-end border-b border-gray-800 pb-3 mb-6">
         <span class="text-gray-400 text-sm">Poster untuk PO Laju Prima </span>
-        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200">02 WB Trans</span>
+        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200 hidden md:block">02 WB Trans</span>
       </div>
 
       <!-- MAIN GRID CONTAINER -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
 
         <!-- KOLOM KIRI: 1 Poster Utama Besar (Rasio 4:5 Pas Poster IG) -->
-        <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 relative group aspect-[4/5]">
+        <div
+          class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
           <img src="poster/poster_05.webp" alt="Poster Utama WB Trans" class="w-full h-full object-cover "
             loading="lazy" decoding="async">
-
-          <!-- Label Overlay -->
-          <div
-            class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 text-[11px] text-white tracking-wider">
-            Adobe Illustrator & Photoshop
-          </div>
         </div>
 
 
@@ -854,30 +1127,148 @@
         <div class="grid grid-cols-2 gap-3">
 
           <!-- Poster Kecil 1 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_04.webp" alt="Poster 1" class="w-full h-full object-cover" loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
           <!-- Poster Kecil 2 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_03.webp" alt="Poster 2" class="w-full h-full object-cover" loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
           <!-- Poster Kecil 3 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_02.webp" alt="Poster 3" class="w-full h-full object-cover " loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
 
           <!-- Poster Kecil 4 -->
-          <div class="w-full bg-[#121212] overflow-hidden border border-gray-800 group aspect-[4/5]">
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
             <img src="poster/poster_16.webp" alt="Poster 4" class="w-full h-full object-cover " loading="lazy"
-              decoding="async">
+              decoding="async" onclick="openZoom(this)">
           </div>
+        </div>
+      </div>
+
+
+
+      <!-- Case Header 4-->
+      <div class="flex justify-between items-end border-b border-gray-800 pb-3 mb-6">
+        <span class="text-gray-400 text-sm">Poster lomba untuk event </span>
+        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200 hidden md:block">02 event</span>
+      </div>
+
+      <!-- MAIN GRID CONTAINER -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+
+        <!-- KOLOM KIRI: 1 Poster Utama Besar (Rasio 4:5 Pas Poster IG) -->
+        <div
+          class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
+          <img src="poster/brosur_event01.webp" alt="Poster Utama WB Trans" class="w-full h-full object-cover "
+            loading="lazy" decoding="async" onclick="openZoom(this)">
+
+
 
         </div>
+
+
+        <!-- KOLOM KANAN: Grid 2x2 (4 Poster Kecil dengan Rasio 4:5 Sesuai Gambar) -->
+        <div class="grid grid-cols-2 gap-3">
+
+          <!-- Poster Kecil 1 -->
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
+            <img src="poster/brosur_event02.webp" alt="Poster 1" class="w-full h-full object-cover" loading="lazy"
+              decoding="async" onclick="openZoom(this)">
+          </div>
+
+          <!-- Poster Kecil 2 -->
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
+            <img src="poster/brosur_event03.webp" alt="Poster 2" class="w-full h-full object-cover" loading="lazy"
+              decoding="async" onclick="openZoom(this)">
+          </div>
+
+          <!-- Poster Kecil 3 -->
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
+            <img src="poster/brosur_event04.webp" alt="Poster 3" class="w-full h-full object-cover " loading="lazy"
+              decoding="async" onclick="openZoom(this)">
+          </div>
+
+          <!-- Poster Kecil 4 -->
+          <div
+            class="w-full bg-[#121212] overflow-hidden border border-gray-800 hover:border-white transition-colors duration-300 aspect-[4/5] cursor-pointer">
+            <img src="poster/brosur_event05.webp" alt="Poster 4" class="w-full h-full object-cover" loading="lazy"
+              decoding="async" onclick="openZoom(this)">
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Header 5-->
+      <div class="flex justify-between items-end border-b border-gray-800 pb-3 mb-6">
+        <span class="text-gray-400 text-sm">Poster lainnya </span>
+        <span class="text-xl sm:text-2xl font-serif font-light text-gray-200 hidden md:block">poster</span>
+      </div>
+
+      <!-- KOLOM KANAN: Grid 2x2 (4 Poster Kecil) -->
+      <div class="grid grid-cols-2 gap-3">
+
+        <!-- Poster Kecil 1 -->
+        <div class="w-full aspect-[4/5] flex items-center justify-center cursor-pointer group">
+          <!-- Ubah h-[70%] menjadi h-[85%] atau h-[90%] agar lebih tinggi, hapus scale jika tidak ingin zoom -->
+          <div
+            class="w-[70%] h-[85%] bg-[#121212] border border-gray-800 hover:border-white transition-colors duration-300 overflow-hidden relative flex items-center justify-center">
+            <img src="poster/magazine.webp" alt="Poster 1" class="w-full h-full object-cover" loading="lazy"
+              decoding="async" onclick="openZoom(this)">
+          </div>
+        </div>
+
+        <!-- Poster Kecil 2 -->
+        <div class="w-full aspect-[4/5] flex items-center justify-center cursor-pointer group">
+          <div
+            class="w-[70%] h-[85%] bg-[#121212] border border-gray-800 hover:border-white transition-colors duration-300 overflow-hidden relative flex items-center justify-center">
+            <img src="poster/lainnya01.webp" alt="Poster 2" class="w-full h-full object-cover" loading="lazy"
+              decoding="async" onclick="openZoom(this)">
+          </div>
+        </div>
+
+        <!-- Poster Kecil 3 -->
+        <div class="w-full aspect-[4/5] flex items-center justify-center cursor-pointer group">
+          <div
+            class="w-[70%] h-[85%] bg-[#121212] border border-gray-800 hover:border-white transition-colors duration-300 overflow-hidden relative flex items-center justify-center">
+            <img src="poster/lainnya02.webp" alt="Poster 3" class="w-full h-full object-cover" loading="lazy"
+              decoding="async" onclick="openZoom(this)">
+          </div>
+        </div>
+
+        <!-- Poster Kecil 4 -->
+        <div class="w-full aspect-[4/5] flex items-center justify-center cursor-pointer group">
+          <div
+            class="w-[70%] h-[85%] bg-[#121212] border border-gray-800 hover:border-white transition-colors duration-300 overflow-hidden relative flex items-center justify-center">
+            <img src="poster/lainnya03.webp" alt="Poster 4" class="w-full h-full object-cover" loading="lazy"
+              decoding="async" onclick="openZoom(this)">
+          </div>
+        </div>
+
+        <!-- Poster Kecil 5 -->
+        <div class="w-full aspect-[4/5] flex items-center justify-center cursor-pointer group">
+          <div
+            class="w-[70%] h-[85%] bg-[#121212] border border-gray-800 hover:border-white transition-colors duration-300 overflow-hidden relative flex items-center justify-center">
+            <img src="poster/lainnya04.webp" alt="Poster 5" class="w-full h-full object-cover" loading="lazy"
+              decoding="async" onclick="openZoom(this)">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </section>
 
 
@@ -932,8 +1323,8 @@
           <!-- Container Gambar -->
           <div class="w-full h-full relative overflow-hidden">
             <img src="gallery/ttb/page_23.png" alt="Artwork Horizontal 1"
-              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-              loading="lazy" decoding="async">
+              class="w-full h-full object-cover object-top  transition-transform duration-500" loading="lazy"
+              decoding="async">
 
             <!-- Overlay Gradasi (Hilang saat Hover) -->
             <div
@@ -960,8 +1351,8 @@
 
           <div class="w-full h-full relative overflow-hidden">
             <img src="gallery/ttb/page_24.png" alt="Artwork Horizontal 2"
-              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-              loading="lazy" decoding="async">
+              class="w-full h-full object-cover object-top  transition-transform duration-500" loading="lazy"
+              decoding="async">
 
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent group-hover:opacity-0 transition-opacity duration-300">
@@ -986,8 +1377,8 @@
 
           <div class="w-full h-full relative overflow-hidden">
             <img src="gallery/ttb/page_25.webp" alt="Artwork Horizontal 3"
-              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-              loading="lazy" decoding="async">
+              class="w-full h-full object-cover object-top  transition-transform duration-500" loading="lazy"
+              decoding="async">
 
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent group-hover:opacity-0 transition-opacity duration-300">
@@ -1059,98 +1450,151 @@
 
 
 
+  <!-- Section Showcase Diagonal (Kiri Gambar Miring & Kanan Grid 2x2) -->
+  <section class="py-12 px-4 max-w-7xl mx-auto">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+      <!-- BAGIAN KIRI: Gambar Besar dengan Potongan Diagonal (Miring) -->
+      <div class="lg:col-span-6 h-[400px] sm:h-[500px] w-full relative group overflow-hidden rounded-l-2xl">
+        <!-- Container Gambar Miring menggunakan Clip-Path Polygon -->
+        <div class="w-full h-full bg-gray-300 overflow-hidden transition-transform duration-500 ">
+          <img src="a/kanan.webp" alt="Featured Large" class="w-full h-full object-cover object-center">
+        </div>
+      </div>
+
+      <!-- BAGIAN KANAN: 4 Gambar Grid 2x2 -->
+      <div class="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6">
+
+        <!-- Gambar Kanan 1 -->
+        <div class="overflow-hidden rounded-2xl shadow-lg bg-gray-200 aspect-square group">
+          <img src="a/skt01.webp" alt="Gambar 1" class="w-full h-full object-cover  transition duration-300">
+        </div>
+
+        <!-- Gambar Kanan 2 -->
+        <div class="overflow-hidden rounded-2xl shadow-lg bg-gray-200 aspect-square group">
+          <img src="a/skt02.webp" alt="Gambar 2" class="w-full h-full object-cover  transition duration-300">
+        </div>
+
+        <!-- Gambar Kanan 3 -->
+        <div class="overflow-hidden rounded-2xl shadow-lg bg-gray-200 aspect-square group">
+          <img src="a/skt03.webp" alt="Gambar 3" class="w-full h-full object-cover  transition duration-300">
+        </div>
+
+        <!-- Gambar Kanan 4 -->
+        <div class="overflow-hidden rounded-2xl shadow-lg bg-gray-200 aspect-square group">
+          <img src="a/skt04.webp  " alt="Gambar 4" class="w-full h-full object-cover  transition duration-300">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
 
   <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">
+      <!-- Judul Section -->
       <div class="flex flex-col text-center w-full mb-20">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Beberapa karya lainnya</h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">sisa beberapa karya yang saya buat .</p>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Sisa beberapa karya yang saya buat.</p>
       </div>
+
+      <!-- Catatan untuk Mobile -->
+      <div class="flex flex-col text-center w-full mb-1 block md:hidden">
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Klik 2x untuk melihat lebih lengkap.</p>
+      </div>
+
+      <!-- Grid Container -->
       <div class="flex flex-wrap -m-4">
-        <a href="https://drive.google.com/file/d/1G64aY5c0Ze66yiObwq62z5kXsnVMLcvd/view" target="_blank"
-          rel="noopener noreferrer">
-          <div class="lg:w-1/3 sm:w-1/2 p-4">
-            <div class="flex relative">
+
+        <!-- Kartu 1: Adobe InDesign -->
+        <div class="lg:w-1/3 sm:w-1/2 p-4 w-full">
+          <!-- Judul di atas gambar -->
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Digital Buku (Adobe Indesign)</h3>
+          <a href="https://drive.google.com/file/d/1G64aY5c0Ze66yiObwq62z5kXsnVMLcvd/view" target="_blank"
+            rel="noopener noreferrer" class="block h-full">
+            <div class="flex relative h-64 sm:h-72 rounded-lg overflow-hidden shadow-md">
               <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
                 src="A.indesign/foto_01.webp">
               <div
-                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">EPUB (BUKU DIGITAL)
-                </h2>
-                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Adobe Indesign</h1>
-                <p class="leading-relaxed">Memahami adobe indesign seperti pembuatan epub statis maupun animation.</p>
-        </a>
-      </div>
-    </div>
-    </div>
-    <div class="lg:w-1/3 sm:w-1/2 p-4">
-      <a href="https://chipper-horse-a3ec5f.netlify.app/" target="_blank" rel="noopener noreferrer"
-        class="text-indigo-600">
-        <div class="flex relative">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-            src="gallery/ttb/splash_art.webp">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">MOTION SPLASH ART</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Charackter Genshin Kokomi</h1>
-            <p class="leading-relaxed">Saya membuatnya dengan mengambil projeck Github orang lain dan saya edit
-              lagi.</p>
-      </a>
-    </div>
-    </div>
-    </div>
-    <div class="lg:w-1/3 sm:w-1/2 p-4">
-      <div class="flex relative">
-        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-          src="https://dummyimage.com/603x363">
-        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-          <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-          <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-          <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
-            tousled waistcoat.</p>
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">EPUB (BUKU DIGITAL)</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Adobe InDesign</h1>
+                <p class="leading-relaxed">Memahami Adobe InDesign seperti pembuatan epub statis maupun animation.</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-    </div>
-    <div class="lg:w-1/3 sm:w-1/2 p-4">
-      <div class="flex relative">
-        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-          src="https://dummyimage.com/602x362">
-        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-          <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-          <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-          <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
-            tousled waistcoat.</p>
+
+        <!-- Kartu 2: Motion Splash Art -->
+        <div class="lg:w-1/3 sm:w-1/2 p-4 w-full">
+          <!-- Judul di atas gambar -->
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Motion Splash Art (Credit By Github)</h3>
+          <a href="https://chipper-horse-a3ec5f.netlify.app/" target="_blank" rel="noopener noreferrer"
+            class="block h-full">
+            <div class="flex relative h-64 sm:h-72 rounded-lg overflow-hidden shadow-md">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                src="gallery/ttb/splash_art.webp">
+              <div
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">MOTION SPLASH ART</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Character Genshin Kokomi</h1>
+                <p class="leading-relaxed">Saya membuatnya dengan mengambil project Github orang lain dan saya edit
+                  lagi.</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-    </div>
-    <div class="lg:w-1/3 sm:w-1/2 p-4">
-      <div class="flex relative">
-        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-          src="https://dummyimage.com/605x365">
-        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-          <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-          <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-          <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
-            tousled waistcoat.</p>
+
+        <!-- Kartu 3: Redesign Website Sumarecone (Wix) -->
+        <div class="lg:w-1/3 sm:w-1/2 p-4 w-full">
+          <!-- Judul di atas gambar -->
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Branding Wix (website)</h3>
+          <a href="https://fickryrabbani.wixstudio.com/sumarecone" target="_blank" rel="noopener noreferrer"
+            class="block h-full">
+            <div class="flex relative h-64 sm:h-72 rounded-lg overflow-hidden shadow-md">
+              <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                src="gallery/ttb/sm.webp">
+              <div
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">REDESIGN WEBSITE
+                  SUMMARECON</h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Menggunakan Wix</h1>
+                <p class="leading-relaxed">Project tugas kampus menggunakan Wix meredesign website Summarecon.</p>
+              </div>
+            </div>
+          </a>
         </div>
+
       </div>
-    </div>
-    <div class="lg:w-1/3 sm:w-1/2 p-4">
-      <div class="flex relative">
-        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
-          src="https://dummyimage.com/606x366">
-        <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-          <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-          <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-          <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing
-            tousled waistcoat.</p>
-        </div>
-      </div>
-    </div>
-    </div>
     </div>
   </section>
 
 
+  <!-- Footer Section -->
+  <footer class="bg-black text-gray-400 border-t border-white/10 py-10 px-4 sm:px-6">
+    <div
+      class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+
+      <!-- Informasi Hak Cipta & Brand -->
+      <div>
+        <h3 class="text-white font-bold text-lg tracking-wider">THANKS YOU</h3>
+
+      </div>
+
+      <!-- Tautan Navigasi Cepat / Sosial Media -->
+      <div class="flex items-center gap-6 text-sm">
+
+        <a target="_blank" rel="noopener noreferrer" class="hover:text-white transition duration-300">@fcrybdibbi</a>
+        <a class="hover:text-white transition duration-300">Fickryrabbani@gmail.com</a>
+        <a class="hover:text-white transition duration-300">0881-0242-48095</a>
+      </div>
+
+    </div>
+  </footer>
 
 
   <!-- File JavaScript Eksternal -->
@@ -1168,7 +1612,7 @@
       // - Slide 12 (buffer 100) = Index 11 (Slide terakhir)
       // Masukkan indeks slide mana saja di sini secara manual:
       // ============================================================
-      const hiddenHintSlides = [9, 11, 12, 13, 14];
+      const hiddenHintSlides = [8, 10, 12, 13, 14];
 
       // 1. Fungsi untuk mengecek posisi scroll & toggle visibilitas hint
       function updateSpaceHintVisibility() {
@@ -1217,8 +1661,8 @@
             const nextSection = sections[nextIndex];
 
             // bufferList milikmu utuh tanpa diubah nilainya
-            //                   1    2   3    4   5   6   7   8   9   10  11  12   13  14  15
-            const bufferList = [120, 80, 120, 80, 80, 80, 80, 80, 80, 90, 100, 90, 90, 150];
+            //                   1    2   3    4  5    6   7   8    9   10  11  12   13  14  15
+            const bufferList = [120, 80, 120, 80, 80, 120, 80, 80, 80, 80, 80, 80, 100, 90, 90, 150, 80];
             const extraBuffer = bufferList[nextIndex] !== undefined ? bufferList[nextIndex] : 100;
 
             window.scrollTo({
