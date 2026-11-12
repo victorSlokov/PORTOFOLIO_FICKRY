@@ -307,7 +307,7 @@
                 </div>
                 <div
                   class="w-full bg-neutral-200 h-1.5 sm:h-2 rounded-full overflow-hidden p-0.5 border border-neutral-300 shadow-inner">
-                  <div class="bg-black h-full rounded-full transition-all duration-700 ease-out" style="width: 50%;">
+                  <div class="bg-black h-full rounded-full transition-all duration-700 ease-out" style="width: 40%;">
                   </div>
                 </div>
               </div>
@@ -1838,15 +1838,15 @@
       });
 
       // 3. Pantau scroll biasa (wheel/touch) untuk update tampilan hint
-      window.addEventListener('scroll', updateSpaceHintVisibility, { passive: true });
+      window.addEventListener('scroll', updateSpaceHintVisibility, {passive: true});
 
       window.addEventListener('wheel', () => {
         document.body.classList.remove('is-space-pressed');
-      }, { passive: true });
+      }, {passive: true});
 
       window.addEventListener('touchmove', () => {
         document.body.classList.remove('is-space-pressed');
-      }, { passive: true });
+      }, {passive: true});
 
       // Jalankan sekali saat halaman pertama dimuat
       updateSpaceHintVisibility();
