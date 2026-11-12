@@ -355,8 +355,12 @@
   <!-- SLIDE 3 — EXPERIENCE & SOFTWARE SKILLS -->
   <section class="experience-section" id="experience">
     <div class="exp-container">
-      <div class="exp-grid" data-animate="slide-left">
-        <div class="exp-col">
+
+      <!-- Bungkus Utama Grid: 1 Kolom di HP, 2 Kolom di Desktop -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-12 lg:gap-y-8 items-start" data-animate="slide-left">
+
+        <!-- 1. PENDIDIKAN (HP: Urutan 1 | Desktop: Kolom Kiri Atas) -->
+        <div class="exp-col order-1 lg:col-start-1 lg:row-start-1">
           <h2 class="exp-title">Pendidikan</h2>
           <div class="exp-list">
             <div class="exp-item org-item">
@@ -373,120 +377,144 @@
             </div>
             <div class="exp-item org-item">
               <h3>POLITEKNIK BINA MADANI</h3>
-              <p class="company">Program Studi Desain Media</p>
+              <p class="company text-xs sm:text-[13px]">Program Studi Desain Media</p>
               <span class="date">(2022 - 2026)</span>
             </div>
           </div>
         </div>
 
-        <div class="exp-col" data-animate="slide-left">
+        <!-- 2. PENGALAMAN (HP: Urutan 2 | Desktop: Kolom Kanan Penuh) -->
+        <div class="exp-col order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2">
           <h2 class="exp-title">Pengalaman</h2>
-          <div class="exp-list">
+          <div class="exp-list space-y-5">
+
             <div class="exp-item">
-              <h3>TOKO CAT DELUCEN’T (2020 - 3 bulan)</h3>
-              <p class="company">Memberikan pelayanan prima kepada pelanggan (customer service) dalam berkonsultasi dan
-                memilih produk cat yang sesuai kebutuhan.</p>
-              <p class="company">Mengelola operasional kasir secara akurat, termasuk melakukan pencatatan transaksi
-                penjualan, rekap
-                pembayaran, dan pengelolaan uang tunai maupun non-tunai.</p>
-              <p>Menjaga kerapian toko, menata stok display produk cat, serta membantu proses inventaris barang harian.
-              </p>
+              <h3 class="mb-1.5">TOKO CAT DELUCEN’T (2020 - 3 bulan)</h3>
+              <div class="space-y-3 text-neutral-700">
+                <p class="company text-xs sm:text-[13px] leading-snug text-justify">• Memberikan pelayanan prima kepada
+                  pelanggan
+                  (customer service) dalam berkonsultasi dan memilih produk cat yang sesuai kebutuhan.</p>
+                <p class="company text-xs sm:text-[13px] leading-snug text-justify">• Mengelola operasional kasir secara
+                  akurat,
+                  termasuk melakukan pencatatan transaksi penjualan, rekap pembayaran, dan pengelolaan uang tunai maupun
+                  non-tunai.</p>
+                <p class="company text-xs sm:text-[13px] leading-snug text-justify">• Menjaga kerapian toko, menata stok
+                  display
+                  produk cat, serta membantu proses inventaris barang harian.</p>
+              </div>
             </div>
+
             <div class="exp-item">
-              <h3>PT PROKEMAS ADIKARYA (2022 - 2 bulan)</h3>
-              <p class="company">Melakukan proses quality control dasar dengan menyortir dan menyeleksi produk kardus
-                minuman sesuai standar kualitas perusahaan.</p>
-              <p class="company">Menjalankan prosedur pengemasan (packaging) produk kardus secara aman, rapi, dan
-                efisien.</p>
-              <p class="company">Bertanggung jawab atas penanganan material (material handling) dan pemindahan logistik
-                kardus produksi
-                ke area penyimpanan dengan aman.</p>
+              <h3 class="mb-1.5">PT PROKEMAS ADIKARYA (2022 - 2 bulan)</h3>
+              <div class="space-y-3 text-neutral-700">
+                <p class="company text-xs sm:text-[13px] leading-snug text-justify">• Melakukan proses
+                  quality control
+                  dasar dengan menyortir dan menyeleksi produk kardus minuman sesuai standar kualitas perusahaan.</p>
+                <p class="company text-xs sm:text-[13px] leading-snug text-justify">• Menjalankan prosedur pengemasan
+                  (packaging)
+                  produk kardus secara aman, rapi, dan efisien.</p>
+                <p class="company text-xs sm:text-[13px] leading-snug text-justify">• Bertanggung jawab atas penanganan
+                  material
+                  (material handling) dan pemindahan logistik kardus produksi ke area penyimpanan dengan aman.</p>
+              </div>
             </div>
+
             <div class="exp-item">
-              <h3>MAGANG PT DAMBIRO (2024 - 6 bulan)</h3>
-              <p class="company">Merancang dan memproduksi berbagai materi visual kreatif (seperti poster, dan grafis
-                promosi) untuk kebutuhan publikasi media sosial perusahaan.</p>
+              <h3 class="mb-1.5">MAGANG PT DAMBIRO (2024 - 6 bulan)</h3>
+              <div class="space-y-3 text-neutral-700">
+                <p class="company text-xs sm:text-[13px] leading-snug text-justify">• Merancang dan memproduksi berbagai
+                  materi
+                  visual kreatif (seperti poster, dan grafis promosi) untuk kebutuhan publikasi media sosial perusahaan.
+                </p>
+              </div>
             </div>
+
           </div>
         </div>
-      </div>
 
-      <hr class="exp-divider">
+        <!-- 3. SOFTWARES & TOOLS + HOBBY (Logo sudah diperkecil) -->
+        <div class="flex flex-col gap-8 order-3 lg:col-start-1 lg:row-start-2">
 
-      <div class="skills-wrapper" data-animate="slide-left">
-        <h2 class="exp-title">SOFTWARES & TOOLS</h2>
-        <div class="skills-grid">
-          <div class="skill-card" data-tooltip="Illustrator">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg"
-              alt="Illustrator" loading="lazy" decoding="async" width="128" height="128">
+          <!-- Softwares & Tools -->
+          <div class="skills-wrapper">
+            <h2 class="exp-title">SOFTWARES & TOOLS</h2>
+            <div class="skills-grid">
+              <div class="skill-card" data-tooltip="Illustrator">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg"
+                  alt="Illustrator" loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="Adobe XD">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" alt="Adobe XD"
+                  loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="Figma">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
+                  loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="Canva">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva"
+                  loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="Google Gemini">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"
+                  alt="Google Gemini" loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="Wix">
+                <img src="https://img.icons8.com/windows/32/wix.png" alt="Wix" loading="lazy" decoding="async"
+                  class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="Adobe InDesign">
+                <img src="https://img.icons8.com/?size=100&id=GuWUhoT5K5Gg&format=png&color=000000" alt="Adobe InDesign"
+                  loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="Microsoft Word">
+                <img src="https://img.icons8.com/?size=100&id=pGHcje298xSl&format=png&color=000000" alt="Microsoft Word"
+                  loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="Microsoft Powerpoint">
+                <img src="https://img.icons8.com/?size=100&id=ifP93G7BXUhU&format=png&color=000000"
+                  alt="Microsoft Powerpoint" loading="lazy" decoding="async"
+                  class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="Microsoft Excel">
+                <img src="https://img.icons8.com/?size=100&id=UECmBSgBOvPT&format=png&color=000000"
+                  alt="Microsoft Excel" loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+            </div>
           </div>
-          <div class="skill-card" data-tooltip="Adobe XD">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" alt="Adobe XD" loading="lazy"
-              decoding="async" width="128" height="128">
+
+          <!-- Softwares Hobby -->
+          <div class="skills-wrapper">
+            <h2 class="exp-title">SOFTWARES HOBBY</h2>
+            <div class="skills-grid">
+              <div class="skill-card" data-tooltip="VS Code">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"
+                  loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="HTML5">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+                  loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="CSS3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                  loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="Godot Engine">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
+                  alt="Godot Engine" loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+              <div class="skill-card" data-tooltip="ibis Paint X">
+                <img src="https://brandlogos.sgp1.digitaloceanspaces.com/svg/arcticons/ibispaint-x.svg"
+                  alt="ibis Paint X" loading="lazy" decoding="async" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+              </div>
+            </div>
           </div>
-          <div class="skill-card" data-tooltip="Figma">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <div class="skill-card" data-tooltip="Canva">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <div class="skill-card" data-tooltip="Google Gemini">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="Google Gemini"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <!-- Kartu Baru: Wix -->
-          <div class="skill-card" data-tooltip="Wix">
-            <img width="32" height="32" src="https://img.icons8.com/windows/32/wix.png" alt="wix" alt="Wix"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <div class="skill-card" data-tooltip="Adobe InDesign">
-            <img src="https://img.icons8.com/?size=100&id=GuWUhoT5K5Gg&format=png&color=000000" alt="Adobe InDesign"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <div class="skill-card" data-tooltip="Microsoft Word">
-            <img src="https://img.icons8.com/?size=100&id=pGHcje298xSl&format=png&color=000000" alt="Microsoft Word"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <div class="skill-card" data-tooltip="Microsoft Powerpoint">
-            <img src="https://img.icons8.com/?size=100&id=ifP93G7BXUhU&format=png&color=000000"
-              alt="Microsoft Powerpoint" loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <div class="skill-card" data-tooltip="Microsoft Excel">
-            <img src="https://img.icons8.com/?size=100&id=UECmBSgBOvPT&format=png&color=000000" alt="Microsoft Excel"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
+
         </div>
+
       </div>
 
-      <hr class="exp-divider">
-
-      <div class="skills-wrapper" data-animate="slide-left">
-        <h2 class="exp-title">SOFTWARES HOBBY</h2>
-        <div class="skills-grid">
-          <div class="skill-card" data-tooltip="VS Code">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <div class="skill-card" data-tooltip="HTML5">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <div class="skill-card" data-tooltip="CSS3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <div class="skill-card" data-tooltip="Godot Engine">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg"
-              alt="Godot Engine" loading="lazy" decoding="async" width="128" height="128">
-          </div>
-          <div class="skill-card" data-tooltip="ibis Paint X">
-            <img src="https://brandlogos.sgp1.digitaloceanspaces.com/svg/arcticons/ibispaint-x.svg" alt="ibis Paint X"
-              loading="lazy" decoding="async" width="128" height="128">
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -1740,7 +1768,7 @@
       // - Slide 12 (buffer 100) = Index 11 (Slide terakhir)
       // Masukkan indeks slide mana saja di sini secara manual:
       // ============================================================
-      const hiddenHintSlides = [8, 10, 12, 13, 14];
+      const hiddenHintSlides = [3, 8, 10, 12, 13, 14];
 
       // 1. Fungsi untuk mengecek posisi scroll & toggle visibilitas hint
       function updateSpaceHintVisibility() {
