@@ -22,13 +22,7 @@
 </head>
 
 <body>
-  <!-- PRELOADER (Layar Loading) -->
-  <div id="preloader">
-    <div class="loader-content">
-      <div class="spinner"></div>
-      <p class="loading-text">LOADING...</p>
-    </div>
-  </div>
+
 
   <!-- HEADER / NAVBAR -->
   <header id="dashboard-header" class="dashboard-nav">
@@ -146,9 +140,9 @@
   </section>
 
 
-  <!-- SLIDE 2 — ABOUT ME (FULL LAYAR DENGAN TAILWIND) -->
+  <!-- SLIDE 2 — ABOUT ME (RESPONSIF KHUSUS IPHONE SE & MOBILE) -->
   <section
-    class="about-slide relative w-full min-h-[calc(100vh-88px)] bg-white border-t-2 border-black overflow-hidden flex flex-col lg:flex-row items-center justify-between px-6 sm:px-[6vw] py-16 gap-8 lg:gap-[4vw]"
+    class="about-slide relative w-full min-h-0 lg:min-h-[calc(100vh-88px)] bg-white border-t-2 border-black overflow-hidden flex flex-col lg:flex-row items-center justify-between px-4 sm:px-[6vw] py-10 lg:py-16 gap-6 lg:gap-[4vw]"
     id="about">
 
     <!-- Dekorasi Blob Abu-abu di Kanan Atas -->
@@ -168,69 +162,196 @@
     </div>
 
     <!-- KOLOM KIRI: Ilustrasi Karakter + Tombol CV -->
-    <div
-      class="about-left relative z-10 w-full lg:w-[34%] flex flex-col justify-end h-full bg-[#c2c2c2] border-4 rounded-lg">
+    <div class="about-left relative z-10 w-full lg:w-[34%] flex flex-col justify-end bg-[#c2c2c2] border-4 rounded-lg">
 
       <!-- Bungkus Ilustrasi Karakter -->
-      <!-- Bungkus Ilustrasi Karakter (Tanpa Animasi Slide) -->
       <div
-        class="about-illustration-wrap relative w-full flex justify-center bg-[#c2c2c2] rounded-t-2xl shadow-xl pt-6 px-4">
+        class="about-illustration-wrap relative w-full flex justify-center bg-[#c2c2c2] rounded-t-2xl shadow-xl pt-4 px-4">
         <img src="about_character.webp" alt="Ilustrasi Fickry Abdi Rabbani" id="aboutImg"
-          class="max-w-full h-auto max-h-[50vh] sm:max-h-[62vh] object-contain" loading="lazy" decoding="async"
+          class="max-w-full h-auto max-h-[35vh] lg:max-h-[62vh] object-contain" loading="lazy" decoding="async"
           width="1191" height="1440">
       </div>
 
       <!-- Tombol View CV -->
       <a href="cv/Cv ATS.pdf" target="_blank" rel="noopener noreferrer" id="viewCvBtn"
-        class="view-cv-btn block mx-auto mt-8 mb-6 px-7 py-3.5 bg-[#e6e6e6] hover:bg-[#d3d3d3] text-[#111] font-bold text-[15px] rounded-lg tracking-wide shadow-md transition-all duration-200 hover:-translate-y-0.5 text-center w-fit">
+        class="view-cv-btn block mx-auto mt-4 mb-4 px-5 py-2.5 bg-[#e6e6e6] hover:bg-[#d3d3d3] text-[#111] font-bold text-xs sm:text-[15px] rounded-lg tracking-wide shadow-md transition-all duration-200 hover:-translate-y-0.5 text-center w-fit">
         View Cv
       </a>
     </div>
 
     <!-- KOLOM KANAN: Judul + Kartu Bio -->
-    <div class="about-right relative z-10 w-full lg:flex-1 flex flex-col justify-center h-full">
+    <div class="about-right relative z-10 w-full lg:flex-1 flex flex-col justify-center">
 
-      <!-- Judul Section di Mobile/Tablet (Opsional, jika ingin dimunculkan) -->
-      <div class="mb-4 ">
-        <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight">About Me</h2>
-        <p class="text-sm font-semibold text-neutral-600 tracking-wider">Graphic Designer</p>
+      <!-- Judul Section di Mobile/Tablet -->
+      <div class="mb-3 lg:mb-4">
+        <h2 class="text-2xl sm:text-4xl font-black uppercase tracking-tight">About Me</h2>
+        <p class="text-xs sm:text-sm font-semibold text-neutral-600 tracking-wider">Graphic Designer</p>
       </div>
 
       <!-- Kartu Bio Glassmorphism -->
       <div data-animate="slide-right" class="about-card relative w-full bg-gradient-to-b from-white/50 to-[#f2f2f2]/50 backdrop-blur-md 
-        border border-black/20 rounded-[18px] 
-        p-5 sm:p-9 overflow-hidden 
-        shadow-[0_15px_35px_rgba(0,0,0,0.08)] flex flex-col justify-between min-h-[320px]">
+      border border-black/20 rounded-[18px] 
+      p-4 sm:p-9 overflow-hidden 
+      shadow-[0_15px_35px_rgba(0,0,0,0.08)] flex flex-col justify-between">
 
-        <!-- Teks Deskripsi Bio -->
-        <p
-          class="about-card-text relative z-10 font-sans text-xs sm:text-[15px] leading-relaxed text-black max-w-full lg:max-w-[75%] pb-12 sm:pb-0">
-          Halo, saya Fickry Abdi Rabbani seorang graphic designer memiliki ketertarikan Mengeksplor hal baru.
-          Softskil saya di bidang Desain Grafis, brainstorming, poster media sosial, Ilustrasi, pembuatan epub dan
-          Ui/Ux,
-          memiliki tambahan keahlian di bidang Post-Production, pengeditan video (kinemaster, capcut) dan
-          hoby/ketertarikan dengan frontend
-          <b class="block mt-2">Portofolio ini menampilkan beberapa softskil saya di bidang desain yang telah dipelajari
-            selama kuliah.</b>
-        </p>
 
-        <!-- Barcode + Nama di Pojok Kanan Bawah Kartu Bio (Sudah dioptimasi agar tidak menyatu di HP) -->
-        <div class="about-card-id absolute right-4 sm:right-8 bottom-4 sm:bottom-6 z-10 text-right">
-          <div class="barcode-mini font-['Libre_Barcode_39',cursive] text-2xl sm:text-3xl leading-[0.7]">
+        <!-- Pembungkus Utama Bagian Bio & Skill Grid -->
+        <div class="relative z-10 w-full lg:max-w-[73%] pb-12 sm:pb-14 lg:pb-2">
+
+          <!-- Teks Deskripsi Bio -->
+          <p
+            class="about-card-text font-sans text-[11px] sm:text-[15px] leading-snug sm:leading-relaxed text-black mb-4">
+            Halo, saya Fickry Abdi Rabbani seorang graphic designer dan memiliki ketertarikan mempelajari hal baru
+            (jack of all trades).
+          </p>
+
+          <!-- WRAPPER GRID: 1 Kolom di HP (<=375px), jadi 2 Kolom mulai layar sm ke atas -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2.5 sm:gap-y-3">
+
+            <!-- ==================== KOLOM KIRI: HARD SKILLS ==================== -->
+            <div class="space-y-1.5 sm:space-y-2">
+              <h4 class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-neutral-500 mb-0.5">Hard
+                Skills</h4>
+
+              <!-- 1. Desain Grafis -->
+              <div class="space-y-0.5">
+                <div class="flex justify-between items-center text-[11px] sm:text-xs font-semibold text-neutral-900">
+                  <span>Desain Grafis</span>
+                  <span class="font-mono text-[9px] sm:text-[10px] text-neutral-600">90%</span>
+                </div>
+                <div
+                  class="w-full bg-neutral-200 h-1.5 sm:h-2 rounded-full overflow-hidden p-0.5 border border-neutral-300 shadow-inner">
+                  <div class="bg-black h-full rounded-full transition-all duration-700 ease-out" style="width: 90%;">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 3. Fotografi -->
+              <div class="space-y-0.5">
+                <div class="flex justify-between items-center text-[11px] sm:text-xs font-semibold text-neutral-900">
+                  <span>Fotografi</span>
+                  <span class="font-mono text-[9px] sm:text-[10px] text-neutral-600">50%</span>
+                </div>
+                <div
+                  class="w-full bg-neutral-200 h-1.5 sm:h-2 rounded-full overflow-hidden p-0.5 border border-neutral-300 shadow-inner">
+                  <div class="bg-black h-full rounded-full transition-all duration-700 ease-out" style="width: 50%;">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Videografi -->
+              <div class="space-y-0.5">
+                <div class="flex justify-between items-center text-[11px] sm:text-xs font-semibold text-neutral-900">
+                  <span>Videografi</span>
+                  <span class="font-mono text-[9px] sm:text-[10px] text-neutral-600">50%</span>
+                </div>
+                <div
+                  class="w-full bg-neutral-200 h-1.5 sm:h-2 rounded-full overflow-hidden p-0.5 border border-neutral-300 shadow-inner">
+                  <div class="bg-black h-full rounded-full transition-all duration-700 ease-out" style="width: 50%;">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 4. Front-End / Godot -->
+              <div class="space-y-0.5">
+                <div class="flex justify-between items-center text-[11px] sm:text-xs font-semibold text-neutral-900">
+                  <span>Front-End / Godot</span>
+                  <span class="font-mono text-[9px] sm:text-[10px] text-neutral-600">40%</span>
+                </div>
+                <div
+                  class="w-full bg-neutral-200 h-1.5 sm:h-2 rounded-full overflow-hidden p-0.5 border border-neutral-300 shadow-inner">
+                  <div class="bg-black h-full rounded-full transition-all duration-700 ease-out" style="width: 40%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== KOLOM KANAN: SOFT SKILLS ==================== -->
+            <div class="space-y-1.5 sm:space-y-2">
+              <h4 class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-neutral-500 mb-0.5">Soft
+                Skills</h4>
+
+              <!-- 1. Problem Solving -->
+              <div class="space-y-0.5">
+                <div class="flex justify-between items-center text-[11px] sm:text-xs font-semibold text-neutral-900">
+                  <span>Problem Solving</span>
+                  <span class="font-mono text-[9px] sm:text-[10px] text-neutral-600">85%</span>
+                </div>
+                <div
+                  class="w-full bg-neutral-200 h-1.5 sm:h-2 rounded-full overflow-hidden p-0.5 border border-neutral-300 shadow-inner">
+                  <div class="bg-black h-full rounded-full transition-all duration-700 ease-out" style="width: 85%;">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Adaptabilitas -->
+              <div class="space-y-0.5">
+                <div class="flex justify-between items-center text-[11px] sm:text-xs font-semibold text-neutral-900">
+                  <span>Adaptabilitas</span>
+                  <span class="font-mono text-[9px] sm:text-[10px] text-neutral-600">50%</span>
+                </div>
+                <div
+                  class="w-full bg-neutral-200 h-1.5 sm:h-2 rounded-full overflow-hidden p-0.5 border border-neutral-300 shadow-inner">
+                  <div class="bg-black h-full rounded-full transition-all duration-700 ease-out" style="width: 50%;">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Komunikasi -->
+              <div class="space-y-0.5">
+                <div class="flex justify-between items-center text-[11px] sm:text-xs font-semibold text-neutral-900">
+                  <span>Komunikasi</span>
+                  <span class="font-mono text-[9px] sm:text-[10px] text-neutral-600">40%</span>
+                </div>
+                <div
+                  class="w-full bg-neutral-200 h-1.5 sm:h-2 rounded-full overflow-hidden p-0.5 border border-neutral-300 shadow-inner">
+                  <div class="bg-black h-full rounded-full transition-all duration-700 ease-out" style="width: 50%;">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. English -->
+              <div class="space-y-0.5">
+                <div class="flex justify-between items-center text-[11px] sm:text-xs font-semibold text-neutral-900">
+                  <span>English</span>
+                  <span class="font-mono text-[9px] sm:text-[10px] text-neutral-600">40%</span>
+                </div>
+                <div
+                  class="w-full bg-neutral-200 h-1.5 sm:h-2 rounded-full overflow-hidden p-0.5 border border-neutral-300 shadow-inner">
+                  <div class="bg-black h-full rounded-full transition-all duration-700 ease-out" style="width: 40%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- Penutup Grid -->
+
+        </div> <!-- Penutup div pembungkus utama -->
+
+        <!-- Barcode + Nama di Pojok Kanan Bawah Kartu Bio -->
+        <div class="about-card-id absolute right-3 sm:right-8 bottom-3 sm:bottom-6 z-10 text-right">
+          <div class="barcode-mini font-['Libre_Barcode_39',cursive] text-xl sm:text-3xl leading-[0.7]">
             *Fickry.A.R*
           </div>
-          <div
-            class="name-mini text-[9px] sm:text-[11px] font-bold tracking-[2px] sm:tracking-[4px] text-[#1a1a1a] mt-1">
-            FICKRY ABDI RABBANI
+        </div>
+
+        <!-- Aksen Panel Kanan (Desktop Only) -->
+        <div
+          class="hidden lg:block absolute top-0 right-0 bottom-0 w-[25%] border-l border-neutral-200/80 overflow-hidden z-0"
+          style="background-color: #f3f4f6;">
+          <div class="w-full h-full opacity-20"
+            style="background-image: radial-gradient(#000000 1px, transparent 1px); background-size: 12px 12px;">
           </div>
         </div>
-      </div>
 
-
-
+      </div> <!-- Penutup Kartu Bio Glassmorphism -->
     </div>
 
   </section>
+
+
   <!-- SLIDE 3 — EXPERIENCE & SOFTWARE SKILLS -->
   <section class="experience-section" id="experience">
     <div class="exp-container">
@@ -262,15 +383,25 @@
           <h2 class="exp-title">Pengalaman</h2>
           <div class="exp-list">
             <div class="exp-item">
-              <h3>TOKO CAT DELUCEN’T</h3>
-              <p class="company">Menjaga toko cat sebagai pelayan dan kasir</p>
+              <h3>TOKO CAT DELUCEN’T (2020 - 3 bulan)</h3>
+              <p class="company">Memberikan pelayanan prima kepada pelanggan (customer service) dalam berkonsultasi dan
+                memilih produk cat yang sesuai kebutuhan.</p>
+              <p>Mengelola operasional kasir secara akurat, termasuk melakukan pencatatan transaksi penjualan, rekap
+                pembayaran, dan pengelolaan uang tunai maupun non-tunai.</p>
+              <p>Menjaga kerapian toko, menata stok display produk cat, serta membantu proses inventaris barang harian.
+              </p>
             </div>
             <div class="exp-item">
-              <h3>PT PROKEMAS ADIKARYA (Packing)</h3>
-              <p class="company">Menyortir beberapa produksi kardus minuman</p>
+              <h3>PT PROKEMAS ADIKARYA (2022 - 2 bulan)</h3>
+              <p class="company">Melakukan proses quality control dasar dengan menyortir dan menyeleksi produk kardus
+                minuman sesuai standar kualitas perusahaan.</p>
+              <p class="company">Menjalankan prosedur pengemasan (packaging) produk kardus secara aman, rapi, dan
+                efisien.</p>
+              <p>Bertanggung jawab atas penanganan material (material handling) dan pemindahan logistik kardus produksi
+                ke area penyimpanan dengan aman.</p>
             </div>
             <div class="exp-item">
-              <h3>MAGANG PT DAMBIRO (Creative Assistant)</h3>
+              <h3>MAGANG PT DAMBIRO (2024 - 6 bulan)</h3>
               <p class="company">Membantu membuat konten sosial media</p>
             </div>
           </div>
@@ -1445,11 +1576,6 @@
   </section>
 
 
-
-
-
-
-
   <!-- Section Showcase Diagonal (Kiri Gambar Miring & Kanan Grid 2x2) -->
   <section class="py-12 px-4 max-w-7xl mx-auto">
 
@@ -1491,7 +1617,6 @@
     </div>
 
   </section>
-
 
 
   <section class="text-gray-600 body-font">
